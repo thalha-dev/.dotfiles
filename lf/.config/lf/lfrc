@@ -1,0 +1,19 @@
+# Basic Settings
+
+set hidden true
+
+
+
+
+
+# Movement 
+map gb cd ~/Documents/Books/computer
+map gd cd ~/Documents
+map gD cd ~/Downloads
+map gp cd ~/Pictures
+map gv cd ~/Videos
+map gc cd ~/.config
+map gx cd ~/.xmonad
+map gr cd / 
+map gG cd ~/Documents/Books/computer/GoldenTouch
+
