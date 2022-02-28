@@ -36,7 +36,11 @@ Plug 'ayu-theme/ayu-vim'
 
 "-----------------------------NerdTree
 "
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
+
+"------------------------------Vifm
+"
+Plug 'vifm/vifm.vim'
 
 "----------------------------undotree
 "
@@ -137,8 +141,8 @@ noremap <silent> <C-Down> :resize -2<CR>
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
-"-------------------------------Nerdtree
-noremap <Leader>n :NERDTreeToggle<cr>
+"-------------------------------Vifm
+noremap <Leader>n :TabVifm<cr>
 
 
 "----------------------------- Removes pipes | that act as seperators on splits

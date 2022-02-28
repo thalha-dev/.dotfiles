@@ -20,6 +20,7 @@ set -x MANPAGER "sh -c 'col -bx | batcat -l man -p'"
 function fish_user_key_bindings
   # fish_default_key_bindings
   fish_vi_key_bindings
+  bind -M insert -m default jk backward-char force-repaint
 end
 ### END OF VI MODE ###
 

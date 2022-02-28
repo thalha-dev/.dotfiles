@@ -11,7 +11,8 @@
 " If you would like to use another vi clone such as Elvis or Vile
 " you will need to change this setting.
 
-set vicmd=vim
+set vicmd=nvim
+"set vicmd=vim
 " set vicmd=elvis\ -G\ termcap
 " set vicmd=vile
 
@@ -100,7 +101,7 @@ set incsearch
 
 " Try to leave some space from cursor to upper/lower border in lists
 
-set scrolloff=4
+set scrolloff=8
 
 " Don't do too many requests to slow file systems
 
@@ -116,8 +117,17 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " :mark mark /full/directory/path [filename]
 
-mark b ~/bin/
 mark h ~/
+mark c ~/.dotfiles
+mark d ~/Downloads
+mark p ~/Pictures
+mark v ~/Videos
+mark D ~/Documents
+mark b ~/Documents/Books
+mark l ~/learn
+mark w ~/workspace
+
+
 
 " ------------------------------------------------------------------------------
 
@@ -228,6 +238,8 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
           "\*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
           "\*.as[fx]
           "\ ffprobe -pretty %c 2>&1
+          
+
 
 " Web
 filextype *.html,*.htm
@@ -429,6 +441,13 @@ nnoremap O :!gvim %f<cr>
 
 " Open file in the background using its default program
 nnoremap gb :file &<cr>l
+
+" Semicolon to colon
+nnoremap ; :
+
+" Colon to semicolon
+cnoremap jk <c-u><del>
+
 
 " Interaction with system clipboard
 if has('win')
