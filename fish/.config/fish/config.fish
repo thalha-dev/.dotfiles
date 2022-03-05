@@ -7,6 +7,7 @@ set -U fish_user_paths $HOME/applications $HOME/.local/bin $fish_user_paths
 
 # Export #
 set TERM "xterm-256color"                         # Sets the terminal type
+set SHELL "/usr/bin/fish"                  # Sets the shell
 
 #remove greeting
 set -U fish_greeting
@@ -51,7 +52,7 @@ alias ll='ls -lash --color=auto'
 alias ld='ls -hd .* --color=auto'
 alias lld='ls -lhd .* --color=auto'
 # exa - ls alternative
-alias l='exa -alhhumi --icons --group'
+alias l='exa -alhhmi --icons --group'
 alias la='exa --icons -a'
 
 

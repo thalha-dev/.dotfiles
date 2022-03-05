@@ -49,6 +49,8 @@ set nofollowlinks
 
 set sortnumbers
 
+set nu
+set relativenumber
 " Maximum number of changes that can be undone.
 
 set undolevels=100
@@ -219,7 +221,7 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
         "\ {View using mplayer}
         "\ mplayer %f,
         \ {View using mpv}
-        \ mpv --msg-level=all=no %f &,
+        \ mpv --msg-level=all=no %f 2> /dev/null &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
          \ ffprobe -pretty %c 2>&1
 
@@ -447,6 +449,13 @@ nnoremap ; :
 
 " Colon to semicolon
 cnoremap jk <c-u><del>
+
+"---------------------- Remap splits navigation to just CTRL + hjkl
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 
 
 " Interaction with system clipboard
