@@ -71,6 +71,7 @@ alias k="keynav daemonize"
 alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
+alias goo="google-chrome"
 
 # update and upgrade
 

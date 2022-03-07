@@ -146,6 +146,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
+alias goo="google-chrome"
 
 # update and upgrade
 
