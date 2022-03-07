@@ -70,6 +70,11 @@ Plug 'tpope/vim-surround'
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
+Plug 'honza/vim-snippets'
+
+" post install (yarn install | npm install) then load plugin only for editing supported files
+"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+
 " ---------------------------------Comments
 
 Plug 'tpope/vim-commentary'
@@ -78,13 +83,23 @@ Plug 'tpope/vim-commentary'
 "--------------------------------- LSP
 "
 Plug 'neovim/nvim-lspconfig'
+
+"--------- auto-completion
+"
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"--------------Java
+"Plug 'mfussenegger/nvim-jdtls'
+" --------------------------------nvim-treesitter
+Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
@@ -103,6 +118,28 @@ let g:hexokinase_optinpatterns = [
 \     'hsla',
 \ ]
 let g:Hexokinase_highlighters = ['backgroundfull']
+
+  ""coc.preferences.formatOnSaveFiletypes": [
+  "  "javascript",
+  "  "typescript",
+  "  "typescriptreact",
+  "  "json",
+  "  "javascriptreact",
+  "  "typescript.tsx",
+  "  "graphql",
+  "  "html",
+  "  "css"
+  "],
+
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+let g:coc_global_extensions = [
+    \ 'coc-prettier',
+    \ 'coc-json',
+    \ 'coc-snippets',
+    \]
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
 
 
 let mapleader=" "
@@ -143,6 +180,10 @@ map <Leader>tk <C-w>t<C-w>K
 
 "-------------------------------Vifm
 noremap <Leader>n :TabVifm<cr>
+
+"----------------------------------cocPrettierformat
+nnoremap <leader>cf <cmd>CocCommand prettier.forceFormatDocument<cr>
+
 
 
 "----------------------------- Removes pipes | that act as seperators on splits

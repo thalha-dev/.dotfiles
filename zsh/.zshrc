@@ -81,6 +81,9 @@ alias upgrade="sudo apt upgrade"
 
 alias brightness="xrandr --output eDP --brightness"
 
+alias bluecon="bluetoothctl connect 41:42:59:C9:5E:12"
+alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
+
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
