@@ -245,6 +245,8 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
 
 " Web
 filextype *.html,*.htm
+        \ {Open with google-chrome}
+        \ google-chrome %f %i &,
         \ {Open with dwb}
         \ dwb %f %i &,
         \ {Open with firefox}
