@@ -125,8 +125,8 @@ alias cat="batcat"
 alias c="clear"
 alias k="keynav daemonize"
 
-alias livee="live-server --no-browser --quiet &"
-alias klivee="ps aux | grep live-server | grep -v grep | awk '{print $2}' | xargs kill"
+#alias livee="live-server --no-browser --quiet &"
+#alias klivee="ps aux | grep live-server | grep -v grep | awk '{print $2}' | xargs kill"
 
 
 # confirm before overwriting something
