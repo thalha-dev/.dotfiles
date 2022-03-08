@@ -65,6 +65,10 @@ alias cat="batcat"
 alias c="clear"
 alias k="keynav daemonize"
 
+alias livee="live-server --no-browser --quiet &"
+alias klivee="ps aux | grep live-server | grep -v grep | awk '{print $2}' | xargs kill"
+
+
 
 # applications
 
@@ -80,7 +84,10 @@ alias upgrade="sudo apt upgrade"
 
 # system control
 
-alias brightness="xrandr --output eDP --brightness"
+#alias brightness="xrandr --output eDP --brightness"
+alias bri="sudo brightnessctl set" 
+#alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
+
 
 alias bluecon="bluetoothctl connect 41:42:59:C9:5E:12"
 alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
@@ -109,6 +116,9 @@ export PATH=$PATH:$JAVA_HOME/bin:/usr/local/go/bin
 # else
 #   export EDITOR='vim'
 # fi
+
+# load Xmodmap
+xmodmap ~/.Xmodmap
 
 
 

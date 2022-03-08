@@ -79,6 +79,8 @@ Plug 'honza/vim-snippets'
 
 Plug 'tpope/vim-commentary'
 
+" ----------------------------------Tmux
+"Plug 'preservim/vimux'
 
 "--------------------------------- LSP
 "
@@ -207,6 +209,19 @@ nnoremap <leader>pf :Files<CR>
 
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
+
+"------------------------------------Move with ALT
+
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '>-2<CR>gv=gv
+
+" nnoremap <A-C-j> yyp
+" nnoremap <A-C-k> yyP
+"
+
+
 
 "--------------------------normal mode remap
 nnoremap ; :
