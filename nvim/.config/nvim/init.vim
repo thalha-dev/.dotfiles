@@ -62,24 +62,46 @@ Plug 'itchyny/lightline.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
-"-------------------------------Syntax Help
+"-------------------------------------------------Syntax Help
+"
+"----------auto close html tag
 "
 Plug 'alvan/vim-closetag'
+
+"--------------------Modify Surroundings
+"
+"ysiw* ------> give surround
+"select + S + * ------> another way to surround
+"yss + * ------> full line surround
+"cs + * + # ------> change surround * with #
+"ds + * ------> delete surround * 
+"
 Plug 'tpope/vim-surround'
+
+"---------------Auto Complete brackets
+"
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
+"-------------------------Awesome Snippets
+"
 Plug 'honza/vim-snippets'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " ---------------------------------Comments
+"
+"  Select in visual mode and press leader+gc
 
 Plug 'tpope/vim-commentary'
 
+
+
 " ----------------------------------Tmux
+"
 "Plug 'preservim/vimux'
 
 "--------------------------------- LSP
@@ -96,20 +118,27 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 
+"------------------------------Coc-LSP
+"
+"for some easy setup
+"
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"--------------Java
-"Plug 'mfussenegger/nvim-jdtls'
 " --------------------------------nvim-treesitter
+"--Syntax highlighting
+"
 Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
+"----------------------------Plugin Configs
+"
 
+"---------------------Theme
 let ayucolor="dark"
 colorscheme ayu
 
-"-------------------------vim-hexokinase Plugin Congig
+"-------------------------vim-hexokinase Plugin Config
 " 
 let g:hexokinase_optinpatterns = [
 \     'full_hex',
@@ -133,16 +162,23 @@ let g:Hexokinase_highlighters = ['backgroundfull']
   "  "css"
   "],
 
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+"--------------------------------Coc-Extension-List
+"
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-json',
     \ 'coc-snippets',
     \]
 
+"---------------------------------------vim-sinppets config
+"
 " Use <C-l> for trigger snippet expand.
+"
 imap <C-l> <Plug>(coc-snippets-expand)
 
+
+"+++++++++++++++++++++++++++++++++++++++++++++FOLLOW THE LEADER :)
 
 let mapleader=" "
 
@@ -150,7 +186,7 @@ let mapleader=" "
 
 "--------------------------------------------> Window Remapping
 
-nnoremap <leader>pv :Vex<CR>
+"nnoremap <leader>pv :Vex<CR>
 
 "------------------------------------------------------> General Remapping
 
@@ -181,10 +217,18 @@ map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 "-------------------------------Vifm
-noremap <Leader>n :TabVifm<cr>
+noremap <Leader>nn <cmd>TabVifm<cr>
+noremap <Leader>nv <cmd>VsplitVifm<cr>
+noremap <Leader>nh <cmd>SplitVifm<cr>
+noremap <Leader>na <cmd>Vifm<cr>
+
+"-----------------------------Unload Netrw
+let g:loaded_netrw       = 1
+let g:loaded_netrwPlugin = 1
+
 
 "----------------------------------cocPrettierformat
-nnoremap <leader>cf <cmd>CocCommand prettier.forceFormatDocument<cr>
+nnoremap <leader>fp <cmd>CocCommand prettier.forceFormatDocument<cr>
 
 
 
@@ -202,20 +246,48 @@ command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 "-----------------------------------------Fuzzy Finder
 
-nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>pf :Files<CR> 
+nnoremap <leader>pf <cmd>Telescope find_files<CR> 
+nnoremap <leader>pb <cmd>Telescope buffers<CR>
+nnoremap <leader>pt <cmd>Telescope tags<CR>
+nnoremap <leader>pm <cmd>Telescope marks<CR>
+nnoremap <leader>pr <cmd>Telescope registers<CR>
+nnoremap <leader>pc <cmd>Telescope commands<CR>
+nnoremap <leader>pq <cmd>Telescope quickfix<CR>
+nnoremap <leader>pgf <cmd>Telescope git_files<CR>
+nnoremap <leader>pgc <cmd>Telescope git_commits<CR>
+nnoremap <leader>pgb <cmd>Telescope git_branches<CR>
+nnoremap <leader>pgs <cmd>Telescope git_status<CR>
+nnoremap <leader>pvo <cmd>Telescope vim_options<CR>
+nnoremap <leader>pvb <cmd>Telescope builtin<CR>
+nnoremap <leader>pvc <cmd>Telescope colorscheme<CR>
+nnoremap <leader>plg <cmd>Telescope live_grep<CR>
 
-"----------------------------------------------->QuickFix
 
-nnoremap <C-j> :cnext<CR>
-nnoremap <C-k> :cprev<CR>
+"-----------------------------------------Shell Scripts
+"
+"s**
+"
+"-------s=>shell
+"-------*=>subdivision
+"-------#=>command alias
+
+nnoremap <leader>sdl <cmd>!live.sh<CR>
+nnoremap <leader>sdk <cmd>!klive.sh<CR>
+
+
+"colorscheme----------------------------------------------->quickfix
+
+nnoremap <leader>jj <cmd>cnext<CR>
+nnoremap <leader>jk <cmd>cprev<CR>
 
 "------------------------------------Move with ALT
+"OOOOooooOOOooo
+"
 
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
-vnoremap <A-j> :m '>+1<CR>gv=gv
-vnoremap <A-k> :m '>-2<CR>gv=gv
+vnoremap <a-j> :m '>+1<cr>gv=gv
+vnoremap <a-k> :m '<-2<cr>gv=gv
 
 " nnoremap <A-C-j> yyp
 " nnoremap <A-C-k> yyP
@@ -225,6 +297,8 @@ vnoremap <A-k> :m '>-2<CR>gv=gv
 
 "--------------------------normal mode remap
 nnoremap ; :
+
+
 
 "--------------------------command mode remap
 
