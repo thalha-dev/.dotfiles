@@ -52,7 +52,7 @@ alias ll='ls -lash --color=auto'
 alias ld='ls -hd .* --color=auto'
 alias lld='ls -lhd .* --color=auto'
 # exa - ls alternative
-alias l='exa -alhhmi --icons --group'
+alias l='exa -almi --icons --group'
 alias la='exa --icons -a'
 
 
@@ -139,5 +139,5 @@ xmodmap ~/.Xmodmap
 
 #prompt
 #
-starship init fish | source 
+#starship init fish | source 
 

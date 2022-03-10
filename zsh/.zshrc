@@ -54,7 +54,7 @@ alias ls='ls --color=auto'
 alias ll='ls -las --color=auto'
 alias ld='ls -lhd .[^.]* --color=auto'
 # exa - ls alternative
-alias l='exa -alhhmi --icons --group'
+alias l='exa -almi --icons --group'
 alias la='exa --icons -a'
 
 

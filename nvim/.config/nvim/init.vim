@@ -178,15 +178,12 @@ let g:coc_global_extensions = [
 imap <C-l> <Plug>(coc-snippets-expand)
 
 
-"+++++++++++++++++++++++++++++++++++++++++++++FOLLOW THE LEADER :)
-
+"===============================================FOLLOW THE LEADER :)
+"=====================================================
 let mapleader=" "
+"=====================================================
+"=====================================================
 
-
-
-"--------------------------------------------> Window Remapping
-
-"nnoremap <leader>pv :Vex<CR>
 
 "------------------------------------------------------> General Remapping
 
@@ -207,20 +204,26 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
-noremap <silent> <C-Left> :vertical resize +5<CR>
-noremap <silent> <C-Right> :vertical resize -2<CR>
-noremap <silent> <C-Up> :resize +5<CR>
-noremap <silent> <C-Down> :resize -2<CR>
+"noremap <silent> <C-Left> :vertical resize +5<CR>
+noremap <silent> <A-C-l> :vertical resize +5<CR>
+noremap <silent> <A-C-h> :vertical resize -2<CR>
+noremap <silent> <A-C-j> :resize +5<CR>
+noremap <silent> <A-C-k> :resize -2<CR>
+
+"------------------------------------------------Switch Tabs
+"
+nnoremap <silent> <A-h> :tabprevious<CR>
+nnoremap <silent> <A-l> :tabnext<CR>
 
 "------------------------------ Change 2 split windows from vert to horiz or horiz to vert
 map <Leader>th <C-w>t<C-w>H
 map <Leader>tk <C-w>t<C-w>K
 
 "-------------------------------Vifm
-noremap <Leader>nn <cmd>TabVifm<cr>
-noremap <Leader>nv <cmd>VsplitVifm<cr>
-noremap <Leader>nh <cmd>SplitVifm<cr>
-noremap <Leader>na <cmd>Vifm<cr>
+noremap <Leader>vt <cmd>TabVifm<cr>
+noremap <Leader>vv <cmd>VsplitVifm<cr>
+noremap <Leader>vh <cmd>SplitVifm<cr>
+noremap <Leader>vc <cmd>Vifm<cr>
 
 "-----------------------------Unload Netrw
 let g:loaded_netrw       = 1
@@ -228,7 +231,7 @@ let g:loaded_netrwPlugin = 1
 
 
 "----------------------------------cocPrettierformat
-nnoremap <leader>fp <cmd>CocCommand prettier.forceFormatDocument<cr>
+nnoremap <leader>lfp <cmd>CocCommand prettier.forceFormatDocument<cr>
 
 
 
@@ -246,21 +249,21 @@ command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 "-----------------------------------------Fuzzy Finder
 
-nnoremap <leader>pf <cmd>Telescope find_files<CR> 
-nnoremap <leader>pb <cmd>Telescope buffers<CR>
-nnoremap <leader>pt <cmd>Telescope tags<CR>
-nnoremap <leader>pm <cmd>Telescope marks<CR>
-nnoremap <leader>pr <cmd>Telescope registers<CR>
-nnoremap <leader>pc <cmd>Telescope commands<CR>
-nnoremap <leader>pq <cmd>Telescope quickfix<CR>
-nnoremap <leader>pgf <cmd>Telescope git_files<CR>
-nnoremap <leader>pgc <cmd>Telescope git_commits<CR>
-nnoremap <leader>pgb <cmd>Telescope git_branches<CR>
-nnoremap <leader>pgs <cmd>Telescope git_status<CR>
-nnoremap <leader>pvo <cmd>Telescope vim_options<CR>
-nnoremap <leader>pvb <cmd>Telescope builtin<CR>
-nnoremap <leader>pvc <cmd>Telescope colorscheme<CR>
-nnoremap <leader>plg <cmd>Telescope live_grep<CR>
+nnoremap <leader>ff <cmd>Telescope find_files<CR> 
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>ft <cmd>Telescope tags<CR>
+nnoremap <leader>fm <cmd>Telescope marks<CR>
+nnoremap <leader>fr <cmd>Telescope registers<CR>
+nnoremap <leader>fc <cmd>Telescope commands<CR>
+nnoremap <leader>fq <cmd>Telescope quickfix<CR>
+nnoremap <leader>fgf <cmd>Telescope git_files<CR>
+nnoremap <leader>fgc <cmd>Telescope git_commits<CR>
+nnoremap <leader>fgb <cmd>Telescope git_branches<CR>
+nnoremap <leader>fgs <cmd>Telescope git_status<CR>
+nnoremap <leader>fvo <cmd>Telescope vim_options<CR>
+nnoremap <leader>fvb <cmd>Telescope builtin<CR>
+nnoremap <leader>fvc <cmd>Telescope colorscheme<CR>
+nnoremap <leader>flg <cmd>Telescope live_grep<CR>
 
 
 "-----------------------------------------Shell Scripts
@@ -271,14 +274,15 @@ nnoremap <leader>plg <cmd>Telescope live_grep<CR>
 "-------*=>subdivision
 "-------#=>command alias
 
+nnoremap <leader>S :!
 nnoremap <leader>sdl <cmd>!live.sh<CR>
 nnoremap <leader>sdk <cmd>!klive.sh<CR>
 
 
 "colorscheme----------------------------------------------->quickfix
 
-nnoremap <leader>jj <cmd>cnext<CR>
-nnoremap <leader>jk <cmd>cprev<CR>
+nnoremap <leader>qj <cmd>cnext<CR>
+nnoremap <leader>qk <cmd>cprev<CR>
 
 "------------------------------------Move with ALT
 "OOOOooooOOOooo
