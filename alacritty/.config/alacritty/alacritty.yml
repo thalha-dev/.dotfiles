@@ -598,7 +598,7 @@ colors: *Dracula
 
 #background_opacity: 0.8
 window:
-    opacity: 0.3
+    opacity: 1
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 

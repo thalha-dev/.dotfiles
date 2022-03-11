@@ -137,6 +137,7 @@ set -gx PATH $PATH /usr/local/go/bin
 xmodmap ~/.Xmodmap
 
 
+
 #prompt
 #
 #starship init fish | source 
