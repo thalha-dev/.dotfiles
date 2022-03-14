@@ -50,13 +50,17 @@ Plug 'mbbill/undotree'
 "
 Plug 'tpope/vim-fugitive'
 
+"-------------------Scroll Smooth
+"
+"Plug 'psliwka/vim-smoothie'
+
 "--------------------------Color Preview
 "
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 "----------------------------Status Line
 "
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 
 " -----------------------------Telescope
 Plug 'nvim-lua/plenary.nvim'
@@ -102,7 +106,7 @@ Plug 'tpope/vim-commentary'
 
 " ----------------------------------Tmux
 "
-"Plug 'preservim/vimux'
+Plug 'preservim/vimux'
 
 "--------------------------------- LSP
 "
@@ -221,7 +225,7 @@ map <Leader>tk <C-w>t<C-w>K
 
 "-------------------------------Vifm
 noremap <Leader>vt <cmd>TabVifm<cr>
-noremap <Leader>vv <cmd>VsplitVifm<cr>
+noremap <Leader>vs <cmd>VsplitVifm<cr>
 noremap <Leader>vh <cmd>SplitVifm<cr>
 noremap <Leader>vc <cmd>Vifm<cr>
 
@@ -266,6 +270,20 @@ nnoremap <leader>fvc <cmd>Telescope colorscheme<CR>
 nnoremap <leader>flg <cmd>Telescope live_grep<CR>
 
 
+"-----------------------------------------Vimux
+"
+
+nnoremap <leader>ttr <cmd>VimuxPromptCommand<CR>
+nnoremap <leader>ttl <cmd>VimuxRunLastCommand<CR>
+nnoremap <leader>tto <cmd>VimuxOpenRunner<CR>
+nnoremap <leader>ttx <cmd>VimuxCloseRunner<CR>
+nnoremap <leader>ttt <cmd>VimuxTogglePane<CR>
+nnoremap <leader>ttc <cmd>VimuxClearTerminalScreen<CR>
+
+
+
+
+"
 "-----------------------------------------Shell Scripts
 "
 "s**
