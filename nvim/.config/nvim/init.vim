@@ -34,6 +34,9 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'ayu-theme/ayu-vim' 
 
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+
 "-----------------------------NerdTree
 "
 "Plug 'preservim/nerdtree'
@@ -52,9 +55,13 @@ Plug 'tpope/vim-fugitive'
 
 "-------------------Scroll Smooth
 "
-"Plug 'psliwka/vim-smoothie'
+Plug 'psliwka/vim-smoothie'
+"
+"Plug 'karb94/neoscroll.nvim'
+
 
 "--------------------------Color Preview
+"
 "
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
@@ -140,7 +147,8 @@ call plug#end()
 
 "---------------------Theme
 let ayucolor="dark"
-colorscheme ayu
+"colorscheme ayu
+colorscheme dracula
 
 "-------------------------vim-hexokinase Plugin Config
 " 
