@@ -79,6 +79,10 @@ Plug 'nvim-telescope/telescope.nvim'
 "
 Plug 'alvan/vim-closetag'
 
+"------------------------brackets
+"
+Plug 'junegunn/rainbow_parentheses.vim'
+
 "--------------------Modify Surroundings
 "
 "ysiw* ------> give surround
@@ -208,6 +212,10 @@ nnoremap <leader>x :!chmod +x %<CR>
 
 
 "------------------------------------------------------Window Remap
+"
+"-----------------Splits
+" nnoremap <leader>vvh :split<cr>
+" nnoremap <leader>vvv :vsplit<cr>
 
 "---------------------- Remap splits navigation to just CTRL + hjkl
 nnoremap <C-h> <C-w>h
@@ -265,6 +273,7 @@ nnoremap <leader>ff <cmd>Telescope find_files<CR>
 nnoremap <leader>fb <cmd>Telescope buffers<CR>
 nnoremap <leader>ft <cmd>Telescope tags<CR>
 nnoremap <leader>fm <cmd>Telescope marks<CR>
+nnoremap <leader>fj <cmd>Telescope jumplist<CR>
 nnoremap <leader>fr <cmd>Telescope registers<CR>
 nnoremap <leader>fc <cmd>Telescope commands<CR>
 nnoremap <leader>fq <cmd>Telescope quickfix<CR>
@@ -289,20 +298,23 @@ nnoremap <leader>ttt <cmd>VimuxTogglePane<CR>
 nnoremap <leader>ttc <cmd>VimuxClearTerminalScreen<CR>
 
 
+"Split tmux window with leader
+nnoremap <silent> <leader>ttv :!tmux split-window -h<CR><CR>
+nnoremap <silent> <leader>tth :!tmux split-window<CR><CR>
 
 
 "
 "-----------------------------------------Shell Scripts
 "
-"s**
+"s*#
 "
 "-------s=>shell
 "-------*=>subdivision
 "-------#=>command alias
 
 nnoremap <leader>S :!
-nnoremap <leader>sdl <cmd>!live.sh<CR>
-nnoremap <leader>sdk <cmd>!klive.sh<CR>
+nnoremap <leader>sdl <cmd>!live.sh<CR><CR>
+nnoremap <leader>sdk <cmd>!klive.sh<CR><CR>
 
 
 "colorscheme----------------------------------------------->quickfix
