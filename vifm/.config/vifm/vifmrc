@@ -67,7 +67,7 @@ set norunexec
 
 " Selected color scheme
 
-colorscheme Default
+colorscheme palenight
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -185,7 +185,9 @@ command! reload :write | restart
 " Pdf
 filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 filextype *.pdf evince %c %i &, apvlv %c, xpdf %c
-fileviewer *.pdf pdftotext -nopgbrk %c -
+"fileviewer *.pdf pdftotext  -nopgbrk %c -
+fileviewer *.pdf echo no preview available. %i 
+fileviewer *.epub echo no preview available. %i 
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
@@ -223,7 +225,10 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob,*.flv
         \ {View using mpv}
         \ mpv --msg-level=all=no %f 2> /dev/null &,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
-         \ ffprobe -pretty %c 2>&1
+        \ echo no preview available. %i 
+
+" fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.vob
+"          \ ffprobe -pretty %c 2>&1
 
 "filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
          "\*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
@@ -271,7 +276,7 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ {View in shotwell}
         \ shotwell,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-         \ identify %f
+        \ echo no preview available. %i 
 
 " OpenRaster
 filextype *.ora
@@ -341,6 +346,7 @@ fileviewer *.rar unrar v %c
 filetype *.iso
        \ {Mount with fuseiso}
        \ FUSE_MOUNT|fuseiso %SOURCE_FILE %DESTINATION_DIR,
+fileviewer *.iso echo no preview available. %i 
 
 " SshMount
 filetype *.ssh
@@ -360,8 +366,9 @@ fileviewer *.7z 7z l %c
 
 " Office files
 filextype *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx libreoffice %f &
-fileviewer *.doc catdoc %c
-fileviewer *.docx docx2txt.pl %f -
+" fileviewer *.doc catdoc %c
+" fileviewer *.docx docx2txt.pl %f -
+fileviewer *.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx echo no preview available %i 
 
 " TuDu files
 filetype *.tudu tudu -f %c
@@ -429,7 +436,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " Sample mappings
 
 " Start shell in current directory
-nnoremap s :shell<cr>
+nnoremap ss :shell<cr>
+nnoremap sa :!
+
 
 " Display sorting dialog
 nnoremap S :sort<cr>
@@ -457,6 +466,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nnoremap ,s <C-w>v  
+nnoremap ,f <C-w>o
+nnoremap ,v <C-w>l
 
 
 
@@ -486,7 +499,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+"nnoremap ,t :!alacritty &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
@@ -495,6 +508,13 @@ nnoremap ,C :!gvim --remote-tab-silent $MYVIFMRC &<cr>
 
 " Toggle wrap setting on ,w key
 nnoremap ,w :set wrap!<cr>
+
+" view preview "
+"nnoremap ,v <s-s>
+
+nnoremap <C-m> :mkdir
+nnoremap <C-t> :touch
+
 
 " Example of standard two-panel file managers mappings
 nnoremap <f3> :!less %f<cr>

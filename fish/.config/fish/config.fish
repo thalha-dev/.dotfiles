@@ -91,7 +91,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 # utils and binaries
 
-alias cat="batcat"
+alias p="batcat"
 alias c="clear"
 alias k="keynav daemonize"
 
@@ -105,6 +105,10 @@ alias f="vifm"
 alias goo="google-chrome"
 
 alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
+alias pman="/home/thalha/other-applications/Postman/Postman"
+alias tor="./start-tor-browser.desktop"
+alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
+alias ctord="cd (tord)"
 
 # update and upgrade
 
@@ -138,6 +142,7 @@ set -gx PATH $PATH /usr/local/go/bin
 # load Xmodmap
 xmodmap ~/.Xmodmap
 
+#cat ~/.config/asciiarts/bismillah.txt | lolcat -F 0.021
 
 
 #prompt

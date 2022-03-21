@@ -36,6 +36,7 @@ Plug 'ayu-theme/ayu-vim'
 
 Plug 'dracula/vim', { 'as': 'dracula' }
 
+Plug 'rebelot/kanagawa.nvim'
 
 "-----------------------------NerdTree
 "
@@ -151,8 +152,9 @@ call plug#end()
 
 "---------------------Theme
 let ayucolor="dark"
-"colorscheme ayu
-colorscheme dracula
+colorscheme ayu
+"colorscheme kanagawa
+"colorscheme dracula
 
 "-------------------------vim-hexokinase Plugin Config
 " 
@@ -236,14 +238,23 @@ nnoremap <silent> <A-h> :tabprevious<CR>
 nnoremap <silent> <A-l> :tabnext<CR>
 
 "------------------------------ Change 2 split windows from vert to horiz or horiz to vert
-map <Leader>th <C-w>t<C-w>H
-map <Leader>tk <C-w>t<C-w>K
+map <leader>th <C-w>t<C-w>H
+map <leader>tk <C-w>t<C-w>K
+
+"--------------------------------------VIM
 
 "-------------------------------Vifm
-noremap <Leader>vt <cmd>TabVifm<cr>
-noremap <Leader>vs <cmd>VsplitVifm<cr>
-noremap <Leader>vh <cmd>SplitVifm<cr>
-noremap <Leader>vc <cmd>Vifm<cr>
+noremap <leader>vvt <cmd>TabVifm<cr>
+noremap <leader>vvs <cmd>VsplitVifm<cr>
+noremap <leader>vvh <cmd>SplitVifm<cr>
+noremap <leader>vvc <cmd>Vifm<cr>
+
+"---------------------------Colorsceme
+noremap <leader>vcc :colorscheme 
+noremap <leader>vca <cmd>colorscheme ayu<cr>
+noremap <leader>vcd <cmd>colorscheme dracula<cr>
+noremap <leader>vck <cmd>colorscheme kanagawa<cr>
+
 
 "-----------------------------Unload Netrw
 let g:loaded_netrw       = 1
@@ -251,12 +262,13 @@ let g:loaded_netrwPlugin = 1
 
 
 "----------------------------------cocPrettierformat
-nnoremap <leader>lfp <cmd>CocCommand prettier.forceFormatDocument<cr>
+nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
 
 
 
 "----------------------------- Removes pipes | that act as seperators on splits
 "set fillchars+=vert:.
+"set fillchars=stl:,stlnc:=,vert:│,fold:·,diff:-
 
 "-------------------------------Undo tree
 
@@ -300,10 +312,24 @@ nnoremap <leader>ttc <cmd>VimuxClearTerminalScreen<CR>
 
 "Split tmux window with leader
 nnoremap <silent> <leader>ttv :!tmux split-window -h<CR><CR>
-nnoremap <silent> <leader>tth :!tmux split-window<CR><CR>
+nnoremap <silent> <leader>tth :!tmux split-window -l 12<CR><CR>
 
 
+
+"---------------------------------------LSP
 "
+
+nnoremap <leader>lli <cmd>LspInfo<CR>
+nnoremap <leader>lls <cmd>LspStart<CR>
+nnoremap <leader>llx <cmd>LspStop<CR>
+nnoremap <leader>llr <cmd>LspRestart<CR>
+
+"-----------------------Copilot
+"
+nnoremap <leader>lce <cmd>Copilot enable<CR>
+nnoremap <leader>lcd <cmd>Copilot disable<CR>
+nnoremap <leader>lcs <cmd>Copilot status<CR>
+
 "-----------------------------------------Shell Scripts
 "
 "s*#
@@ -331,11 +357,6 @@ nnoremap <A-k> :m .-2<CR>==
 vnoremap <a-j> :m '>+1<cr>gv=gv
 vnoremap <a-k> :m '<-2<cr>gv=gv
 
-" nnoremap <A-C-j> yyp
-" nnoremap <A-C-k> yyP
-"
-
-
 
 "--------------------------normal mode remap
 nnoremap ; :
@@ -348,6 +369,8 @@ command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 
 cnoremap jk <c-u><del>
+
+cnoremap <A-x> :<c-u>w<cr>:Bd<cr>:q<cr>
 
 "--------------------------------------
 "
