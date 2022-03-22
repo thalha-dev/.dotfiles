@@ -50,7 +50,7 @@ set nofollowlinks
 set sortnumbers
 
 set nu
-set relativenumber
+" set relativenumber
 " Maximum number of changes that can be undone.
 
 set undolevels=100
@@ -65,9 +65,17 @@ set vimhelp
 
 set norunexec
 
+set nowrap
+
 " Selected color scheme
 
 colorscheme palenight
+"colorscheme zenburn
+" colorscheme gruvBox
+" colorscheme codedark
+" colorscheme solarizedDark
+" colorscheme onedark
+" colorscheme darkDesert
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -467,9 +475,25 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap ,s <C-w>v  
+
+"------------------------------------------------- Make adjusing split sizes a bit more friendly
+"noremap <silent> <C-Left> :vertical resize +5<CR>
+" noremap <silent> <a-c-l> :vertical resize +5<cr>
+" noremap <silent> <a-c-h> :vertical resize -2<cr>
+" noremap <silent> <a-c-j> :resize +5<cr>
+" noremap <silent> <a-c-k> :resize -2<cr>
+
+nnoremap <silent> <a-c-l> <C-w>10+
+nnoremap <silent> <a-c-h> <C-w>5-
+nnoremap <silent> <a-c-j> <C-w>10+
+nnoremap <silent> <a-c-k> <C-w>5-
+
+
+nnoremap ,v <C-w>v  
 nnoremap ,f <C-w>o
-nnoremap ,v <C-w>l
+nnoremap ,l <C-w>l
+nnoremap ,h <C-w>s
+nnoremap ,j <C-w>j
 
 
 

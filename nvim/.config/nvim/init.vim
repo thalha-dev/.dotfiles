@@ -255,6 +255,14 @@ noremap <leader>vca <cmd>colorscheme ayu<cr>
 noremap <leader>vcd <cmd>colorscheme dracula<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
 
+"--------------------------Sessions
+
+noremap <leader>vss <cmd>mksession!<cr>
+noremap <leader>vsd :mksession! ~/.config/nvim/session/
+noremap <leader>vsmm :!mkdir -p ~/.config/nvim/session/
+noremap <leader>vsrc <cmd>source Session.vim<cr>
+noremap <leader>vsrr :source ~/.config/nvim/session/
+
 
 "-----------------------------Unload Netrw
 let g:loaded_netrw       = 1
@@ -361,6 +369,9 @@ vnoremap <a-k> :m '<-2<cr>gv=gv
 "--------------------------normal mode remap
 nnoremap ; :
 
+" nnoremap <Plug>(hello) :echo "Hello"<CR>
+
+" nmap <leader>hhh <Plug>(hello)
 
 
 "--------------------------command mode remap
