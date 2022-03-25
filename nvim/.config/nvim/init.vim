@@ -142,8 +142,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --------------------------------nvim-treesitter
 "--Syntax highlighting
-"
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 call plug#end()
 
@@ -152,8 +151,8 @@ call plug#end()
 
 "---------------------Theme
 let ayucolor="dark"
-colorscheme ayu
-"colorscheme kanagawa
+" colorscheme ayu
+colorscheme kanagawa
 "colorscheme dracula
 
 "-------------------------vim-hexokinase Plugin Config
@@ -213,6 +212,7 @@ nnoremap <leader>y gg"+yg
 nnoremap <leader>x :!chmod +x %<CR>
 
 
+
 "------------------------------------------------------Window Remap
 "
 "-----------------Splits
@@ -227,10 +227,13 @@ nnoremap <C-l> <C-w>l
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
 "noremap <silent> <C-Left> :vertical resize +5<CR>
-noremap <silent> <A-C-l> :vertical resize +5<CR>
-noremap <silent> <A-C-h> :vertical resize -2<CR>
-noremap <silent> <A-C-j> :resize +5<CR>
-noremap <silent> <A-C-k> :resize -2<CR>
+noremap <silent> <A-C-l> :vertical resize +8<CR>
+noremap <silent> <A-C-h> :vertical resize -4<CR>
+noremap <silent> <A-C-j> :resize +8<CR>
+noremap <silent> <A-C-k> :resize -4<CR>
+" noremap <silent> <A-C-v> :vertical resize<CR>:resize<CR>
+noremap <silent> <leader>vsf :vertical resize<CR>:resize<CR>
+noremap <silent> <leader>vse <C-w>=
 
 "------------------------------------------------Switch Tabs
 "
@@ -250,18 +253,28 @@ noremap <leader>vvh <cmd>SplitVifm<cr>
 noremap <leader>vvc <cmd>Vifm<cr>
 
 "---------------------------Colorsceme
+"v------- vim
+    "c-------- colorscheme
+        "a-------- ayu
 noremap <leader>vcc :colorscheme 
 noremap <leader>vca <cmd>colorscheme ayu<cr>
 noremap <leader>vcd <cmd>colorscheme dracula<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
 
 "--------------------------Sessions
+"v --- vim
+    "s --- session
+        "s ---- save
+        "r ------ restore
+        "m ------- make
+            "c ----- current
+            "d ----- dir
 
-noremap <leader>vss <cmd>mksession!<cr>
-noremap <leader>vsd :mksession! ~/.config/nvim/session/
-noremap <leader>vsmm :!mkdir -p ~/.config/nvim/session/
+noremap <leader>vssc <cmd>mksession!<cr>
+noremap <leader>vssd :mksession! ~/.config/nvim/session/
+noremap <leader>vsmd :!mkdir -p ~/.config/nvim/session/
 noremap <leader>vsrc <cmd>source Session.vim<cr>
-noremap <leader>vsrr :source ~/.config/nvim/session/
+noremap <leader>vsrd :source ~/.config/nvim/session/
 
 
 "-----------------------------Unload Netrw

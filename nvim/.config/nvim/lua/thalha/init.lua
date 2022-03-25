@@ -1,2 +1,2 @@
 require("thalha/lsp")
-require("thalha/treesitter")
+-- require("thalha/treesitter")

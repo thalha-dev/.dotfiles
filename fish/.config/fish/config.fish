@@ -42,7 +42,7 @@ alias .5='cd ../../../../..'
 
 # vim 
 alias vim='/usr/bin/vim'
-alias vi='/usr/local/bin/nvim'
+alias v='/usr/local/bin/nvim'
 
 # ls 
 alias ls='ls --color=auto'

@@ -102,10 +102,17 @@ fi
 
 alias cll="pwd | xclip -i -sel primary"
 
+# navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+
 
 # vim 
 alias vim='/usr/bin/vim'
-alias vi='/usr/local/bin/nvim'
+alias v='/usr/local/bin/nvim'
 
 
 # ls 
@@ -121,7 +128,7 @@ alias la='exa --icons -a'
 
 # utils and binaries
 
-alias cat="batcat"
+alias p="batcat"
 alias c="clear"
 alias k="keynav daemonize"
 
@@ -151,6 +158,13 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
 alias goo="google-chrome"
+alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
+alias pman="/home/thalha/other-applications/Postman/Postman"
+alias tor="./start-tor-browser.desktop"
+alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
+alias ctord="cd (tord)"
+
+#alias lser="live-server --no-browser --quiet &"
 
 # update and upgrade
 
