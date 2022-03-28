@@ -38,6 +38,10 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'rebelot/kanagawa.nvim'
 
+Plug 'marko-cerovac/material.nvim'
+
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
 "-----------------------------NerdTree
 "
 "Plug 'preservim/nerdtree'
@@ -152,8 +156,20 @@ call plug#end()
 "---------------------Theme
 let ayucolor="dark"
 " colorscheme ayu
-colorscheme kanagawa
+"colorscheme kanagawa
 "colorscheme dracula
+"--------material
+"let g:material_style="darker"
+"let g:material_style="oceanic"
+"let g:material_style="palenight"
+let g:material_style="deep ocean"
+colorscheme material
+
+"-------tokyonight
+let g:tokyonight_style="night"
+" let g:tokyonight_style="dark"
+"colorscheme tokyonight
+
 
 "-------------------------vim-hexokinase Plugin Config
 " 
@@ -240,11 +256,27 @@ noremap <silent> <leader>vse <C-w>=
 nnoremap <silent> <A-h> :tabprevious<CR>
 nnoremap <silent> <A-l> :tabnext<CR>
 
+"--------------------------------Move Tabs
+"
+nnoremap <silent> <A-H> :tabmove -<CR>
+nnoremap <silent> <A-L> :tabmove +<CR>
+
 "------------------------------ Change 2 split windows from vert to horiz or horiz to vert
 map <leader>th <C-w>t<C-w>H
 map <leader>tk <C-w>t<C-w>K
 
 "--------------------------------------VIM
+"
+"-----------------------Vim Plugin
+noremap <leader>vpi :PlugInstall<CR>
+noremap <leader>vpr :PlugReload<CR>
+noremap <leader>vpup :PlugUpdate<CR>
+noremap <leader>vpug :PlugUpgrade<CR>
+noremap <leader>vpc :PlugClean<CR>
+noremap <leader>vps :PlugStatus<CR>
+
+"------------------------Find and Replace
+nnoremap <leader>vfr :%s/
 
 "-------------------------------Vifm
 noremap <leader>vvt <cmd>TabVifm<cr>
