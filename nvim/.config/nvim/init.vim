@@ -44,11 +44,19 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 "-----------------------------NerdTree
 "
-"Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree'
 
+""-----------------------------NvimTree
+
+"Plug 'kyazdani42/nvim-web-devicons' " for file icons
+"Plug 'kyazdani42/nvim-tree.lua'
 "------------------------------Vifm
 "
 Plug 'vifm/vifm.vim'
+
+"------------------------------Vifm
+"
+Plug 'easymotion/vim-easymotion'
 
 "----------------------------undotree
 "
@@ -101,6 +109,11 @@ Plug 'tpope/vim-surround'
 "---------------Auto Complete brackets
 "
 Plug 'jiangmiao/auto-pairs'
+
+"------------------emmet
+"
+Plug 'mattn/emmet-vim'
+
 
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -155,16 +168,20 @@ call plug#end()
 
 "---------------------Theme
 let ayucolor="dark"
+" let ayucolor="mirage"
 " colorscheme ayu
-"colorscheme kanagawa
+"
+colorscheme kanagawa
+"
 "colorscheme dracula
+"
 "--------material
 "let g:material_style="darker"
-"let g:material_style="oceanic"
+" let g:material_style="oceanic"
 "let g:material_style="palenight"
 let g:material_style="deep ocean"
-colorscheme material
-
+" colorscheme material
+"
 "-------tokyonight
 let g:tokyonight_style="night"
 " let g:tokyonight_style="dark"
@@ -204,6 +221,18 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \]
 
+"------------------------emmet
+"
+let g:user_emmet_mode='inv'  
+" let g:user_emmet_install_global = 0
+" autocmd FileType html,css EmmetInstall
+" let g:user_emmet_leader_key='<C-Z>'
+
+
+
+
+
+
 "---------------------------------------vim-sinppets config
 "
 " Use <C-l> for trigger snippet expand.
@@ -226,7 +255,7 @@ inoremap jk <esc>
 vnoremap <leader>y "+y
 nnoremap <leader>y gg"+yg
 nnoremap <leader>x :!chmod +x %<CR>
-
+nnoremap <leader>k /[A-Z]<CR>
 
 
 "------------------------------------------------------Window Remap
@@ -267,6 +296,15 @@ map <leader>tk <C-w>t<C-w>K
 
 "--------------------------------------VIM
 "
+"
+
+"-----------------------Vim Buffer
+
+noremap <leader>bs :wa<CR>
+noremap <leader>bx :wqa<CR>
+noremap <leader>bq :qa<CR>
+
+
 "-----------------------Vim Plugin
 noremap <leader>vpi :PlugInstall<CR>
 noremap <leader>vpr :PlugReload<CR>
@@ -310,8 +348,8 @@ noremap <leader>vsrd :source ~/.config/nvim/session/
 
 
 "-----------------------------Unload Netrw
-let g:loaded_netrw       = 1
-let g:loaded_netrwPlugin = 1
+" let g:loaded_netrw       = 1
+" let g:loaded_netrwPlugin = 1
 
 
 "----------------------------------cocPrettierformat
@@ -348,8 +386,23 @@ nnoremap <leader>fgb <cmd>Telescope git_branches<CR>
 nnoremap <leader>fgs <cmd>Telescope git_status<CR>
 nnoremap <leader>fvo <cmd>Telescope vim_options<CR>
 nnoremap <leader>fvb <cmd>Telescope builtin<CR>
+nnoremap <leader>fvk <cmd>Telescope keymaps<CR>
 nnoremap <leader>fvc <cmd>Telescope colorscheme<CR>
 nnoremap <leader>flg <cmd>Telescope live_grep<CR>
+
+
+"-----------------------------------------NerdTree
+"
+nnoremap <leader>nn :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>ng :NERDTreeVCS<CR>
+
+
+"-----------------------------------------EasyMotion
+"
+map <leader><leader>f <Plug>(easymotion-overwin-f)
+map <leader><leader>w <Plug>(easymotion-overwin-w)
+  
 
 
 "-----------------------------------------Vimux

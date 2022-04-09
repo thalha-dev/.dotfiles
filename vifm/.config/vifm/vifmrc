@@ -50,7 +50,7 @@ set nofollowlinks
 set sortnumbers
 
 set nu
-" set relativenumber
+set relativenumber
 " Maximum number of changes that can be undone.
 
 set undolevels=100
