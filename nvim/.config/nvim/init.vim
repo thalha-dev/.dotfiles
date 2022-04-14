@@ -53,15 +53,16 @@ Plug 'luochen1990/rainbow'
 "
 Plug 'preservim/nerdtree'
 
-""-----------------------------NvimTree
-
-"Plug 'kyazdani42/nvim-web-devicons' " for file icons
-"Plug 'kyazdani42/nvim-tree.lua'
 "------------------------------Vifm
 "
 Plug 'vifm/vifm.vim'
 
-"------------------------------Vifm
+"------------------------------NvimTree
+
+" Plug 'kyazdani42/nvim-web-devicons' " for file icons
+" Plug 'kyazdani42/nvim-tree.lua'
+
+"------------------------------EasyMotion
 "
 Plug 'easymotion/vim-easymotion'
 
@@ -76,6 +77,15 @@ Plug 'tpope/vim-fugitive'
 "-------------------Scroll Smooth
 "
 Plug 'psliwka/vim-smoothie'
+
+"-------------------Fastest jk
+"
+Plug 'rhysd/accelerated-jk'
+
+"-------------------jump flasher
+"
+" Plug 'danilamihailov/beacon.nvim'
+
 "
 "Plug 'karb94/neoscroll.nvim'
 
@@ -185,7 +195,7 @@ let ayucolor="dark"
 " let ayucolor="mirage"
 " colorscheme ayu
 "
-"colorscheme kanagawa
+colorscheme kanagawa
 "
 "colorscheme dracula
 "
@@ -194,7 +204,7 @@ let ayucolor="dark"
 " let g:material_style="oceanic"
 "let g:material_style="palenight"
 let g:material_style="deep ocean"
-colorscheme material
+"colorscheme material
 "
 "-------tokyonight
 let g:tokyonight_style="night"
@@ -293,6 +303,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
 "noremap <silent> <C-Left> :vertical resize +5<CR>
