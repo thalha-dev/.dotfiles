@@ -203,8 +203,9 @@ let g:tokyonight_style="night"
 
 
 "-------------------------indentLine Config
-let g:indentLine_fileTypeExclue = ["help", "undotree", "diff"]
-let g:indentLine_bufTypeExclue = ["help","terminal"]
+let g:indentLine_fileTypeExclude= ["help", "undotree", "diff","floaterm","fzf"]
+let g:indentLine_bufTypeExclude = ["help","terminal","term:.*"]
+let g:indentLine_bufNameExclude = ["vifm"]
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 " let g:indentLine_setConceal = 0
 " let g:indentLine_concealcursor = 'inc'
@@ -353,6 +354,18 @@ noremap <leader>vcc :colorscheme
 noremap <leader>vca <cmd>colorscheme ayu<cr>
 noremap <leader>vcd <cmd>colorscheme dracula<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
+
+
+
+
+
+"---------------------------indentLineToggle
+"
+noremap <leader>vii <cmd>IndentLinesToggle<cr>
+
+
+
+
 
 "--------------------------Sessions
 "v --- vim
