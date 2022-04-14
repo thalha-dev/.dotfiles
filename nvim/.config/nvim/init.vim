@@ -19,6 +19,9 @@ set smartcase
 set wildmenu
 set tags=tags;
 
+" :set listchars=tab:\|\ 
+" :set list
+
 "-----------------------folds
 set foldmethod=indent
 autocmd BufRead * normal zR
@@ -41,6 +44,10 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'marko-cerovac/material.nvim'
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
+"-----------------------------rainbow paranthasis
+
+Plug 'luochen1990/rainbow'
 
 "-----------------------------NerdTree
 "
@@ -92,9 +99,13 @@ Plug 'nvim-telescope/telescope.nvim'
 "
 Plug 'alvan/vim-closetag'
 
+"----------indent line
+"
+Plug 'Yggdroot/indentLine'
+
 "------------------------brackets
 "
-Plug 'junegunn/rainbow_parentheses.vim'
+" Plug 'junegunn/rainbow_parentheses.vim'
 
 "--------------------Modify Surroundings
 "
@@ -159,19 +170,22 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --------------------------------nvim-treesitter
 "--Syntax highlighting
-" Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 
 call plug#end()
 
 "----------------------------Plugin Configs
 "
+"set to 0 if you want to enable it later via :RainbowToggle
+let g:rainbow_active = 1 
 
 "---------------------Theme
 let ayucolor="dark"
 " let ayucolor="mirage"
 " colorscheme ayu
 "
-colorscheme kanagawa
+"colorscheme kanagawa
 "
 "colorscheme dracula
 "
@@ -180,7 +194,7 @@ colorscheme kanagawa
 " let g:material_style="oceanic"
 "let g:material_style="palenight"
 let g:material_style="deep ocean"
-" colorscheme material
+colorscheme material
 "
 "-------tokyonight
 let g:tokyonight_style="night"
@@ -188,7 +202,16 @@ let g:tokyonight_style="night"
 "colorscheme tokyonight
 
 
-"-------------------------vim-hexokinase Plugin Config
+"-------------------------indentLine Config
+let g:indentLine_fileTypeExclue = ["help", "undotree", "diff"]
+let g:indentLine_bufTypeExclue = ["help","terminal"]
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" let g:indentLine_setConceal = 0
+" let g:indentLine_concealcursor = 'inc'
+" let g:indentLine_conceallevel = 2
+
+
+"-------------------------vim-hexokinase Config
 " 
 let g:hexokinase_optinpatterns = [
 \     'full_hex',
