@@ -142,6 +142,7 @@ set -gx PATH $PATH /usr/local/go/bin
 # load Xmodmap
 xmodmap ~/.Xmodmap
 
+xset r rate 240 20
 #cat ~/.config/asciiarts/bismillah.txt | lolcat -F 0.021
 
 

@@ -16,6 +16,7 @@ set shiftwidth=4
 set splitbelow splitright
 set ignorecase
 set smartcase
+" set wildmode=longest,list,full
 set wildmenu
 set tags=tags;
 
@@ -35,6 +36,14 @@ Plug 'junegunn/fzf.vim'
 
 "-------------------------------theme
 
+Plug 'flazz/vim-colorschemes'
+
+Plug 'katawful/kat.nvim'
+
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+
+Plug 'vim-conf-live/vimconflive2021-colorscheme'
+
 Plug 'ayu-theme/ayu-vim' 
 
 Plug 'dracula/vim', { 'as': 'dracula' }
@@ -44,6 +53,9 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'marko-cerovac/material.nvim'
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+
+Plug 'xiyaowong/nvim-transparent'
+
 
 "-----------------------------rainbow paranthasis
 
@@ -82,6 +94,13 @@ Plug 'psliwka/vim-smoothie'
 "
 Plug 'rhysd/accelerated-jk'
 
+
+"-------------------multi-cursor
+"TODO
+
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+
 "-------------------jump flasher
 "
 " Plug 'danilamihailov/beacon.nvim'
@@ -89,6 +108,25 @@ Plug 'rhysd/accelerated-jk'
 "
 "Plug 'karb94/neoscroll.nvim'
 
+" Debugger Plugins
+"
+" Plug 'mfussenegger/nvim-dap'
+" Plug 'Pocco81/DAPInstall.nvim'
+" Plug 'szw/vim-maximizer'
+
+"--------------------------Prettier
+
+" Plug 'sbdchd/neoformat'
+
+"--------------------------browserTextArea
+"
+" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+" Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
+
+"--------------------------board
+"TODO
+"
+" Plug 'azabiong/vim-board'
 
 "--------------------------Color Preview
 "
@@ -193,24 +231,19 @@ let g:rainbow_active = 1
 "---------------------Theme
 let ayucolor="dark"
 " let ayucolor="mirage"
-" colorscheme ayu
 "
-colorscheme kanagawa
-"
-"colorscheme dracula
 "
 "--------material
 "let g:material_style="darker"
 " let g:material_style="oceanic"
 "let g:material_style="palenight"
 let g:material_style="deep ocean"
-"colorscheme material
 "
 "-------tokyonight
 let g:tokyonight_style="night"
 " let g:tokyonight_style="dark"
-"colorscheme tokyonight
 
+colorscheme catppuccin
 
 "-------------------------indentLine Config
 let g:indentLine_fileTypeExclude= ["help", "undotree", "diff","floaterm","fzf"]
@@ -314,8 +347,8 @@ noremap <silent> <A-C-h> :vertical resize -4<CR>
 noremap <silent> <A-C-j> :resize +8<CR>
 noremap <silent> <A-C-k> :resize -4<CR>
 " noremap <silent> <A-C-v> :vertical resize<CR>:resize<CR>
-noremap <silent> <leader>vsf :vertical resize<CR>:resize<CR>
-noremap <silent> <leader>vse <C-w>=
+noremap <silent> <leader>vff :vertical resize<CR>:resize<CR>
+noremap <silent> <leader>vee <C-w>=
 
 "------------------------------------------------Switch Tabs
 "
@@ -335,11 +368,9 @@ map <leader>tk <C-w>t<C-w>K
 "
 "
 
-"-----------------------Vim Buffer
-
-noremap <leader>bs :wa<CR>
-noremap <leader>bx :wqa<CR>
-noremap <leader>bq :qa<CR>
+"-----------------------Vim Help
+"
+nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
 
 
 "-----------------------Vim Plugin
@@ -351,8 +382,9 @@ noremap <leader>vpc :PlugClean<CR>
 noremap <leader>vps :PlugStatus<CR>
 
 "------------------------Find and Replace
-nnoremap <leader>vfr :%s/
+" nnoremap <leader>vfr :%s/
 
+nnoremap <leader>vfr :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 "-------------------------------Vifm
 noremap <leader>vvt <cmd>TabVifm<cr>
 noremap <leader>vvs <cmd>VsplitVifm<cr>
@@ -365,8 +397,13 @@ noremap <leader>vvc <cmd>Vifm<cr>
         "a-------- ayu
 noremap <leader>vcc :colorscheme 
 noremap <leader>vca <cmd>colorscheme ayu<cr>
-noremap <leader>vcd <cmd>colorscheme dracula<cr>
+noremap <leader>vck <cmd>colorscheme kat.nvim<cr>
+noremap <leader>vcp <cmd>colorscheme catppuccin<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
+
+"------------Transparent
+"
+noremap <leader>vtt <cmd>TransparentToggle<cr>
 
 
 
@@ -412,7 +449,8 @@ nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
 
 "-------------------------------Undo tree
 
-noremap <f5> :UndotreeToggle<CR>
+" noremap <f5> :UndotreeToggle<CR>
+noremap <leader>vuu :UndotreeToggle<CR>
 
 "----------------------------------------------------COMMANDS REMAP
 
@@ -512,8 +550,8 @@ nnoremap <A-k> :m .-2<CR>==
 vnoremap <a-j> :m '>+1<cr>gv=gv
 vnoremap <a-k> :m '<-2<cr>gv=gv
 
-
 "--------------------------normal mode remap
+"
 nnoremap ; :
 
 " nnoremap <Plug>(hello) :echo "Hello"<CR>
@@ -531,5 +569,15 @@ cnoremap jk <c-u><del>
 cnoremap <A-x> :<c-u>w<cr>:Bd<cr>:q<cr>
 
 "--------------------------------------
-"
+
+
+
+augroup LSP_OFF
+    autocmd!
+    autocmd BufEnter,BufWinEnter,TabEnter * :LspStop
+    autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
+augroup END
+
+
+
 lua require("thalha")
