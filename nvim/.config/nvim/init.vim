@@ -42,15 +42,15 @@ Plug 'katawful/kat.nvim'
 
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
-Plug 'vim-conf-live/vimconflive2021-colorscheme'
+" Plug 'vim-conf-live/vimconflive2021-colorscheme'
 
 Plug 'ayu-theme/ayu-vim' 
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'rebelot/kanagawa.nvim'
 
-Plug 'marko-cerovac/material.nvim'
+" Plug 'marko-cerovac/material.nvim'
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
@@ -76,7 +76,7 @@ Plug 'vifm/vifm.vim'
 
 "------------------------------EasyMotion
 "
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 
 "----------------------------undotree
 "
@@ -174,8 +174,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 
 
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'yuezk/vim-js'
+" Plug 'maxmellon/vim-jsx-pretty'
 
 "-------------------------Awesome Snippets
 "
@@ -376,8 +376,8 @@ nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
 "-----------------------Vim Plugin
 noremap <leader>vpi :PlugInstall<CR>
 noremap <leader>vpr :PlugReload<CR>
-noremap <leader>vpup :PlugUpdate<CR>
-noremap <leader>vpug :PlugUpgrade<CR>
+noremap <leader>vpu :PlugUpdate<CR>
+noremap <leader>vpg :PlugUpgrade<CR>
 noremap <leader>vpc :PlugClean<CR>
 noremap <leader>vps :PlugStatus<CR>
 
@@ -385,6 +385,8 @@ noremap <leader>vps :PlugStatus<CR>
 " nnoremap <leader>vfr :%s/
 
 nnoremap <leader>vfr :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+nnoremap <leader>v; /\<<C-r><C-w>\><Left><Left>
+
 "-------------------------------Vifm
 noremap <leader>vvt <cmd>TabVifm<cr>
 noremap <leader>vvs <cmd>VsplitVifm<cr>
@@ -397,13 +399,20 @@ noremap <leader>vvc <cmd>Vifm<cr>
         "a-------- ayu
 noremap <leader>vcc :colorscheme 
 noremap <leader>vca <cmd>colorscheme ayu<cr>
-noremap <leader>vck <cmd>colorscheme kat.nvim<cr>
+noremap <leader>vcj <cmd>colorscheme kat.nvim<cr>
 noremap <leader>vcp <cmd>colorscheme catppuccin<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
 
 "------------Transparent
 "
-noremap <leader>vtt <cmd>TransparentToggle<cr>
+noremap <leader>vct <cmd>TransparentToggle<cr>
+
+
+"------------Spell Checker
+"
+noremap <leader>vsc <cmd>setlocal spell<cr>
+noremap <leader>vsx <cmd>set nospell<cr>
+
 
 
 
@@ -487,8 +496,8 @@ nnoremap <leader>ng :NERDTreeVCS<CR>
 
 "-----------------------------------------EasyMotion
 "
-map <leader><leader>f <Plug>(easymotion-overwin-f)
-map <leader><leader>w <Plug>(easymotion-overwin-w)
+" map <leader><leader>f <Plug>(easymotion-overwin-f)
+" map <leader><leader>w <Plug>(easymotion-overwin-w)
   
 
 
@@ -561,22 +570,24 @@ nnoremap ; :
 
 "--------------------------command mode remap
 
-command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
+command! DD :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 
 cnoremap jk <c-u><del>
 
-cnoremap <A-x> :<c-u>w<cr>:Bd<cr>:q<cr>
+cnoremap <A-x> :<c-u>w<cr>:DD<cr>:q<cr>
 
 "--------------------------------------
 
+" autocmd BufEnter,BufWinEnter,TabEnter * :LspStop
+" autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
 
 
-augroup LSP_OFF
-    autocmd!
-    autocmd BufEnter,BufWinEnter,TabEnter * :LspStop
-    autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
-augroup END
+" augroup LSP_OFF
+"     autocmd!
+"     autocmd BufEnter * :LspStop
+"     autocmd BufEnter * :Copilot disable
+" augroup END
 
 
 
