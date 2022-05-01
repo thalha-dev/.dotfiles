@@ -139,7 +139,9 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " -----------------------------Telescope
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+" Plug 'nvim-telescope/telescope.nvim'
 
 "-------------------------------------------------Syntax Help
 "
@@ -375,7 +377,6 @@ nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
 
 "-----------------------Vim Plugin
 noremap <leader>vpi :PlugInstall<CR>
-noremap <leader>vpr :PlugReload<CR>
 noremap <leader>vpu :PlugUpdate<CR>
 noremap <leader>vpg :PlugUpgrade<CR>
 noremap <leader>vpc :PlugClean<CR>
@@ -468,23 +469,37 @@ command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 "-----------------------------------------Fuzzy Finder
 
-nnoremap <leader>ff <cmd>Telescope find_files<CR> 
-nnoremap <leader>fb <cmd>Telescope buffers<CR>
-nnoremap <leader>ft <cmd>Telescope tags<CR>
-nnoremap <leader>fm <cmd>Telescope marks<CR>
+" nnoremap <leader>ff <cmd>Telescope find_files<CR> 
+nnoremap <leader>ff <cmd>Files<CR> 
+nnoremap <leader>fa :Files 
+" nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fb <cmd>Buffers<CR>
+" nnoremap <leader>ft <cmd>Telescope tags<CR>
+nnoremap <leader>ft <cmd>Tags<CR>
+" nnoremap <leader>fm <cmd>Telescope marks<CR>
+nnoremap <leader>fm <cmd>Marks<CR>
 nnoremap <leader>fj <cmd>Telescope jumplist<CR>
 nnoremap <leader>fr <cmd>Telescope registers<CR>
-nnoremap <leader>fc <cmd>Telescope commands<CR>
+" nnoremap <leader>fc <cmd>Telescope commands<CR>
+nnoremap <leader>fcc <cmd>Commands<CR>
+nnoremap <leader>fch <cmd>History:<CR>
 nnoremap <leader>fq <cmd>Telescope quickfix<CR>
-nnoremap <leader>fgf <cmd>Telescope git_files<CR>
-nnoremap <leader>fgc <cmd>Telescope git_commits<CR>
+" nnoremap <leader>fgf <cmd>Telescope git_files<CR>
+nnoremap <leader>fgf <cmd>GFiles<CR>
+" nnoremap <leader>fgc <cmd>Telescope git_commits<CR>
+nnoremap <leader>fgc <cmd>Commits<CR>
 nnoremap <leader>fgb <cmd>Telescope git_branches<CR>
-nnoremap <leader>fgs <cmd>Telescope git_status<CR>
+" nnoremap <leader>fgs <cmd>Telescope git_status<CR>
+nnoremap <leader>fgs <cmd>GFiles?<CR>
 nnoremap <leader>fvo <cmd>Telescope vim_options<CR>
 nnoremap <leader>fvb <cmd>Telescope builtin<CR>
-nnoremap <leader>fvk <cmd>Telescope keymaps<CR>
-nnoremap <leader>fvc <cmd>Telescope colorscheme<CR>
-nnoremap <leader>flg <cmd>Telescope live_grep<CR>
+" nnoremap <leader>fvk <cmd>Telescope keymaps<CR>
+nnoremap <leader>fvk <cmd>Maps<CR>
+" nnoremap <leader>fvc <cmd>Telescope colorscheme<CR>
+nnoremap <leader>fvc <cmd>Colors<CR>
+" nnoremap <leader>flg <cmd>Telescope live_grep<CR>
+nnoremap <leader>flg <cmd>Rg<CR>
+nnoremap <leader>fsh <cmd>History/<CR>
 
 
 "-----------------------------------------NerdTree
@@ -583,11 +598,11 @@ cnoremap <A-x> :<c-u>w<cr>:DD<cr>:q<cr>
 " autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
 
 
-" augroup LSP_OFF
-"     autocmd!
-"     autocmd BufEnter * :LspStop
-"     autocmd BufEnter * :Copilot disable
-" augroup END
+augroup LSP_OFF
+    autocmd!
+    autocmd BufEnter * :LspStop
+    autocmd BufEnter * :Copilot disable
+augroup END
 
 
 
