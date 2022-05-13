@@ -604,7 +604,8 @@ schemes:
 
     primary:
       background: '0x000b1e'
-      foreground: '0x0abdc6'
+      # foreground: '0x0abdc6'
+      foreground: '0xd7d7d5'
 
     normal:
       black:   '0x123e7c'
