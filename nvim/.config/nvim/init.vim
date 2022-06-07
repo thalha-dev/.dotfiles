@@ -56,6 +56,8 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'xiyaowong/nvim-transparent'
 
+Plug 'akai54/2077.nvim'
+
 
 "-----------------------------rainbow paranthasis
 
@@ -68,6 +70,11 @@ Plug 'preservim/nerdtree'
 "------------------------------Vifm
 "
 Plug 'vifm/vifm.vim'
+
+
+"------------------------------Vifm
+
+Plug 'wfxr/minimap.vim'
 
 "------------------------------NvimTree
 
@@ -176,8 +183,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mattn/emmet-vim'
 
 
-" Plug 'yuezk/vim-js'
-" Plug 'maxmellon/vim-jsx-pretty'
+Plug 'yuezk/vim-js'
+Plug 'maxmellon/vim-jsx-pretty'
 
 "-------------------------Awesome Snippets
 "
@@ -204,13 +211,13 @@ Plug 'neovim/nvim-lspconfig'
 
 "--------- auto-completion
 "
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'saadparwaiz1/cmp_luasnip'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-cmdline'
+" Plug 'L3MON4D3/LuaSnip'
+" Plug 'saadparwaiz1/cmp_luasnip'
 
 "------------------------------Coc-LSP
 "
@@ -220,7 +227,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " --------------------------------nvim-treesitter
 "--Syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
 call plug#end()
@@ -288,6 +295,8 @@ let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-json',
     \ 'coc-snippets',
+    \ 'coc-html',
+    \ 'coc-tsserver',
     \]
 
 "------------------------emmet
@@ -322,7 +331,7 @@ let mapleader=" "
 nnoremap <leader><cr> :so ~/.config/nvim/init.vim<cr>
 inoremap jk <esc>
 vnoremap <leader>y "+y
-nnoremap <leader>y gg"+yg
+nnoremap <leader>y gg"+yG
 nnoremap <leader>x :!chmod +x %<CR>
 nnoremap <leader>k /[A-Z]<CR>
 
@@ -450,6 +459,11 @@ noremap <leader>vsrd :source ~/.config/nvim/session/
 
 "----------------------------------cocPrettierformat
 nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
+
+"----------------------------------minimap
+
+nnoremap <leader>vmm <cmd>MinimapToggle<cr>
+
 
 
 
@@ -606,4 +620,4 @@ augroup END
 
 
 
-lua require("thalha")
+" lua require("thalha")
