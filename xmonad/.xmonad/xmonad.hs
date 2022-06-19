@@ -123,6 +123,12 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Deincrement the number of windows in the master area
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
+    -- picom - compositor
+    , ((modm              , xK_f ), spawn "picom -b")
+
+    -- picom - compositor - kill
+    , ((modm .|. shiftMask  , xK_f ), spawn "killall picom")
+
     -- Screenshot - Full Screen
     , ((0                 , xK_Print ), spawn "gnome-screenshot")
 

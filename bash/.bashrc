@@ -112,7 +112,7 @@ alias .5='cd ../../../../..'
 
 # vim 
 alias vim='/usr/bin/vim'
-alias v='/usr/local/bin/nvim'
+#alias v='/usr/local/bin/nvim'
 
 
 # ls 
@@ -158,11 +158,11 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
 alias goo="google-chrome"
-alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
-alias pman="/home/thalha/other-applications/Postman/Postman"
-alias tor="./start-tor-browser.desktop"
-alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
-alias ctord="cd (tord)"
+#alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
+#alias pman="/home/thalha/other-applications/Postman/Postman"
+#alias tor="./start-tor-browser.desktop"
+#alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
+#alias ctord="cd (tord)"
 
 #alias lser="live-server --no-browser --quiet &"
 
@@ -212,18 +212,16 @@ fi
 
 
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export PATH=$PATH:$JAVA_HOME/bin
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+#export PATH=$PATH:$JAVA_HOME/bin
 
 # load Xmodmap
-xmodmap ~/.Xmodmap
+#xmodmap ~/.Xmodmap
 
 
-
-
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+#if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION

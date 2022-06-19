@@ -188,7 +188,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 "-------------------------Awesome Snippets
 "
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 "Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
@@ -266,7 +266,27 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 "-------------------------vim-hexokinase Config
 " 
-let g:hexokinase_optinpatterns = [
+
+" Neovim default
+let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+
+" " All possible highlighters
+" let g:Hexokinase_highlighters = [
+" \   'virtual',
+" \   'sign_column',
+" \   'background',
+" \   'backgroundfull',
+" \   'foreground',
+" \   'foregroundfull'
+" \ ]
+
+" Patterns to match for all filetypes
+" Can be a comma separated string or a list of strings
+" Default value:
+" let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+
+" All possible values
+let g:Hexokinase_optInPatterns = [
 \     'full_hex',
 \     'triple_hex',
 \     'rgb',
@@ -274,7 +294,15 @@ let g:hexokinase_optinpatterns = [
 \     'hsl',
 \     'hsla',
 \ ]
-let g:Hexokinase_highlighters = ['backgroundfull']
+
+" \     'colour_names'
+
+" Filetype specific patterns to match
+" entry value must be comma seperated list
+" let g:Hexokinase_ftOptInPatterns = {
+" \     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
+" \     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names'
+" \ }
 
   ""coc.preferences.formatOnSaveFiletypes": [
   "  "javascript",
@@ -294,11 +322,13 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 let g:coc_global_extensions = [
     \ 'coc-prettier',
     \ 'coc-json',
-    \ 'coc-snippets',
     \ 'coc-html',
     \ 'coc-tsserver',
     \]
 
+    " \ 'coc-snippets',
+    "
+    "
 "------------------------emmet
 "
 let g:user_emmet_mode='inv'  
@@ -306,6 +336,7 @@ let g:user_emmet_mode='inv'
 " autocmd FileType html,css EmmetInstall
 " let g:user_emmet_leader_key='<C-Z>'
 
+" let g:python3_host_prog = '/usr/bin/python3'
 
 
 
@@ -612,11 +643,11 @@ cnoremap <A-x> :<c-u>w<cr>:DD<cr>:q<cr>
 " autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
 
 
-augroup LSP_OFF
-    autocmd!
-    autocmd BufEnter * :LspStop
-    autocmd BufEnter * :Copilot disable
-augroup END
+" augroup LSP_OFF
+"     autocmd!
+"     autocmd BufEnter * :LspStop
+"     autocmd BufEnter * :Copilot disable
+" augroup END
 
 
 

@@ -42,7 +42,7 @@ alias .5='cd ../../../../..'
 
 # vim 
 alias vim='/usr/bin/vim'
-alias v='/usr/local/bin/nvim'
+alias v='/usr/bin/nvim'
 
 # ls 
 alias ls='ls --color=auto'
@@ -104,11 +104,11 @@ alias eclipse="eclipse &"
 alias f="vifm"
 alias goo="google-chrome"
 
-alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
-alias pman="/home/thalha/other-applications/Postman/Postman"
-alias tor="./start-tor-browser.desktop"
-alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
-alias ctord="cd (tord)"
+#alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
+#alias pman="/home/thalha/other-applications/Postman/Postman"
+#alias tor="./start-tor-browser.desktop"
+#alias tord="echo '/home/thalha/other-applications/tor-browser_en-US/'"
+#alias ctord="cd (tord)"
 
 # update and upgrade
 
@@ -133,11 +133,14 @@ alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
 
 #JAVA
 
-set -gx JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
-set -gx PATH $PATH $JAVA_HOME/bin
+#set -gx JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+#set -gx PATH $PATH $JAVA_HOME/bin
 
 #Go
 set -gx PATH $PATH /usr/local/go/bin
+
+#Rust
+set -gx PATH $PATH ~/.cargo/bin
 
 # load Xmodmap
 xmodmap ~/.Xmodmap
