@@ -45,16 +45,14 @@ alias vim='/usr/bin/vim'
 alias v='/usr/bin/nvim'
 
 # ls 
-alias ls='ls --color=auto'
+#alias ls='ls --color=auto'
+alias ls='exa --icons --color=auto'
 #alias la='ls -ah --color=auto'
 #alias l='ls -lash --color=auto'
-alias ll='ls -lash --color=auto'
-alias ld='ls -hd .* --color=auto'
-alias lld='ls -lhd .* --color=auto'
+alias ld='exa -ad .* --icons --color=auto'
 # exa - ls alternative
 alias l='exa -almi --icons --group'
 alias la='exa --icons -a'
-
 
 
 alias dir='dir --color=auto'
@@ -103,6 +101,7 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
 alias goo="google-chrome"
+alias tmux="tmux -u"
 
 #alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
 #alias pman="/home/thalha/other-applications/Postman/Postman"
@@ -127,6 +126,12 @@ alias bri="sudo brightnessctl set"
 alias bluecon="bluetoothctl connect 41:42:59:C9:5E:12"
 alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
 
+
+#Variables
+
+
+set -gx LC_ALL 'en_IN.UTF-8'
+set -gx LANG 'en_IN.UTF-8'
 
 
 #Export Path

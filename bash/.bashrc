@@ -116,11 +116,12 @@ alias vim='/usr/bin/vim'
 
 
 # ls 
-alias ls='ls --color=auto'
+# alias ls='ls --color=auto'
+alias ls='exa --icons --color=auto'
 #alias la='ls -ah --color=auto'
 #alias l='ls -lash --color=auto'
-alias ll='ls -las --color=auto'
-alias ld='ls -lhd .[^.]* --color=auto'
+alias ll='ls -la --color=auto'
+alias ld='exa -ad .[^.]* --icons --color=auto'
 # exa - ls alternative
 alias l='exa -almi --icons --group'
 alias la='exa --icons -a'
@@ -158,6 +159,7 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm"
 alias goo="google-chrome"
+alias tmux="tmux -u"
 #alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
 #alias pman="/home/thalha/other-applications/Postman/Postman"
 #alias tor="./start-tor-browser.desktop"
@@ -189,6 +191,12 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 
+# variables
+
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
+
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -216,10 +224,10 @@ fi
 #export PATH=$PATH:$JAVA_HOME/bin
 
 # load Xmodmap
-#xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 
 
-#eval "$(starship init bash)"
+eval "$(starship init bash)"
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
