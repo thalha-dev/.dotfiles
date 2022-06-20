@@ -123,8 +123,8 @@ alias bri="sudo brightnessctl set"
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 
 
-alias bluecon="bluetoothctl connect 41:42:59:C9:5E:12"
-alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
+alias bcon="bluetoothctl connect C6:36:B2:7C:A7:A6"
+alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 
 
 #Variables
