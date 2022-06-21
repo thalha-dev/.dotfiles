@@ -220,9 +220,10 @@ fi
 . "$HOME/.cargo/env"
 
 
+export PATH=$PATH:/usr/local/go/bin
 
-#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-#export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$PATH:$JAVA_HOME/bin
 
 # load Xmodmap
 xmodmap ~/.Xmodmap

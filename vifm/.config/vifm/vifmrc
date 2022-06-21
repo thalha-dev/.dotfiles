@@ -69,7 +69,7 @@ set nowrap
 
 " Selected color scheme
 
-colorscheme palenight
+colorscheme darkDesert
 "colorscheme zenburn
 " colorscheme gruvBox
 " colorscheme codedark

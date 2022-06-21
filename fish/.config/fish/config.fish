@@ -143,8 +143,8 @@ set -gx LANG 'en_IN.UTF-8'
 
 #JAVA
 
-#set -gx JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
-#set -gx PATH $PATH $JAVA_HOME/bin
+set -gx JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
+set -gx PATH $PATH $JAVA_HOME/bin
 
 #Go
 set -gx PATH $PATH /usr/local/go/bin
