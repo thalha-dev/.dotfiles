@@ -149,75 +149,75 @@ set selection-clipboard clipboard
 # DRACULA (current)
 # 
 #
-# set notification-error-bg       "#ff5555" # Red
-# set notification-error-fg       "#f8f8f2" # Foreground
-# set notification-warning-bg     "#ffb86c" # Orange
-# set notification-warning-fg     "#282a36" # Selection
-# set notification-bg             "#44475a" # Background
-# set notification-fg             "#f8f8f2" # Foreground
+set notification-error-bg       "#ff5555" # Red
+set notification-error-fg       "#f8f8f2" # Foreground
+set notification-warning-bg     "#ffb86c" # Orange
+set notification-warning-fg     "#282a36" # Selection
+set notification-bg             "#44475a" # Background
+set notification-fg             "#f8f8f2" # Foreground
 
-# set completion-bg               "#282a36" # Background
-# set completion-fg               "#f8f8f2" # Comment
-# set completion-group-bg         "#282a36" # Background
-# set completion-group-fg         "#50fa7b" # Comment
-# set completion-highlight-bg     "#bd93f9" # Selection
-# set completion-highlight-fg     "#282a36" # Foreground
+set completion-bg               "#282a36" # Background
+set completion-fg               "#f8f8f2" # Comment
+set completion-group-bg         "#282a36" # Background
+set completion-group-fg         "#50fa7b" # Comment
+set completion-highlight-bg     "#bd93f9" # Selection
+set completion-highlight-fg     "#282a36" # Foreground
 
-# set index-bg                    "#282a36" # Background
-# set index-fg                    "#f8f8f2" # Foreground
-# set index-active-bg             "#bd93f9" # Current Line
-# set index-active-fg             "#282a36" # Foreground
+set index-bg                    "#282a36" # Background
+set index-fg                    "#f8f8f2" # Foreground
+set index-active-bg             "#bd93f9" # Current Line
+set index-active-fg             "#282a36" # Foreground
 
-# set inputbar-bg                 "#44475a" # Background
-# set inputbar-fg                 "#f8f8f2" # Foreground
-# set statusbar-bg                "#44475a" # Background
-# set statusbar-fg                "#f8f8f2" # Foreground
+set inputbar-bg                 "#44475a" # Background
+set inputbar-fg                 "#f8f8f2" # Foreground
+set statusbar-bg                "#44475a" # Background
+set statusbar-fg                "#f8f8f2" # Foreground
 
-# set highlight-color             "#ffb86c" # Orange
-# set highlight-active-color      "#ff79c6" # Pink
+set highlight-color             "#ffb86c" # Orange
+set highlight-active-color      "#ff79c6" # Pink
 
-# set default-bg                  "#282a36" # Background
-# set default-fg                  "#f8f8f2" # Foreground
+set default-bg                  "#282a36" # Background
+set default-fg                  "#f8f8f2" # Foreground
 
-# set render-loading              true
-# set render-loading-fg           "#282a36" # Background
-# set render-loading-bg           "#f8f8f2" # Foreground
+set render-loading              true
+set render-loading-fg           "#282a36" # Background
+set render-loading-bg           "#f8f8f2" # Foreground
 
-# set recolor-lightcolor          "#282a36" # Background
-# set recolor-darkcolor           "#f8f8f2" # Foreground
+set recolor-lightcolor          "#282a36" # Background
+set recolor-darkcolor           "#f8f8f2" # Foreground
 
 
 # MATERIAL
 
-set default-bg                  "#212121"
-set default-fg                  "#303030"
+# set default-bg                  "#212121"
+# set default-fg                  "#303030"
 
-set statusbar-fg                "#B2CCD6"
-set statusbar-bg                "#353535"
+# set statusbar-fg                "#B2CCD6"
+# set statusbar-bg                "#353535"
 
-set inputbar-bg                 "#212121"
-set inputbar-fg                 "#EEFFFF"
+# set inputbar-bg                 "#212121"
+# set inputbar-fg                 "#EEFFFF"
 
-set notification-bg             "#212121"
-set notification-fg             "#EEFFFF"
+# set notification-bg             "#212121"
+# set notification-fg             "#EEFFFF"
 
-set notification-error-bg       "#212121"
-set notification-error-fg       "#F07178"
+# set notification-error-bg       "#212121"
+# set notification-error-fg       "#F07178"
 
-set notification-warning-bg     "#212121"
-set notification-warning-fg     "#F07178"
+# set notification-warning-bg     "#212121"
+# set notification-warning-fg     "#F07178"
 
-set highlight-color             "#FFCB6B"
-set highlight-active-color      "#82AAFF"
+# set highlight-color             "#FFCB6B"
+# set highlight-active-color      "#82AAFF"
 
-set completion-bg               "#303030"
-set completion-fg               "#82AAFF"
+# set completion-bg               "#303030"
+# set completion-fg               "#82AAFF"
 
-set completion-highlight-fg     "#EEFFFF"
-set completion-highlight-bg     "#82AAFF"
+# set completion-highlight-fg     "#EEFFFF"
+# set completion-highlight-bg     "#82AAFF"
 
-set recolor-lightcolor          "#212121"
-set recolor-darkcolor           "#EEFFFF"
+# set recolor-lightcolor          "#212121"
+# set recolor-darkcolor           "#EEFFFF"
 
 
 
