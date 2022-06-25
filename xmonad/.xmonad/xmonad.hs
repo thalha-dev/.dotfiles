@@ -70,7 +70,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch rofi 
     , ((modm,               xK_p     ), spawn "rofi -show run") -- commands 
 
-    , ((modm .|. shiftMask,   xK_p     ), spawn "rofi -show drun") -- window app
+    , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show drun") -- window app
+
+    , ((modm,               xK_s     ), spawn "rofi -show emoji -modi emoji") -- emoji
+
+    , ((modm,               xK_f     ), spawn "rofi -show file-browser-extended") -- emoji
 
     -- launch gmrun
     --, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -124,10 +128,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
     -- picom - compositor
-    , ((modm              , xK_f ), spawn "picom -b")
+    , ((modm              , xK_a ), spawn "picom -b")
 
     -- picom - compositor - kill
-    , ((modm .|. shiftMask  , xK_f ), spawn "killall picom")
+    , ((modm .|. shiftMask  , xK_a ), spawn "killall picom")
 
     -- Screenshot - Full Screen
     , ((0                 , xK_Print ), spawn "gnome-screenshot")
