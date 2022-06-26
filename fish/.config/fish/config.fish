@@ -80,6 +80,38 @@ alias psmem='ps auxf | sort -nr -k 4'
 alias pscpu='ps auxf | sort -nr -k 3'
 
 
+# YOUTUBE-DL
+alias yb="yt-dlp"
+alias ybs="yt-dlp  --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+#
+alias y2="yt-dlp -f "best[height<=240]""
+alias y2s="yt-dlp -f "best[height<=240]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+#
+alias y3="yt-dlp -f "best[height<=360]""
+alias y3s="yt-dlp -f "best[height<=360]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+#
+alias y4="yt-dlp -f "best[height<=480]""
+alias y4s="yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+#
+alias y7="yt-dlp -f "best[height<=720]""
+alias y7s="yt-dlp -f "best[height<=720]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+#
+alias yc="yt-dlp -f"
+alias ycs="yt-dlp --sub-lang en --sub-format srt/best --write-sub --write-auto-sub -f"
+#
+alias yf="yt-dlp -F"
+#
+alias ya="yt-dlp -x"
+alias yam="yt-dlp -x --audio-format mp3"
+#
+# -o - custom name or/and location
+#
+#yt-dlp -o '%(title)s by %(uploader)s on %(upload_date)s in %(playlist)s.%(ext)s' https://www.yt.com/watch?v=7E-cwdnsiow
+#
+# -a - url in text file
+
+
+
 # switch between shells
 # I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
@@ -92,7 +124,6 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias p="batcat"
 alias c="clear"
 alias k="keynav daemonize"
-
 #alias lser="live-server --no-browser --quiet &"
 
 # applications

@@ -31,7 +31,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 2 
+myBorderWidth   = 1 
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -57,7 +57,8 @@ myNormalBorderColor  = "#02040F"
 -- myFocusedBorderColor = "#B752AE"
 -- myFocusedBorderColor = "#E8F9FD"
 -- myFocusedBorderColor = "#DEA057"
-myFocusedBorderColor = "#525E75"
+-- myFocusedBorderColor = "#525E75"
+myFocusedBorderColor = "#BBBFCA"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -281,7 +282,8 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
-    spawnOnce "compton &"
+    -- spawnOnce "compton &"
+    spawn "picom -b"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
