@@ -187,17 +187,17 @@ alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 alias yb="yt-dlp"
 alias ybs="yt-dlp  --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
 #
-alias y2="yt-dlp -f "best[height<=240]""
-alias y2s="yt-dlp -f "best[height<=240]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+alias y2='yt-dlp -f "best[height<=240]"'
+alias y2s='yt-dlp -f "best[height<=240]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub'
 #
-alias y3="yt-dlp -f "best[height<=360]""
-alias y3s="yt-dlp -f "best[height<=360]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+alias y3='yt-dlp -f "best[height<=360]"'
+alias y3s='yt-dlp -f "best[height<=360]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub'
 #
-alias y4="yt-dlp -f "best[height<=480]""
-alias y4s="yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+alias y4='yt-dlp -f "best[height<=480]"'
+alias y4s='yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub'
 #
-alias y7="yt-dlp -f "best[height<=720]""
-alias y7s="yt-dlp -f "best[height<=720]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub"
+alias y7='yt-dlp -f "best[height<=720]"'
+alias y7s='yt-dlp -f "best[height<=720]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub'
 #
 alias yc="yt-dlp -f"
 alias ycs="yt-dlp --sub-lang en --sub-format srt/best --write-sub --write-auto-sub -f"
