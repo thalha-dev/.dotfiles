@@ -52,6 +52,11 @@ alias ls='exa --icons --color=auto'
 alias ld='exa -ad .* --icons --color=auto'
 # exa - ls alternative
 alias l='exa -almi --icons --group'
+alias lt='exa -almi --icons --group --tree'
+alias lt2='exa -almi --icons --group --tree --level=2'
+alias lt3='exa -almi --icons --group --tree --level=3'
+alias lt4='exa -almi --icons --group --tree --level=4'
+alias lj='exa -almi --icons --group *.java'
 alias la='exa --icons -a'
 
 

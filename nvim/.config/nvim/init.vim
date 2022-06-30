@@ -20,6 +20,7 @@ set smartcase
 set wildmenu
 set tags=tags;
 
+
 " :set listchars=tab:\|\ 
 " :set list
 
