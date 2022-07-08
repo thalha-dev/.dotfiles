@@ -1,4 +1,5 @@
 syntax on                  " enable syntax highlighting.
+syntax enable
 filetype plugin indent on  " enable file type based indentation.
 set autoindent
 set number
@@ -11,6 +12,7 @@ set incsearch " dynamically move the cursor to the next match.
 set relativenumber
 set expandtab
 set scrolloff=8
+" set cursorline
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set splitbelow splitright
@@ -19,6 +21,8 @@ set smartcase
 " set wildmode=longest,list,full
 set wildmenu
 set tags=tags;
+
+set t_Co=256
 
 
 " :set listchars=tab:\|\ 
@@ -37,27 +41,25 @@ Plug 'junegunn/fzf.vim'
 
 "-------------------------------theme
 
-Plug 'flazz/vim-colorschemes'
-
-Plug 'katawful/kat.nvim'
+" Plug 'flazz/vim-colorschemes'
 
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
-" Plug 'vim-conf-live/vimconflive2021-colorscheme'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 
-Plug 'ayu-theme/ayu-vim' 
+Plug 'jacoborus/tender.vim'
 
-" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'gosukiwi/vim-atom-dark'
+
+Plug 'mhartington/oceanic-next'
+
+Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'rebelot/kanagawa.nvim'
-
-" Plug 'marko-cerovac/material.nvim'
 
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'xiyaowong/nvim-transparent'
-
-Plug 'akai54/2077.nvim'
 
 
 "-----------------------------rainbow paranthasis
@@ -76,6 +78,8 @@ Plug 'vifm/vifm.vim'
 "------------------------------Vifm
 
 Plug 'wfxr/minimap.vim'
+
+
 
 "------------------------------NvimTree
 
@@ -148,7 +152,6 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " -----------------------------Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
-" Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 Plug 'nvim-telescope/telescope.nvim'
 
 "-------------------------------------------------Syntax Help
@@ -216,7 +219,6 @@ Plug 'neovim/nvim-lspconfig'
 " Plug 'hrsh7th/cmp-nvim-lsp'
 " Plug 'hrsh7th/cmp-buffer'
 " Plug 'hrsh7th/cmp-path'
-" Plug 'hrsh7th/cmp-cmdline'
 " Plug 'L3MON4D3/LuaSnip'
 " Plug 'saadparwaiz1/cmp_luasnip'
 
@@ -230,6 +232,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "--Syntax highlighting
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+"---------------------------DevIcons
+
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -238,22 +243,24 @@ call plug#end()
 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_active = 1 
 
-"---------------------Theme
-let ayucolor="dark"
-" let ayucolor="mirage"
-"
-"
-"--------material
-"let g:material_style="darker"
-" let g:material_style="oceanic"
-"let g:material_style="palenight"
-let g:material_style="deep ocean"
-"
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+set background=dark
+
 "-------tokyonight
 let g:tokyonight_style="night"
 " let g:tokyonight_style="dark"
 
-colorscheme catppuccin
+colorscheme PaperColor 
+" onehalfdark
+" OceanicNext
+" PaperColor
+" tender
+" atom-dark-256
+" catppuccin
+" kanagawa
+" tokyonight
 
 "-------------------------indentLine Config
 let g:indentLine_fileTypeExclude= ["help", "undotree", "diff","floaterm","fzf"]
@@ -325,9 +332,9 @@ let g:coc_global_extensions = [
     \ 'coc-json',
     \ 'coc-html',
     \ 'coc-tsserver',
+    \ 'coc-snippets',
     \]
 
-    " \ 'coc-snippets',
     "
     "
 "------------------------emmet
@@ -440,8 +447,6 @@ noremap <leader>vvc <cmd>Vifm<cr>
     "c-------- colorscheme
         "a-------- ayu
 noremap <leader>vcc :colorscheme 
-noremap <leader>vca <cmd>colorscheme ayu<cr>
-noremap <leader>vcj <cmd>colorscheme kat.nvim<cr>
 noremap <leader>vcp <cmd>colorscheme catppuccin<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
 
@@ -491,6 +496,8 @@ noremap <leader>vsrd :source ~/.config/nvim/session/
 
 "----------------------------------cocPrettierformat
 nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
+nnoremap <leader>lff <cmd>CocCommand editor.action.formatDocument<cr>
+
 
 "----------------------------------minimap
 
@@ -644,11 +651,11 @@ cnoremap <A-x> :<c-u>w<cr>:DD<cr>:q<cr>
 " autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
 
 
-augroup LSP_OFF
-    autocmd!
-    autocmd BufEnter * :LspStop
-    autocmd BufEnter * :Copilot disable
-augroup END
+" augroup LSP_OFF
+"     autocmd!
+"     autocmd BufEnter * :LspStop
+"     autocmd BufEnter * :Copilot disable
+" augroup END
 
 
 
