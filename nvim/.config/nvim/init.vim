@@ -12,25 +12,21 @@ set incsearch " dynamically move the cursor to the next match.
 set relativenumber
 set expandtab
 set scrolloff=8
-" set cursorline
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set splitbelow splitright
 set ignorecase
 set smartcase
-" set wildmode=longest,list,full
 set wildmenu
 set tags=tags;
-
 set t_Co=256
-
-
-" :set listchars=tab:\|\ 
-" :set list
-
-"-----------------------folds
 set foldmethod=indent
 autocmd BufRead * normal zR
+
+" set wildmode=longest,list,full
+" set cursorline
+" :set listchars=tab:\|\ 
+" :set list
 
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -40,8 +36,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' 
 
 "-------------------------------theme
-
-" Plug 'flazz/vim-colorschemes'
 
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
@@ -74,21 +68,10 @@ Plug 'preservim/nerdtree'
 "
 Plug 'vifm/vifm.vim'
 
-
-"------------------------------Vifm
+"------------------------------minimap
 
 Plug 'wfxr/minimap.vim'
 
-
-
-"------------------------------NvimTree
-
-" Plug 'kyazdani42/nvim-web-devicons' " for file icons
-" Plug 'kyazdani42/nvim-tree.lua'
-
-"------------------------------EasyMotion
-"
-" Plug 'easymotion/vim-easymotion'
 
 "----------------------------undotree
 "
@@ -106,56 +89,15 @@ Plug 'psliwka/vim-smoothie'
 "
 Plug 'rhysd/accelerated-jk'
 
-
-"-------------------multi-cursor
-"TODO
-
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
-
-"-------------------jump flasher
-"
-" Plug 'danilamihailov/beacon.nvim'
-
-"
-"Plug 'karb94/neoscroll.nvim'
-
-" Debugger Plugins
-"
-" Plug 'mfussenegger/nvim-dap'
-" Plug 'Pocco81/DAPInstall.nvim'
-" Plug 'szw/vim-maximizer'
-
-"--------------------------Prettier
-
-" Plug 'sbdchd/neoformat'
-
-"--------------------------browserTextArea
-"
-" Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-" Plug 'subnut/nvim-ghost.nvim', {'do': ':call nvim_ghost#installer#install()'}
-
-"--------------------------board
-"TODO
-"
-" Plug 'azabiong/vim-board'
-
 "--------------------------Color Preview
 "
-"
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
-"----------------------------Status Line
-"
-"Plug 'itchyny/lightline.vim'
 
 " -----------------------------Telescope
 Plug 'nvim-lua/plenary.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'nvim-telescope/telescope.nvim'
 
-"-------------------------------------------------Syntax Help
-"
 "----------auto close html tag
 "
 Plug 'alvan/vim-closetag'
@@ -163,10 +105,6 @@ Plug 'alvan/vim-closetag'
 "----------indent line
 "
 Plug 'Yggdroot/indentLine'
-
-"------------------------brackets
-"
-" Plug 'junegunn/rainbow_parentheses.vim'
 
 "--------------------Modify Surroundings
 "
@@ -186,55 +124,60 @@ Plug 'jiangmiao/auto-pairs'
 "
 Plug 'mattn/emmet-vim'
 
+"--------------------JS syntax highlighting
 
 Plug 'yuezk/vim-js'
 Plug 'maxmellon/vim-jsx-pretty'
 
 "-------------------------Awesome Snippets
 "
-" Plug 'honza/vim-snippets'
-
-" post install (yarn install | npm install) then load plugin only for editing supported files
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
+Plug 'honza/vim-snippets'
 
 " ---------------------------------Comments
-"
 "  Select in visual mode and press leader+gc
 
 Plug 'tpope/vim-commentary'
-
-
 
 " ----------------------------------Tmux
 "
 Plug 'preservim/vimux'
 
-"--------------------------------- LSP
-"
-Plug 'neovim/nvim-lspconfig'
-
-"--------- auto-completion
-"
-" Plug 'hrsh7th/nvim-cmp'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'hrsh7th/cmp-buffer'
-" Plug 'hrsh7th/cmp-path'
-" Plug 'L3MON4D3/LuaSnip'
-" Plug 'saadparwaiz1/cmp_luasnip'
-
-"------------------------------Coc-LSP
-"
-"for some easy setup
+"------------------------------COC
 "
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" --------------------------------nvim-treesitter
-"--Syntax highlighting
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 "---------------------------DevIcons
 
 Plug 'ryanoasis/vim-devicons'
+
+
+" TODO
+"-------------------multi-cursor
+
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+"--------------------------board
+
+" Plug 'azabiong/vim-board'
+
+
+
+
+" NICE TO HAVE
+"-------------------jump flasher
+"
+" Plug 'danilamihailov/beacon.nvim'
+"
+"----------------------------Status Line
+"
+"Plug 'itchyny/lightline.vim'
+"
+"----------------------------multiple color schemes
+"
+" Plug 'flazz/vim-colorschemes'
+
+
+"--------------------------END OF PLUGINS
 
 call plug#end()
 
@@ -252,7 +195,7 @@ set background=dark
 let g:tokyonight_style="night"
 " let g:tokyonight_style="dark"
 
-colorscheme PaperColor 
+colorscheme catppuccin
 " onehalfdark
 " OceanicNext
 " PaperColor
@@ -267,33 +210,25 @@ let g:indentLine_fileTypeExclude= ["help", "undotree", "diff","floaterm","fzf"]
 let g:indentLine_bufTypeExclude = ["help","terminal","term:.*"]
 let g:indentLine_bufNameExclude = ["vifm"]
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-" let g:indentLine_setConceal = 0
-" let g:indentLine_concealcursor = 'inc'
-" let g:indentLine_conceallevel = 2
 
+
+"----------------------------------minimap
+"
+" let g:minimap_auto_start = 1
 
 "-------------------------vim-hexokinase Config
 " 
-
-" Neovim default
 let g:Hexokinase_highlighters = [ 'backgroundfull' ]
 
-" " All possible highlighters
-" let g:Hexokinase_highlighters = [
-" \   'virtual',
-" \   'sign_column',
-" \   'background',
-" \   'backgroundfull',
-" \   'foreground',
-" \   'foregroundfull'
-" \ ]
+"  All possible highlighters
+"    'virtual'
+"    'sign_colmn'
+"    'backgroud'
+"    'backgroudfull'
+"    'foregroud'
+"    'foregroudfull'
 
-" Patterns to match for all filetypes
-" Can be a comma separated string or a list of strings
-" Default value:
-" let g:Hexokinase_optInPatterns = 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 
-" All possible values
 let g:Hexokinase_optInPatterns = [
 \     'full_hex',
 \     'triple_hex',
@@ -305,24 +240,22 @@ let g:Hexokinase_optInPatterns = [
 
 " \     'colour_names'
 
-" Filetype specific patterns to match
-" entry value must be comma seperated list
 " let g:Hexokinase_ftOptInPatterns = {
 " \     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
 " \     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names'
 " \ }
 
-  ""coc.preferences.formatOnSaveFiletypes": [
-  "  "javascript",
-  "  "typescript",
-  "  "typescriptreact",
-  "  "json",
-  "  "javascriptreact",
-  "  "typescript.tsx",
-  "  "graphql",
-  "  "html",
-  "  "css"
-  "],
+""coc.preferences.formatOnSaveFiletypes": [
+"  "javascript",
+"  "typescript",
+"  "typescriptreact",
+"  "json",
+"  "javascriptreact",
+"  "typescript.tsx",
+"  "graphql",
+"  "html",
+"  "css"
+"],
 
 "--------------------------------Coc-Extension-List
 "
@@ -335,24 +268,11 @@ let g:coc_global_extensions = [
     \ 'coc-snippets',
     \]
 
-    "
-    "
 "------------------------emmet
 "
 let g:user_emmet_mode='inv'  
-" let g:user_emmet_install_global = 0
-" autocmd FileType html,css EmmetInstall
-" let g:user_emmet_leader_key='<C-Z>'
-
-" let g:python3_host_prog = '/usr/bin/python3'
-
-
-
-
 
 "---------------------------------------vim-sinppets config
-"
-" Use <C-l> for trigger snippet expand.
 "
 imap <C-l> <Plug>(coc-snippets-expand)
 
@@ -365,8 +285,7 @@ let mapleader=" "
 
 
 "------------------------------------------------------> General Remapping
-
-
+"
 nnoremap <leader><cr> :so ~/.config/nvim/init.vim<cr>
 inoremap jk <esc>
 vnoremap <leader>y "+y
@@ -382,6 +301,7 @@ nnoremap <leader>k /[A-Z]<CR>
 " nnoremap <leader>vvv :vsplit<cr>
 
 "---------------------- Remap splits navigation to just CTRL + hjkl
+"
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -391,12 +311,11 @@ nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
-"noremap <silent> <C-Left> :vertical resize +5<CR>
+"
 noremap <silent> <A-C-l> :vertical resize +8<CR>
 noremap <silent> <A-C-h> :vertical resize -4<CR>
 noremap <silent> <A-C-j> :resize +8<CR>
 noremap <silent> <A-C-k> :resize -4<CR>
-" noremap <silent> <A-C-v> :vertical resize<CR>:resize<CR>
 noremap <silent> <leader>vff :vertical resize<CR>:resize<CR>
 noremap <silent> <leader>vee <C-w>=
 
@@ -411,12 +330,10 @@ nnoremap <silent> <A-H> :tabmove -<CR>
 nnoremap <silent> <A-L> :tabmove +<CR>
 
 "------------------------------ Change 2 split windows from vert to horiz or horiz to vert
+"
 map <leader>th <C-w>t<C-w>H
 map <leader>tk <C-w>t<C-w>K
 
-"--------------------------------------VIM
-"
-"
 
 "-----------------------Vim Help
 "
@@ -424,6 +341,7 @@ nnoremap <leader>vwh :h <C-R>=expand("<cword>")<CR><CR>
 
 
 "-----------------------Vim Plugin
+"
 noremap <leader>vpi :PlugInstall<CR>
 noremap <leader>vpu :PlugUpdate<CR>
 noremap <leader>vpg :PlugUpgrade<CR>
@@ -431,12 +349,12 @@ noremap <leader>vpc :PlugClean<CR>
 noremap <leader>vps :PlugStatus<CR>
 
 "------------------------Find and Replace
-" nnoremap <leader>vfr :%s/
-
+"
 nnoremap <leader>vfr :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
 nnoremap <leader>v; /\<<C-r><C-w>\><Left><Left>
 
 "-------------------------------Vifm
+"
 noremap <leader>vvt <cmd>TabVifm<cr>
 noremap <leader>vvs <cmd>VsplitVifm<cr>
 noremap <leader>vvh <cmd>SplitVifm<cr>
@@ -445,7 +363,6 @@ noremap <leader>vvc <cmd>Vifm<cr>
 "---------------------------Colorsceme
 "v------- vim
     "c-------- colorscheme
-        "a-------- ayu
 noremap <leader>vcc :colorscheme 
 noremap <leader>vcp <cmd>colorscheme catppuccin<cr>
 noremap <leader>vck <cmd>colorscheme kanagawa<cr>
@@ -461,16 +378,9 @@ noremap <leader>vsc <cmd>setlocal spell<cr>
 noremap <leader>vsx <cmd>set nospell<cr>
 
 
-
-
-
-
 "---------------------------indentLineToggle
 "
 noremap <leader>vii <cmd>IndentLinesToggle<cr>
-
-
-
 
 
 "--------------------------Sessions
@@ -495,33 +405,27 @@ noremap <leader>vsrd :source ~/.config/nvim/session/
 
 
 "----------------------------------cocPrettierformat
+"
 nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
 nnoremap <leader>lff <cmd>CocCommand editor.action.formatDocument<cr>
 
 
 "----------------------------------minimap
-
+"
 nnoremap <leader>vmm <cmd>MinimapToggle<cr>
 
 
-
-
-"----------------------------- Removes pipes | that act as seperators on splits
-"set fillchars+=vert:.
-"set fillchars=stl:,stlnc:=,vert:│,fold:·,diff:-
-
 "-------------------------------Undo tree
-
-" noremap <f5> :UndotreeToggle<CR>
+"
 noremap <leader>vuu :UndotreeToggle<CR>
 
 "----------------------------------------------------COMMANDS REMAP
-
+"
 command! Bd :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 
 "-----------------------------------------Fuzzy Finder
-
+"
 nnoremap <leader>ff <cmd>Telescope find_files<CR> 
 " nnoremap <leader>ff <cmd>Files<CR> 
 nnoremap <leader>fa :Files 
@@ -562,16 +466,8 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>ng :NERDTreeVCS<CR>
 
 
-"-----------------------------------------EasyMotion
-"
-" map <leader><leader>f <Plug>(easymotion-overwin-f)
-" map <leader><leader>w <Plug>(easymotion-overwin-w)
-  
-
-
 "-----------------------------------------Vimux
 "
-
 nnoremap <leader>ttr <cmd>VimuxPromptCommand<CR>
 nnoremap <leader>ttl <cmd>VimuxRunLastCommand<CR>
 nnoremap <leader>tto <cmd>VimuxOpenRunner<CR>
@@ -581,6 +477,7 @@ nnoremap <leader>ttc <cmd>VimuxClearTerminalScreen<CR>
 
 
 "Split tmux window with leader
+"
 nnoremap <silent> <leader>ttv :!tmux split-window -h<CR><CR>
 nnoremap <silent> <leader>tth :!tmux split-window -l 12<CR><CR>
 
@@ -588,17 +485,15 @@ nnoremap <silent> <leader>tth :!tmux split-window -l 12<CR><CR>
 
 "---------------------------------------LSP
 "
-
 nnoremap <leader>lli <cmd>LspInfo<CR>
 nnoremap <leader>lls <cmd>LspStart<CR>
 nnoremap <leader>llx <cmd>LspStop<CR>
 nnoremap <leader>llr <cmd>LspRestart<CR>
 
-"-----------------------Copilot
-"
-nnoremap <leader>lce <cmd>Copilot enable<CR>
-nnoremap <leader>lcd <cmd>Copilot disable<CR>
-nnoremap <leader>lcs <cmd>Copilot status<CR>
+
+nnoremap <leader>cls <cmd>CocEnable<CR>
+nnoremap <leader>clx <cmd>CocDisable<CR>
+
 
 "-----------------------------------------Shell Scripts
 "
@@ -613,15 +508,13 @@ nnoremap <leader>sdl <cmd>!live.sh<CR><CR>
 nnoremap <leader>sdk <cmd>!klive.sh<CR><CR>
 
 
-"colorscheme----------------------------------------------->quickfix
-
+"----------------------------------------------->quickfix
+"
 nnoremap <leader>qj <cmd>cnext<CR>
 nnoremap <leader>qk <cmd>cprev<CR>
 
 "------------------------------------Move with ALT
-"OOOOooooOOOooo
 "
-
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 vnoremap <a-j> :m '>+1<cr>gv=gv
@@ -631,32 +524,16 @@ vnoremap <a-k> :m '<-2<cr>gv=gv
 "
 nnoremap ; :
 
-" nnoremap <Plug>(hello) :echo "Hello"<CR>
-
-" nmap <leader>hhh <Plug>(hello)
-
 
 "--------------------------command mode remap
-
+"
 command! DD :bp | :sp | :bn | :bd  " Close buffer without closing window.
 
 
+"-------------------------jk to escape command mode
+"
 cnoremap jk <c-u><del>
 
+"-------------------------save and close the buffer from memory
+"
 cnoremap <A-x> :<c-u>w<cr>:DD<cr>:q<cr>
-
-"--------------------------------------
-
-" autocmd BufEnter,BufWinEnter,TabEnter * :LspStop
-" autocmd BufEnter,BufWinEnter,TabEnter * :Copilot disable
-
-
-" augroup LSP_OFF
-"     autocmd!
-"     autocmd BufEnter * :LspStop
-"     autocmd BufEnter * :Copilot disable
-" augroup END
-
-
-
-" lua require("thalha")
