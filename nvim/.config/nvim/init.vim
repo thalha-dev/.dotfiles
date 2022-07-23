@@ -11,6 +11,9 @@ set termguicolors     " enable true colors support
 set incsearch " dynamically move the cursor to the next match.
 set relativenumber
 set expandtab
+set encoding=UTF-8
+set showmatch				" Show matching brackets
+set mouse=a					" Enable the mouse
 set scrolloff=8
 set tabstop=4 softtabstop=4
 set shiftwidth=4
@@ -37,6 +40,8 @@ Plug 'junegunn/fzf.vim'
 
 "-------------------------------theme
 
+Plug 'rktjmp/lush.nvim'
+
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 Plug 'sonph/onehalf', { 'rtp': 'vim' }
@@ -55,6 +60,23 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 Plug 'xiyaowong/nvim-transparent'
 
+Plug 'rafamadriz/neon'
+
+Plug 'shaeinst/roshnivim-cs'
+
+Plug 'meliora-theme/neovim'
+
+Plug 'adisen99/codeschool.nvim'
+
+Plug 'tiagovla/tokyodark.nvim'
+
+Plug 'nxvu699134/vn-night.nvim'
+
+Plug 'yashguptaz/calvera-dark.nvim'
+
+Plug 'shaunsingh/moonlight.nvim'
+
+Plug 'bluz71/vim-nightfly-guicolors'
 
 "-----------------------------rainbow paranthasis
 
@@ -151,6 +173,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 
 
+"---------------------------Tag
+Plug 'preservim/tagbar'
+
+
+
+
 " TODO
 "-------------------multi-cursor
 
@@ -195,8 +223,21 @@ set background=dark
 let g:tokyonight_style="night"
 " let g:tokyonight_style="dark"
 
-colorscheme catppuccin
+let g:neon_style="dark"
+
+" .vimrc
+" let g:tokyodark_transparent_background = 1
+
+colorscheme nightfly
+" nightfly
+" tokyodark
+" moonlight
+" codeschool
+" vn-night
+" neon
 " onehalfdark
+" rvcs
+" meliora
 " OceanicNext
 " PaperColor
 " tender
@@ -266,6 +307,7 @@ let g:coc_global_extensions = [
     \ 'coc-html',
     \ 'coc-tsserver',
     \ 'coc-snippets',
+    \ 'coc-lua',
     \]
 
 "------------------------emmet
@@ -289,9 +331,16 @@ let mapleader=" "
 nnoremap <leader><cr> :so ~/.config/nvim/init.vim<cr>
 inoremap jk <esc>
 vnoremap <leader>y "+y
-nnoremap <leader>y gg"+yG
+nnoremap <leader>yc gg"+yG
+nnoremap <leader>yy ggVGy
+nnoremap <leader>dyy ggVGd
 nnoremap <leader>x :!chmod +x %<CR>
 nnoremap <leader>k /[A-Z]<CR>
+
+"------------------------Find and Replace
+"
+nnoremap <leader>vfr :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+nnoremap <leader>v; /\<<C-r><C-w>\><Left><Left>
 
 
 "------------------------------------------------------Window Remap
@@ -348,17 +397,17 @@ noremap <leader>vpg :PlugUpgrade<CR>
 noremap <leader>vpc :PlugClean<CR>
 noremap <leader>vps :PlugStatus<CR>
 
-"------------------------Find and Replace
-"
-nnoremap <leader>vfr :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
-nnoremap <leader>v; /\<<C-r><C-w>\><Left><Left>
 
 "-------------------------------Vifm
 "
-noremap <leader>vvt <cmd>TabVifm<cr>
+noremap <leader>vvl <cmd>TabVifm<cr>
 noremap <leader>vvs <cmd>VsplitVifm<cr>
 noremap <leader>vvh <cmd>SplitVifm<cr>
 noremap <leader>vvc <cmd>Vifm<cr>
+
+"-------------------------------Tagbar
+"
+noremap <leader>vtt <cmd>TagbarToggle<cr>
 
 "---------------------------Colorsceme
 "v------- vim
@@ -441,8 +490,8 @@ nnoremap <leader>fcc <cmd>Telescope commands<CR>
 " nnoremap <leader>fcc <cmd>Commands<CR>
 nnoremap <leader>fch <cmd>History:<CR>
 nnoremap <leader>fq <cmd>Telescope quickfix<CR>
-nnoremap <leader>fgf <cmd>Telescope git_files<CR>
-" nnoremap <leader>fgf <cmd>GFiles<CR>
+nnoremap <leader>fgg <cmd>Telescope git_files<CR>
+" nnoremap <leader>fgg <cmd>GFiles<CR>
 nnoremap <leader>fgc <cmd>Telescope git_commits<CR>
 " nnoremap <leader>fgc <cmd>Commits<CR>
 nnoremap <leader>fgb <cmd>Telescope git_branches<CR>

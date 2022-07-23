@@ -56,7 +56,7 @@ alias lt='exa -almi --icons --group --tree'
 alias lt2='exa -almi --icons --group --tree --level=2'
 alias lt3='exa -almi --icons --group --tree --level=3'
 alias lt4='exa -almi --icons --group --tree --level=4'
-alias lj='exa -almi --icons --group *.java'
+alias lj='exa -ami --icons --group *.java'
 alias la='exa --icons -a'
 
 
@@ -114,6 +114,10 @@ alias yam="yt-dlp -x --audio-format mp3"
 #yt-dlp -o '%(title)s by %(uploader)s on %(upload_date)s in %(playlist)s.%(ext)s' https://www.yt.com/watch?v=7E-cwdnsiow
 #
 # -a - url in text file
+#
+
+alias y7p="yt-dlp -f "best[height<=720]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub \"https://youtube.com/playlist?list=PLJO6LXdW1rbjaDom_ozO-TFL3DJtJzL5x\""
+alias y4p="yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub \"https://youtube.com/playlist?list=PLJO6LXdW1rbjaDom_ozO-TFL3DJtJzL5x\""
 
 
 
@@ -149,6 +153,13 @@ alias tmux="tmux -u"
 
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
+alias up="sudo nala update"
+alias upp="sudo nala upgrade"
+alias ins="sudo nala install"
+alias rem="sudo nala remove"
+alias hist="sudo nala history"
+alias histun="sudo nala history undo"
+alias histre="sudo nala history redo"
 
 # system control
 
@@ -199,4 +210,4 @@ xset r rate 240 20
 #prompt
 #
 #starship init fish | source 
-
+zoxide init fish | source

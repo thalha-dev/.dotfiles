@@ -64,18 +64,20 @@ set vimhelp
 " press return on the file name set this.
 
 set norunexec
+set wrap
 
-set nowrap
+" set nowrap
 
 " Selected color scheme
 
-colorscheme iceberg
-"colorscheme zenburn
-" colorscheme gruvBox
-" colorscheme codedark
-" colorscheme solarizedDark
-" colorscheme onedark
-" colorscheme darkDesert
+colorscheme gruvBox
+" zenburn
+" iceberg
+" gruvBox
+" codedark
+" solarizedDark
+" onedark
+" darkDesert
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -135,7 +137,6 @@ mark v ~/Videos
 mark D ~/Documents
 mark b ~/Documents/Books
 mark l ~/learn
-mark w ~/workspace
 
 
 
@@ -444,8 +445,8 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 " Sample mappings
 
 " Start shell in current directory
-nnoremap ss :shell<cr>
-nnoremap sa :!
+nnoremap s :shell<cr>
+" nnoremap sa :!
 
 
 " Display sorting dialog
@@ -536,8 +537,8 @@ nnoremap ,w :set wrap!<cr>
 " view preview "
 "nnoremap ,v <s-s>
 
-nnoremap <C-m> :mkdir
-nnoremap <C-t> :touch
+nnoremap <C-m> :mkdir<Space>
+nnoremap <C-t> :touch<Space>
 
 
 " Example of standard two-panel file managers mappings

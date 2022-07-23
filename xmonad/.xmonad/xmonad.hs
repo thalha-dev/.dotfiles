@@ -57,8 +57,8 @@ myNormalBorderColor  = "#02040F"
 -- myFocusedBorderColor = "#B752AE"
 -- myFocusedBorderColor = "#E8F9FD"
 -- myFocusedBorderColor = "#DEA057"
--- myFocusedBorderColor = "#525E75"
-myFocusedBorderColor = "#BBBFCA"
+myFocusedBorderColor = "#525E75"
+-- myFocusedBorderColor = "#BBBFCA"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.

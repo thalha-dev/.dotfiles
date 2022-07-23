@@ -129,7 +129,7 @@ alias lt='exa -almi --icons --group --tree'
 alias lt2='exa -almi --icons --group --tree --level=2'
 alias lt3='exa -almi --icons --group --tree --level=3'
 alias lt4='exa -almi --icons --group --tree --level=4'
-alias lj='exa -almi --icons --group *.java'
+alias lj='exa -ami --icons --group *.java'
 
 # utils and binaries
 
@@ -176,6 +176,13 @@ alias tmux="tmux -u"
 
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
+alias up="sudo nala update"
+alias upp="sudo nala upgrade"
+alias ins="sudo nala install"
+alias rem="sudo nala remove"
+alias hist="sudo nala history"
+alias histun="sudo nala history undo"
+alias histre="sudo nala history redo"
 
 # system control
 
@@ -210,6 +217,8 @@ alias yf="yt-dlp -F"
 #
 alias ya="yt-dlp -x"
 alias yam="yt-dlp -x --audio-format mp3"
+alias y7p='yt-dlp -f "best[height<=720]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub "https://youtube.com/playlist?list=PLJO6LXdW1rbjaDom_ozO-TFL3DJtJzL5x"'
+alias y4p='yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --write-sub --write-auto-sub "https://youtube.com/playlist?list=PLJO6LXdW1rbjaDom_ozO-TFL3DJtJzL5x"'
 #
 # -o - custom name or/and location
 #
@@ -264,6 +273,7 @@ xmodmap ~/.Xmodmap
 
 eval "$(starship init bash)"
 
+eval "$(zoxide init bash)"
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 #if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
