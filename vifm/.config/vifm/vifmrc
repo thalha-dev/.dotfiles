@@ -70,7 +70,7 @@ set wrap
 
 " Selected color scheme
 
-colorscheme gruvBox
+colorscheme iceberg
 " zenburn
 " iceberg
 " gruvBox
