@@ -1,17 +1,18 @@
-require "thalha.options"
-require "thalha.keymaps"
-require "thalha.plugins"
-require "thalha.impatient"
-require "thalha.colorscheme"
-require "thalha.cmp"
-require "thalha.lsp"
-require "thalha.telescope"
-require "thalha.treesitter"
-require "thalha.autopairs"
-require "thalha.comment"
-require "thalha.gitsigns"
-require "thalha.nvim-tree"
--- require "thalha.bufferline"
-require "thalha.toggleterm"
-require "thalha.indentline"
-require "thalha.fm"
+require("thalha.options")
+require("thalha.keymaps")
+require("thalha.plugins")
+require("thalha.impatient")
+require("thalha.colorscheme")
+require("thalha.cmp")
+require("thalha.lsp")
+require("thalha.telescope")
+require("thalha.treesitter")
+require("thalha.autopairs")
+require("thalha.comment")
+require("thalha.gitsigns")
+require("thalha.neotree")
+require("thalha.colorizer")
+require("thalha.colorpicker")
+require("thalha.toggleterm")
+require("thalha.indentline")
+-- require("thalha.neogit")

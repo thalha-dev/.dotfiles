@@ -70,7 +70,7 @@ set wrap
 
 " Selected color scheme
 
-colorscheme iceberg
+colorscheme iceberg2
 " zenburn
 " iceberg
 " gruvBox
@@ -476,6 +476,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+
+nnoremap <A-c> :colorscheme <TAB>
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
 "noremap <silent> <C-Left> :vertical resize +5<CR>

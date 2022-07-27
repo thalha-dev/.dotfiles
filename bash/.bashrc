@@ -161,7 +161,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="vifm"
+alias f="vifm ."
 alias goo="google-chrome"
 alias tmux="tmux -u"
 #alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"

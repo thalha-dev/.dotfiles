@@ -6,3 +6,11 @@ catch /^Vim\%((\a\+)\)\=:E185/
   set background=dark
 endtry
 ]]
+
+
+-- catppuccin
+-- kanagawa
+-- tokyonight 
+-- minimal
+-- minimal-base16
+-- darkplus

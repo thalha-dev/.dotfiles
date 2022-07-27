@@ -6,6 +6,13 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+--- This is how to create funtcions
+-- local function vifm_current_dir()
+-- 	local st = "marks"
+-- 	local command = string.format(":Telescope %s", st)
+-- 	vim.cmd(command)
+-- end
+
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -41,9 +48,16 @@ keymap("n", "<leader>fvc", "<cmd>Telescope colorscheme<cr>", opts)
 keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fmp", "<cmd>Telescope man_pages<cr>", opts)
 
+-- Vifm
+keymap("n", "<leader>vvc", ":Vifm<cr>", opts)
+keymap("n", "<leader>vvh", ":SplitVifm<cr>", opts)
+keymap("n", "<leader>vvs", ":VsplitVifm<cr>", opts)
+keymap("n", "<leader>vvt", ":TabVifm<cr>", opts)
+-- keymap("n", "<leader>vf", "<cmd>Fzf<cr>", opts)
 
-keymap("n", "<leader>vv", "<cmd>Vifm<cr>", opts)
-keymap("n", "<leader>vf", "<cmd>Fzf<cr>", opts)
+-- Transparent
+
+keymap("n", "<leader>vct", "<cmd>TransparentToggle<CR>", opts)
 
 -- Easy Install
 keymap("n", "<leader>vpi", "<cmd>PackerInstall<cr>", nor)
@@ -69,9 +83,8 @@ keymap("n", "<leader>lls", "<cmd>LspStart<CR>", opts)
 keymap("n", "<leader>llx", "<cmd>LspStop<CR>", opts)
 
 -- Nvim Tree
-keymap("n", "<leader>nf", "<cmd>NvimTreeFindFile<CR>", opts)
-keymap("n", "<leader>nn", "<cmd>NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>nc", "<cmd>NvimTreeCollapse<CR>", opts)
+keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
+keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 
 -- switching pianlessly
 keymap("n", ";", ":", {})
@@ -152,10 +165,15 @@ keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
+-- color picker
+keymap("n", "<leader>vcp", "<cmd>PickColor<cr>", opts)
+
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
 
+-- color picker
+keymap("i", "<C-s>", "<cmd>PickColorInsert<cr>", opts)
 -- Visual --
 
 -- copy to system clipboard
