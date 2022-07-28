@@ -15,7 +15,7 @@ M.setup = function()
 
 	local config = {
 		-- disable virtual text
-        virtual_lines = false,
+		virtual_lines = false,
 		virtual_text = false,
 		-- show signs
 		signs = {
@@ -29,7 +29,7 @@ M.setup = function()
 			focusable = false,
 			style = "minimal",
 			border = "rounded",
-            -- border = {"▄","▄","▄","█","▀","▀","▀","█"},
+			-- border = {"▄","▄","▄","█","▀","▀","▀","█"},
 			source = "always",
 			header = "",
 			prefix = "",
@@ -69,10 +69,22 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ltd', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr,"n", "<leader>fdl", '<cmd>Telescope diagnostics<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ldn", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ldp", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ltd", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fdl", "<cmd>Telescope diagnostics<CR>", opts)
+	vim.api.nvim_buf_set_keymap(
+		bufnr,
+		"n",
+		"<leader>ldn",
+		'<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>',
+		opts
+	)
+	vim.api.nvim_buf_set_keymap(
+		bufnr,
+		"n",
+		"<leader>ldp",
+		'<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>',
+		opts
+	)
 	vim.api.nvim_buf_set_keymap(
 		bufnr,
 		"n",
@@ -82,7 +94,7 @@ local function lsp_keymaps(bufnr)
 	)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	-- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=true}' ]])
-    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>lff', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lff", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 end
 
 M.on_attach = function(client, bufnr)
@@ -90,7 +102,7 @@ M.on_attach = function(client, bufnr)
 	lsp_highlight_document(client)
 	-- vim.notify(client.name .. " starting...")
 	-- TODO: refactor this into a method that checks if string in list
-	if client.name == "tsserver" or "sumneko_lua" then
+	if client.name == "tsserver" then
 		client.resolved_capabilities.document_formatting = false
 	end
 	if client.name == "sumneko_lua" then

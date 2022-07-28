@@ -47,12 +47,13 @@ keymap("n", "<leader>fvk", "<cmd>Telescope keymaps<cr>", opts)
 keymap("n", "<leader>fvc", "<cmd>Telescope colorscheme<cr>", opts)
 keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fmp", "<cmd>Telescope man_pages<cr>", opts)
+keymap("n", "<leader>fht", "<cmd>Telescope help_tags<cr>", opts)
 
 -- Vifm
 keymap("n", "<leader>vvc", ":Vifm<cr>", opts)
 keymap("n", "<leader>vvh", ":SplitVifm<cr>", opts)
 keymap("n", "<leader>vvs", ":VsplitVifm<cr>", opts)
-keymap("n", "<leader>vvt", ":TabVifm<cr>", opts)
+keymap("n", "<leader>vvl", ":TabVifm<cr>", opts)
 -- keymap("n", "<leader>vf", "<cmd>Fzf<cr>", opts)
 
 -- Transparent
@@ -72,6 +73,9 @@ keymap("n", "<leader>tth", ":!tmux split-window -l 12<CR><CR>", opts)
 
 -- Indent Line
 keymap("n", "<leader>vii", "<cmd>IndentBlanklineToggle<CR>", opts)
+
+-- Execute current file
+keymap("n", "<leader>rrr", ":w<CR>:source %<CR>", opts)
 
 -- Quickfix
 keymap("n", "<leader>aj", "<cmd>cnext<CR>", opts)
@@ -98,8 +102,8 @@ keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
 keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 
 -- -- Find and Replace
--- keymap("n", "<leader>vfr" , ':%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>', opts)
--- keymap("n", "<leader>v;" , '/\<<C-r><C-w>\><Left><Left>', opts)
+keymap("n", "<leader>vfr", ":%s/<C-r><C-w>/<C-r><C-w>/gI<Left><Left><Left>", nor)
+keymap("n", "<leader>v;", "/<C-r><C-w>", nor)
 
 -- colorscheme
 keymap("n", "<leader>vcc", ":colorscheme ", {})
@@ -117,6 +121,9 @@ keymap("n", "<leader>dyy", "ggVGd", opts)
 
 -- Make file executable
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
+
+-- Test with plenary
+keymap("n", ",t", "<Plug>PlenaryTestFile", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

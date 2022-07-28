@@ -45,7 +45,7 @@ return packer.startup(function(use)
 	use({ "nvim-lua/popup.nvim" })
 
 	-- fuzzzy finder
-	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
+	-- use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
 
 	-- terminal
 	use({ "akinsho/toggleterm.nvim" })
@@ -69,7 +69,9 @@ return packer.startup(function(use)
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
-	use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
+	use({ "williamboman/mason.nvim" })
+	use({ "williamboman/mason-lspconfig.nvim" })
+	-- use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
 
@@ -119,8 +121,8 @@ return packer.startup(function(use)
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "ziontee113/color-picker.nvim" })
 
-	-- TODO
-	-- use({ "ahmedkhalf/project.nvim", commit = "541115e762764bc44d7d3bf501b6e367842d3d4f" })
+	-- learning plugin
+	use("/home/thalha/learn/lua/plugins/stackmap.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
