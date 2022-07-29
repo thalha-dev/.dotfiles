@@ -8,7 +8,7 @@ if not status_ok_1 then
 	return
 end
 
-local servers = { "jsonls", "sumneko_lua" }
+local servers = { "jsonls", "sumneko_lua", "gopls", "jdtls" }
 
 local settings = {
 	ui = {

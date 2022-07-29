@@ -75,6 +75,13 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
 
+	-- Debugging
+	use("mfussenegger/nvim-dap")
+	use("leoluz/nvim-dap-go")
+	use("rcarriga/nvim-dap-ui")
+	use("theHamsta/nvim-dap-virtual-text")
+	use("nvim-telescope/telescope-dap.nvim")
+
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
 	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
@@ -122,7 +129,7 @@ return packer.startup(function(use)
 	use({ "ziontee113/color-picker.nvim" })
 
 	-- learning plugin
-	use("/home/thalha/learn/lua/plugins/stackmap.nvim")
+	-- use("/home/thalha/learn/lua/plugins/stackmap.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -189,6 +189,9 @@ set -gx LANG 'en_IN.UTF-8'
 
 #Export Path
 
+set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin 
+
+
 #JAVA
 
 set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
@@ -196,6 +199,7 @@ set -gx PATH $PATH $JAVA_HOME/bin
 
 #Go
 set -gx PATH $PATH /usr/local/go/bin
+set -gx PATH $PATH $HOME/go/bin
 
 #Rust
 set -gx PATH $PATH ~/.cargo/bin

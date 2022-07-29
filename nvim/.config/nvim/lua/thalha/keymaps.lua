@@ -90,6 +90,9 @@ keymap("n", "<leader>llx", "<cmd>LspStop<CR>", opts)
 keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
 keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 
+-- Mason
+keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
+
 -- switching pianlessly
 keymap("n", ";", ":", {})
 
