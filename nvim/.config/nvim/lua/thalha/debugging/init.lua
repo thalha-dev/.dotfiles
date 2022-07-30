@@ -3,18 +3,14 @@ if not status_ok then
 	return
 end
 
-vim.keymap.set("n", "<leader>dcc", ":lua require'dap'.continue()<CR>")
-vim.keymap.set("n", "<leader>dsa", ":lua require'dap'.step_over()<CR>")
-vim.keymap.set("n", "<leader>dsi", ":lua require'dap'.step_into()<CR>")
-vim.keymap.set("n", "<leader>dso", ":lua require'dap'.step_out()<CR>")
-vim.keymap.set("n", "<leader>dtt", ":lua require'dap'.toggle_breakpoint()<CR>")
-vim.keymap.set("n", "<leader>dss", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
-vim.keymap.set(
-	"n",
-	"<leader>dsl",
-	":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>"
-)
-vim.keymap.set("n", "<leader>dro", ":lua require'dap'.repl.open()<CR>")
+vim.keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<leader>dl", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<leader>dj", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<leader>do", ":lua require'dap'.step_out()<CR>")
+vim.keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>dc", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+vim.keymap.set("n", "<leader>dm", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
+vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 
 local status_ok, dap_virtual_text = pcall(require, "nvim-dap-virtual-text")
 if not status_ok then
@@ -39,3 +35,4 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 end
 
 require("thalha.debugging.go")
+require("thalha.debugging.lua")

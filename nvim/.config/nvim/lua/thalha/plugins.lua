@@ -57,6 +57,7 @@ return packer.startup(function(use)
 	use({ "rebelot/kanagawa.nvim" })
 	use({ "folke/tokyonight.nvim" })
 	use({ "xiyaowong/nvim-transparent" })
+	use({ "RRethy/nvim-base16" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -77,10 +78,11 @@ return packer.startup(function(use)
 
 	-- Debugging
 	use("mfussenegger/nvim-dap")
-	use("leoluz/nvim-dap-go")
 	use("rcarriga/nvim-dap-ui")
 	use("theHamsta/nvim-dap-virtual-text")
 	use("nvim-telescope/telescope-dap.nvim")
+	use("leoluz/nvim-dap-go")
+	use("jbyuki/one-small-step-for-vimkind")
 
 	-- snippets
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -128,6 +130,7 @@ return packer.startup(function(use)
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "ziontee113/color-picker.nvim" })
 
+	use({ "Pocco81/true-zen.nvim" })
 	-- learning plugin
 	-- use("/home/thalha/learn/lua/plugins/stackmap.nvim")
 
