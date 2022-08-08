@@ -138,7 +138,10 @@ keymap("n", "<A-C-k>", ":resize +2<CR>", opts)
 keymap("n", "<A-C-j>", ":resize -2<CR>", opts)
 keymap("n", "<A-C-h>", ":vertical resize -2<CR>", opts)
 keymap("n", "<A-C-l>", ":vertical resize +2<CR>", opts)
-keymap("n", "<leader>vff", ":vertical resize<CR>:resize<CR>", opts)
+-- keymap("n", "<leader>vff", ":vertical resize<CR>:resize<CR>", opts)
+keymap("n", "<leader>vff", "<cmd>TZFocus<CR>", opts)
+keymap("n", "<leader>vfm", "<cmd>TZMinimalist<CR>", opts)
+keymap("n", "<leader>vfn", "<cmd>TZNarrow<CR>", opts)
 keymap("n", "<leader>vee", "<C-w>=", opts)
 keymap("n", "<leader>vsv", "<C-w>t<C-w>H", opts)
 keymap("n", "<leader>vsh", "<C-w>t<C-w>K", opts)
@@ -158,10 +161,6 @@ keymap("n", "<A-l>", ":tabnext<CR>", opts)
 --  Move Tabs
 keymap("n", "<A-H>", ":tabmove -<CR>", opts)
 keymap("n", "<A-L>", ":tabmove +<CR>", opts)
-
--- Change 2 split windows from vert to horiz or horiz to vert
-keymap("n", "<leader>th", "<C-w>t<C-w>H", opts)
-keymap("n", "<leader>tk", "<C-w>t<C-w>K", opts)
 
 -- Vim Help
 keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)

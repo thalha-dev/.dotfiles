@@ -53,11 +53,10 @@ return packer.startup(function(use)
 	-- colorschemes
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "lunarvim/darkplus.nvim" })
-	use({ "Yazeed1s/minimal.nvim" })
-	use({ "rebelot/kanagawa.nvim" })
-	use({ "folke/tokyonight.nvim" })
 	use({ "xiyaowong/nvim-transparent" })
 	use({ "RRethy/nvim-base16" })
+	use({ "NTBBloodbath/doom-one.nvim" })
+	use({ "themercorp/themer.lua" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin

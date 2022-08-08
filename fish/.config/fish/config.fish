@@ -133,6 +133,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 alias p="batcat"
 alias c="clear"
 alias k="keynav daemonize"
+alias ja="java -cp ./target/classes/ "
 #alias lser="live-server --no-browser --quiet &"
 
 # applications
@@ -140,8 +141,9 @@ alias k="keynav daemonize"
 alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm ."
-alias goo="google-chrome"
 alias tmux="tmux -u"
+alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
+alias kmad="fusermount -u /home/thalha/Downloads/android-mp"
 
 #alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
 #alias pman="/home/thalha/other-applications/Postman/Postman"
@@ -196,6 +198,9 @@ set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin
 
 set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
 set -gx PATH $PATH $JAVA_HOME/bin
+
+# idea
+set -gx PATH $PATH $HOME/source-installed/idea/idea-IC-222.3345.118/bin
 
 #Go
 set -gx PATH $PATH /usr/local/go/bin
