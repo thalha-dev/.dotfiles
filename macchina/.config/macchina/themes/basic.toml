@@ -1,0 +1,42 @@
+# basic
+
+spacing         = 2
+padding         = 0
+hide_ascii      = true
+separator       = ".."
+key_color       = "#F7EC09"
+separator_color = "#EEEEEE"
+
+[palette]
+type = "Dark"
+visible = false
+
+
+[box]
+border          = "rounded"
+visible         = true
+
+[box.inner_margin]
+x               = 1
+y               = 0
+
+
+[keys]
+host            = "Host"
+kernel          = "Kernel"
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = "Distro"
+terminal        = "Terminal"
+shell           = "Shell"
+packages        = "Packages"
+uptime          = "Uptime"
+memory          = "Memory"
+machine         = "Machine"
+local_ip        = "Local IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "CPU Load"
+cpu             = "CPU"
