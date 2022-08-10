@@ -2,12 +2,6 @@
 
 set -o vi
 
-# EXPORTS
-
-# -----Editor
-export ALTERNATE_EDITOR="vim"
-export EDITOR="nvim"
-
 
 # Set MANPAGER
 
@@ -236,11 +230,6 @@ alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 
-# variables
-
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
-
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -264,11 +253,6 @@ fi
 . "$HOME/.cargo/env"
 
 
-export PATH=$PATH:/usr/local/go/bin
-
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export PATH=$PATH:$JAVA_HOME/bin
-export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
 
 # load Xmodmap
 xmodmap ~/.Xmodmap
@@ -276,7 +260,7 @@ xmodmap ~/.Xmodmap
 
 eval "$(starship init bash)"
 
-eval "$(zoxide init bash)"
+# eval "$(zoxide init bash)"
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 #if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

@@ -3,10 +3,9 @@
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
-set -U fish_user_paths $HOME/applications $HOME/.local/bin $fish_user_paths
+# set -U fish_user_paths $HOME/applications $HOME/.local/bin $fish_user_paths
 
 # Export #
-set TERM "xterm-256color"                         # Sets the terminal type
 set SHELL "/usr/bin/fish"                  # Sets the shell
 
 #remove greeting
@@ -181,33 +180,6 @@ alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 #dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_C6_36_B2_7C_A7_A6/sep1/fd4 org.freedesktop.DBus.Properties.Set string:"org.bluez.MediaTransport1" string:"Volume" variant:uint16:70"
 
 
-#Variables
-
-
-set -gx LC_ALL 'en_IN.UTF-8'
-set -gx LANG 'en_IN.UTF-8'
-
-
-
-#Export Path
-
-set -gx PATH $PATH $HOME/.local/share/nvim/mason/bin 
-
-
-#JAVA
-
-set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
-set -gx PATH $PATH $JAVA_HOME/bin
-
-# idea
-set -gx PATH $PATH $HOME/source-installed/idea/idea-IC-222.3345.118/bin
-
-#Go
-set -gx PATH $PATH /usr/local/go/bin
-set -gx PATH $PATH $HOME/go/bin
-
-#Rust
-set -gx PATH $PATH ~/.cargo/bin
 
 # load Xmodmap
 xmodmap ~/.Xmodmap
@@ -217,8 +189,8 @@ xset r rate 240 20
 
 
 #prompt
-#
 #starship init fish | source 
-zoxide init fish | source
+
+# zoxide init fish | source
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/thalha/.ghcup/bin # ghcup-env
