@@ -147,12 +147,9 @@ keymap("n", "<leader>vsv", "<C-w>t<C-w>H", opts)
 keymap("n", "<leader>vsh", "<C-w>t<C-w>K", opts)
 
 -- toggleterm
-keymap("n", "<leader>tda", ":lua _NCDU_TOGGLE()<CR>", nor)
-keymap("n", "<leader>tcu", ":lua _HTOP_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trn", ":lua _NODE_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trp", ":lua _PYTHON_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 keymap("n", "<leader>thh", ":ToggleTerm direction=horizontal size=10<CR>", nor)
+keymap("n", "<leader>tgs", ":LspsagaFloaterm nsnake<CR>", nor)
+keymap("n", "<leader>tgb", ":LspsagaFloaterm bastet<CR>", nor)
 
 -- Switch Tabs
 keymap("n", "<A-h>", ":tabprevious<CR>", opts)
