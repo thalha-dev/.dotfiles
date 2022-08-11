@@ -3,13 +3,6 @@ if not status_ok then
 	return
 end
 
-local opts = { noremap = true, silent = true }
-local nor = { noremap = true }
-
-local term_opts = { silent = true }
-
-local keymap = vim.api.nvim_set_keymap
-
 toggleterm.setup({
 	size = 20,
 	open_mapping = [[<c-\>]],
@@ -76,14 +69,8 @@ function _HTOP_TOGGLE()
 	htop:toggle()
 end
 
-local python = Terminal:new({ cmd = "python3", hidden = true })
+local luaShell = Terminal:new({ cmd = "lua", hidden = true })
 
-function _PYTHON_TOGGLE()
-	python:toggle()
+function _LUA_TOGGLE()
+	luaShell:toggle()
 end
-
-keymap("n", "<leader>tda", ":lua _NCDU_TOGGLE()<CR>", nor)
-keymap("n", "<leader>tcu", ":lua _HTOP_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trn", ":lua _NODE_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trp", ":lua _PYTHON_TOGGLE()<CR>", nor)
-keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
