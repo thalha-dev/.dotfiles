@@ -67,11 +67,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lca", "<cmd>Lspsaga code_action<CR>", { silent = true })
-	vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>lca", ":<C-u>Lspsaga range_code_action<CR>", { silent = true })
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lsf", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ltd", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>fdl", "<cmd>Telescope diagnostics<CR>", opts)
 	vim.api.nvim_buf_set_keymap(
@@ -95,9 +91,16 @@ local function lsp_keymaps(bufnr)
 		'<cmd>lua vim.diagnostic.open_float({ border = "rounded" })<CR>',
 		opts
 	)
+	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lff", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 	-- vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format{async=true}' ]])
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lff", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	-- Lspsaga
+	--
+	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+	-- vim.api.nvim_buf_set_keymap(bufnr, "v", "<leader>lca", ":<C-u>Lspsaga range_code_action<CR>", { silent = true })
+	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>lsf", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+	--
 end
 
 M.on_attach = function(client, bufnr)
@@ -111,9 +114,9 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.resolved_capabilities.document_formatting = false
 	end
-	-- if client.name == "jdt.ls" then
-	-- 	client.resolved_capabilities.document_formatting = false
-	-- end
+	if client.name == "jdt.ls" then
+		client.resolved_capabilities.document_formatting = false
+	end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

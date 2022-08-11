@@ -148,8 +148,8 @@ keymap("n", "<leader>vsh", "<C-w>t<C-w>K", opts)
 
 -- toggleterm
 keymap("n", "<leader>thh", ":ToggleTerm direction=horizontal size=10<CR>", nor)
-keymap("n", "<leader>tgs", ":LspsagaFloaterm nsnake<CR>", nor)
-keymap("n", "<leader>tgb", ":LspsagaFloaterm bastet<CR>", nor)
+-- keymap("n", "<leader>tgs", ":LspsagaFloaterm nsnake<CR>", nor)
+-- keymap("n", "<leader>tgb", ":LspsagaFloaterm bastet<CR>", nor)
 
 -- Switch Tabs
 keymap("n", "<A-h>", ":tabprevious<CR>", opts)
