@@ -134,6 +134,7 @@ alias c="clear"
 alias k="keynav daemonize"
 alias ja="java -cp ./target/classes/ "
 alias mcc="mavenCoreJava.sh"
+alias I="macchina"
 #alias lser="live-server --no-browser --quiet &"
 
 # applications
