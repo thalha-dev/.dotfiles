@@ -93,6 +93,10 @@ keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 -- Mason
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 
+-- Prettier
+keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
+
+
 -- switching pianlessly
 keymap("n", ";", ":", {})
 

@@ -70,10 +70,11 @@ set wrap
 
 " Selected color scheme
 
-colorscheme iceberg2
+colorscheme gruvbox
 " zenburn
+" iceberg2
 " iceberg
-" gruvBox
+" gruvbox
 " codedark
 " solarizedDark
 " onedark

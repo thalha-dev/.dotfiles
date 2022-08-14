@@ -57,6 +57,7 @@ return packer.startup(function(use)
 	use({ "RRethy/nvim-base16" })
 	use({ "NTBBloodbath/doom-one.nvim" })
 	use({ "themercorp/themer.lua" })
+	use({ "olimorris/onedarkpro.nvim" })
 
 	-- cmp plugins
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
@@ -71,9 +72,9 @@ return packer.startup(function(use)
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
-	-- use({ "williamboman/nvim-lsp-installer" }) -- simple to use language server installer
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
+	use({ "MunifTanjim/prettier.nvim" })
 
 	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
