@@ -192,7 +192,7 @@ let g:neon_style="dark"
 " .vimrc
 " let g:tokyodark_transparent_background = 1
 
-colorscheme PaperColor
+colorscheme OceanicNext 
 " nightfly
 " tokyodark
 " moonlight
