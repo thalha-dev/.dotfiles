@@ -1,5 +1,6 @@
 require("thalha.options")
 require("thalha.plugins")
+require("thalha.myFunctions")
 require("thalha.keymaps")
 require("thalha.impatient")
 require("thalha.globals")

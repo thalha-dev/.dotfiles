@@ -1,8 +1,6 @@
-local M = {}
-
 -- OPTIONS
 
-function M.MY_CURSOR_TOGGLE()
+function MY_CURSOR_TOGGLE()
 	if vim.o.cursorline then
 		vim.o.cursorline = false
 	else
@@ -10,7 +8,7 @@ function M.MY_CURSOR_TOGGLE()
 	end
 end
 
-function M.MY_SPELL_TOGGLE()
+function MY_SPELL_TOGGLE()
 	if vim.o.spell then
 		vim.o.spell = false
 	else
@@ -18,4 +16,10 @@ function M.MY_SPELL_TOGGLE()
 	end
 end
 
-return M
+function MY_WRAP_TOGGLE()
+	if vim.o.wrap then
+		vim.o.wrap = false
+	else
+		vim.o.wrap = true
+	end
+end
