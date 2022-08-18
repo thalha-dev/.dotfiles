@@ -1,3 +1,6 @@
+MY_CURSOR_TOGGLE = require("thalha.myFunctions").MY_CURSOR_TOGGLE
+MY_SPELL_TOGGLE = require("thalha.myFunctions").MY_SPELL_TOGGLE
+
 local opts = { noremap = true, silent = true }
 local nor = { noremap = true }
 
@@ -96,7 +99,6 @@ keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 -- Prettier
 keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
 
-
 -- switching pianlessly
 keymap("n", ";", ":", {})
 
@@ -113,6 +115,12 @@ keymap("n", "<leader>v;", "/<C-r><C-w>", nor)
 
 -- colorscheme
 keymap("n", "<leader>vcc", ":colorscheme ", {})
+
+-- cursorline
+keymap("n", "<leader>vcl", ":lua MY_CURSOR_TOGGLE()<CR>", {})
+
+-- spellcheck
+keymap("n", "<leader>vsc", ":lua MY_SPELL_TOGGLE()<CR>", {})
 
 -- Source init.lua
 keymap("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>", opts)
