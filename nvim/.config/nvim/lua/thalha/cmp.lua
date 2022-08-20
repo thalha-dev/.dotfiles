@@ -10,6 +10,8 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
+-- inoremap <c-u> <cmd>lua require("luasnip.extras.select_choice")()<cr>
+
 local check_backspace = function()
 	local col = vim.fn.col(".") - 1
 	return col == 0 or vim.fn.getline("."):sub(col, col):match("%s")
@@ -97,15 +99,15 @@ cmp.setup({
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
 		format = function(entry, vim_item)
-			-- Kind icons
-			vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
-			-- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
+			--[[ vim_item.kind = string.format("%s", kind_icons[vim_item.kind]) ]]
+			vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
 			vim_item.menu = ({
-				luasnip = "[Snippet]",
-				nvim_lsp = "[LSP]",
+				luasnip = "🐰",
+				nvim_lsp = "💧",
 				nvim_lua = "[NVIM_LUA]",
-				buffer = "[Buffer]",
-				path = "[Path]",
+				buffer = "📜",
+				path = "🚙",
+				fish = "🐠",
 			})[entry.source.name]
 			return vim_item
 		end,
@@ -116,6 +118,7 @@ cmp.setup({
 		{ name = "nvim_lua" },
 		{ name = "buffer" },
 		{ name = "path" },
+		{ name = "fish" },
 	},
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,

@@ -59,15 +59,6 @@ return packer.startup(function(use)
 	use({ "themercorp/themer.lua" })
 	use({ "olimorris/onedarkpro.nvim" })
 
-	-- cmp plugins
-	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
-	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
-	use({ "hrsh7th/cmp-path" }) -- path completions
-	use({ "hrsh7th/cmp-cmdline" }) -- snippet completions
-	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
-	use({ "hrsh7th/cmp-nvim-lsp" })
-	use({ "hrsh7th/cmp-nvim-lua" })
-
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/mason.nvim" })
@@ -75,6 +66,19 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
 	use({ "MunifTanjim/prettier.nvim" })
+
+	-- cmp plugins
+	use({ "hrsh7th/cmp-nvim-lsp" })
+	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
+	use({ "hrsh7th/cmp-path" }) -- path completions
+	use({ "hrsh7th/cmp-cmdline" }) -- snippet completions
+	use({ "hrsh7th/cmp-calc" })
+	use({ "mtoohey31/cmp-fish", ft = "fish" })
+	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
+	use({ "L3MON4D3/LuaSnip" }) --snippet engine
+	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
+	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
+	use({ "hrsh7th/cmp-nvim-lua" })
 
 	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
@@ -85,10 +89,6 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-dap.nvim")
 	use("leoluz/nvim-dap-go")
 	use("jbyuki/one-small-step-for-vimkind")
-
-	-- snippets
-	use({ "L3MON4D3/LuaSnip" }) --snippet engine
-	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 
 	-- code help
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
@@ -104,6 +104,11 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+
+	use({
+		"ibhagwan/fzf-lua",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 
 	-- Treesitter
 	use({
@@ -133,6 +138,7 @@ return packer.startup(function(use)
 	use({ "ziontee113/color-picker.nvim" })
 
 	use({ "Pocco81/true-zen.nvim" })
+	use({ "stevearc/dressing.nvim" })
 	-- learning plugin
 	-- use("/home/thalha/learn/lua/plugins/stackmap.nvim")
 
