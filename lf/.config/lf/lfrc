@@ -127,11 +127,7 @@ cmd makeExecutable ${{
 # └───────────────────────────────────────────────────────────────────────────┘
 
 # Remove some defaults
-map m
 map o
-map n
-map "'"
-map '"'
 map d
 
 # Movement 
@@ -155,8 +151,8 @@ map x cut
 map y copy
 map <enter> open
 map R reload
-map mf mkfile
-map md mkdir
+map Cf mkfile
+map Cd mkdir
 map bb setwallpaper
 map Cx makeExecutable
 map dd trash
