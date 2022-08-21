@@ -132,6 +132,7 @@ return packer.startup(function(use)
 		},
 	})
 	use({ "vifm/vifm.vim" })
+	use({ "is0n/fm-nvim" })
 
 	-- color help
 	use({ "norcalli/nvim-colorizer.lua" })

@@ -70,6 +70,9 @@ keymap("n", "<leader>vvh", ":SplitVifm<cr>", opts)
 keymap("n", "<leader>vvs", ":VsplitVifm<cr>", opts)
 keymap("n", "<leader>vvl", ":TabVifm<cr>", opts)
 
+-- LF
+keymap("n", "<leader>fa", ":Lf<CR>", opts)
+
 -- Transparent
 
 keymap("n", "<leader>vct", "<cmd>TransparentToggle<CR>", opts)
