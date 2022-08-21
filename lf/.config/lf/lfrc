@@ -129,6 +129,7 @@ cmd makeExecutable ${{
 # Remove some defaults
 map o
 map d
+map q
 
 # Movement 
 map gb cd ~/Documents/Books
@@ -158,3 +159,5 @@ map Cx makeExecutable
 map dd trash
 map dr restore_trash
 map ; push :
+cmap <a-s> cmd-escape
+cmd q quit
