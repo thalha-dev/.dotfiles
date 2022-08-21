@@ -43,7 +43,7 @@ cmd open ${{
     case $(file --mime-type $f -b) in
         image/*) sxiv -b $fx &;;
         application/pdf|application/epub*) zathura $fx;;
-        video/*) mpv --msg-level=all=no $fx 2> /dev/null &;;
+        video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         text/*) $EDITOR $fx;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
     esac
