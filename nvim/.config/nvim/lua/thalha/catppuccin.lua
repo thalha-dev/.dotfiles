@@ -50,7 +50,7 @@ catppuccin.setup({
 		cmp = true,
 		lsp_saga = false,
 		gitgutter = false,
-		gitsigns = true,
+		gitsigns = false,
 		leap = false,
 		telescope = true,
 		nvimtree = {
@@ -59,7 +59,7 @@ catppuccin.setup({
 			transparent_panel = false,
 		},
 		neotree = {
-			enabled = true,
+			enabled = false,
 			show_root = true,
 			transparent_panel = false,
 		},
