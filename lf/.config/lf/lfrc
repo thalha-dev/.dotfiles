@@ -14,7 +14,7 @@
 # │                                  OPTIONS                                  │
 # └───────────────────────────────────────────────────────────────────────────┘
 
-set shell sh                    # interpreter for shell commands
+set shell bash                    # interpreter for shell commands
 set ifs "\n"
 set filesep "\n"                # default already
 set incsearch o                 # jump to first match after each keystroke in searc
@@ -40,9 +40,10 @@ map r push :rename<space>
 
 cmd open ${{
     test -L $f && f=$(readlink -f $f)
-    case $(file --mime-type $f -b) in
+    pattern=$(file --mime-type $f -b)
+    case $pattern in
         image/*) sxiv -b $fx &;;
-        application/pdf|application/epub*) zathura $fx;;
+        application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1;;
         video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
         text/*) $EDITOR $fx;;
         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
