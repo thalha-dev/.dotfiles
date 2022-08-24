@@ -110,20 +110,18 @@ alias vim='/usr/bin/vim'
 
 
 # ls 
-# alias ls='ls --color=auto'
-alias ls='exa --icons --color=auto'
-#alias la='ls -ah --color=auto'
-#alias l='ls -lash --color=auto'
-alias ll='ls -la --color=auto'
-alias ld='exa -ad .[^.]* --icons --color=auto'
-# exa - ls alternative
-alias l='exa -almi --icons --group'
-alias la='exa --icons -a'
-alias lt='exa -almi --icons --group --tree'
-alias lt2='exa -almi --icons --group --tree --level=2'
-alias lt3='exa -almi --icons --group --tree --level=3'
-alias lt4='exa -almi --icons --group --tree --level=4'
-alias lj='exa -ami --icons --group *.java'
+alias ls='ls --color=auto'
+alias la='ls -ah --color=auto'
+alias l='ls -lash --color=auto'
+alias es='exa --icons --color=auto'
+alias ed='exa -ad .[^.]* --icons --color=auto'
+alias e='exa -almi --icons --group'
+alias ea='exa --icons -a'
+alias et='exa -almi --icons --group --tree'
+alias et2='exa -almi --icons --group --tree --level=2'
+alias et3='exa -almi --icons --group --tree --level=3'
+alias et4='exa -almi --icons --group --tree --level=4'
+alias ej='exa -ami --icons --group *.java'
 
 # utils and binaries
 
@@ -174,6 +172,8 @@ alias I="macchina"
 
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
+alias nirm="nix-env -e "
+alias nils="nix-env -q"
 alias up="sudo nala update"
 alias upp="sudo nala upgrade"
 alias ins="sudo nala install"

@@ -8,8 +8,8 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
+# export LC_ALL=en_IN.UTF-8
+# export LANG=en_IN.UTF-8
 # TERM
 export TERM=xterm-256color
 # EDITOR
@@ -52,3 +52,5 @@ export PATH=$PATH:$HOME/applications
 
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+if [ -e /home/thalha/.nix-profile/etc/profile.d/nix.sh ]; then . /home/thalha/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

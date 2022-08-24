@@ -123,3 +123,5 @@ xmodmap ~/.Xmodmap
 
 
 eval "$(starship init zsh)"
+
+if [ -e /home/thalha/.nix-profile/etc/profile.d/nix.sh ]; then . /home/thalha/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
