@@ -32,6 +32,24 @@ set period 1                    # interval to check for directory updates
 
 
 # ┌───────────────────────────────────────────────────────────────────────────┐
+# │                                 PREVIEWS                                  │
+# └───────────────────────────────────────────────────────────────────────────┘
+
+
+# stpv
+set previewer stpv
+set cleaner stpvimgclr
+&stpvimg --listen $id
+cmd on-quit $stpvimg --end $id
+
+# ctpv not working ...
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
+
+
+# ┌───────────────────────────────────────────────────────────────────────────┐
 # │                                 COMMANDS                                  │
 # └───────────────────────────────────────────────────────────────────────────┘
 
@@ -130,7 +148,6 @@ cmd makeExecutable ${{
 # Remove some defaults
 map o
 map d
-map q
 
 # Movement 
 map gb cd ~/Documents/Books
