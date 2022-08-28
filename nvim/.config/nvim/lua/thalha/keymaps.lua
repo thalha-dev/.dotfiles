@@ -205,6 +205,9 @@ keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 -- color picker
 keymap("n", "<leader>vcp", "<cmd>PickColor<cr>", opts)
 
+-- colorizer
+keymap("n", "<leader>vcz", "<cmd>ColorizerToggle<cr>", opts)
+
 -- Insert --
 -- Press jk fast to exit insert mode
 keymap("i", "jk", "<ESC>", opts)
