@@ -1,0 +1,23 @@
+# Set an option
+set forcekitty
+set forcekittyanim
+# set noimages
+# set forcechafa
+
+# Add a new preview
+#preview cow .moo {{
+#cowsay < "$f"
+#}}
+
+# preview images image/* {{
+# chafa -s 50 "$f"
+# }}
+
+
+# priority ueberzug
+
+# Remove some previews
+remove w3m
+remove lynx
+remove elinks
+
