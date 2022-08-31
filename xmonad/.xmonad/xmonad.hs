@@ -129,7 +129,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
     -- picom - compositor
-    , ((modm              , xK_a ), spawn "picom -b")
+    , ((modm              , xK_a ), spawn "picom -b --experimental-backends")
 
     -- picom - compositor - kill
     , ((modm .|. shiftMask  , xK_a ), spawn "killall picom")
@@ -283,7 +283,7 @@ myLogHook = return ()
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
     -- spawnOnce "compton &"
-    spawn "picom -b"
+    spawn "picom -b --experimental-backends"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

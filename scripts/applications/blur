@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo ""
+echo "---Range-----0-20-->"
+echo ""
+read -p "Enter Blur Strength : " blurstrength
+
+if [[ $blurstrength -gt 20 ]] || [[ $blurstrength -lt 0 ]]; then
+    echo ""
+    echo "Range only between 0 and 20"
+    echo ""
+    exit
+fi
+
+sed -i "s/blur-strength.*/blur-strength = ${blurstrength};/" ~/.config/picom/picom.conf

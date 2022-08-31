@@ -42,11 +42,13 @@ set period 1                    # interval to check for directory updates
 # &stpvimg --listen $id
 # cmd on-quit $stpvimg --end $id
 
+# OR
+
 # ctpv not working ...
-set previewer ctpv
-set cleaner ctpvclear
-&ctpv -s $id
-&ctpvquit $id
+# set previewer ctpv
+# set cleaner ctpvclear
+# &ctpv -s $id
+# &ctpvquit $id
 
 
 # ┌───────────────────────────────────────────────────────────────────────────┐
@@ -179,3 +181,4 @@ map dr restore_trash
 map ; push :
 cmap <a-s> cmd-escape
 cmd q quit
+cmd qa quit

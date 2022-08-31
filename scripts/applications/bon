@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sed -i "s/blur-method.*/blur-method = \"dual_kawase\";/" ~/.config/picom/picom.conf

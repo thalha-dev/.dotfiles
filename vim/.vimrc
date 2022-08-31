@@ -479,8 +479,6 @@ nnoremap <silent> <leader>tth :!tmux split-window -l 12<CR><CR>
 "-------#=>command alias
 
 nnoremap <leader>S :!
-nnoremap <leader>sdl <cmd>!live.sh<CR><CR>
-nnoremap <leader>sdk <cmd>!klive.sh<CR><CR>
 
 
 "----------------------------------------------->quickfix

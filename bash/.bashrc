@@ -222,6 +222,33 @@ alias y4p='yt-dlp -f "best[height<=480]" --sub-lang en --sub-format srt/best --w
 #
 # -a - url in text file
 
+# MPV
+alias mm3="mpv --profile=360p "
+alias mm4="mpv --profile=480p "
+alias mm7="mpv --profile=720p "
+alias mm8="mpv --profile=1080p "
+
+# YTFZF
+
+# VIDEO
+# ------ play video
+alias ff="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --pages-start="
+# ------ sort by time
+alias ffsy="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=year --pages-start="
+alias ffsm="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=month --pages-start="
+alias ffsw="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=week --pages-start="
+
+# ------ download video
+alias ffd="ytfzf -t --thumb-viewer=kitty --pages=2 -f -d --pages-start="
+alias ffds="ytfzf -t --thumb-viewer=kitty --pages=2 -f --ytdl-opts='--write-auto-subs' -d --pages-start="
+
+# AUDIO
+# ------ play audio
+alias ffa="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --pages-start="
+# ------- download audio
+alias ffad="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --ytdl-opts='-x --audio-format mp3' -d --pages-start="
+
+
 
 # switch between shells
 # I do not recommend switching default SHELL from bash.
