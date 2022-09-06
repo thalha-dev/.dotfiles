@@ -112,14 +112,14 @@ alias v='/usr/bin/nvim'
 # ls 
 alias ls='exa --icons --color=auto'
 alias la='exa --icons -a'
-alias l='exa -almi --icons --group'
+alias l='exa -al --icons --group'
 alias ld='exa -ad .[^.]* --icons --color=auto'
-alias e='exa -almi --icons --group'
-alias lt='exa -almi --icons --group --tree'
-alias lt2='exa -almi --icons --group --tree --level=2'
-alias lt3='exa -almi --icons --group --tree --level=3'
-alias lt4='exa -almi --icons --group --tree --level=4'
-alias lj='exa -ami --icons --group *.java'
+alias e='exa -al --icons --group'
+alias lt='exa -al --icons --group --tree'
+alias lt2='exa -al --icons --group --tree --level=2'
+alias lt3='exa -al --icons --group --tree --level=3'
+alias lt4='exa -al --icons --group --tree --level=4'
+alias lj='exa -a --icons --group *.java'
 
 # utils and binaries
 
@@ -128,8 +128,7 @@ alias c="clear"
 alias k="keynav daemonize"
 
 # tmux
-alias t='tmux'
-alias ta='tmux a'
+alias t='tmux a 2>/dev/null || tmux'
 alias tk='tmux kill-server'
 alias tn='tmux new -d -s '
 

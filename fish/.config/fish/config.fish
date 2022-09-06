@@ -32,8 +32,7 @@ alias cll="pwd | xclip -i -sel primary"
 
 
 # tmux
-alias t='tmux'
-alias ta='tmux a'
+alias t='tmux a 2>/dev/null || tmux'
 alias tk='tmux kill-server'
 alias tn='tmux new -d -s '
 
@@ -51,12 +50,12 @@ alias v='/usr/bin/nvim'
 # ls 
 alias ls='exa --icons --color=auto'
 alias ld='exa -ad .* --icons --color=auto'
-alias l='exa -almi --icons --group'
-alias lt='exa -almi --icons --group --tree'
-alias lt2='exa -almi --icons --group --tree --level=2'
-alias lt3='exa -almi --icons --group --tree --level=3'
-alias lt4='exa -almi --icons --group --tree --level=4'
-alias lj='exa -ami --icons --group *.java'
+alias l='exa -al --icons --group'
+alias lt='exa -alm --icons --group --tree'
+alias lt2='exa -alm --icons --group --tree --level=2'
+alias lt3='exa -alm --icons --group --tree --level=3'
+alias lt4='exa -alm --icons --group --tree --level=4'
+alias lj='exa -am --icons --group *.java'
 alias la='exa --icons -a'
 
 
