@@ -2,10 +2,12 @@ set selection-clipboard clipboard
 set guioptions none
 
 
-include catppuccin
+include dark1
+
 # include dark1
 # include dark2
 # include dark3
+# include catppuccin
 # include dracula
 # include gruvbox
 # include material

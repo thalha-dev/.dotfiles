@@ -1,6 +1,7 @@
 # Another Dark Theme
 
-set default-bg                  "#151515" #00
+# set default-bg                  "#151515" #00
+set default-bg                  "#000000" #00
 set default-fg                  "#202020" #01
 
 set statusbar-fg                "#B0B0B0" #04

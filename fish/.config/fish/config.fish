@@ -31,6 +31,11 @@ end
 alias cll="pwd | xclip -i -sel primary"
 
 
+# tmux
+alias t='tmux'
+alias ta='tmux a'
+alias tk='tmux kill-server'
+alias tn='tmux new -d -s '
 
 # navigation
 alias ..='cd ..'
@@ -122,25 +127,47 @@ alias mm7="mpv --profile=720p "
 alias mm8="mpv --profile=1080p "
 
 
+if test "$TERM" = "xterm-kitty" 
+    # VIDEO
+    # ------ play video
+    alias ff="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --pages-start="
+    # ------ sort by time
+    alias ffsy="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=year --pages-start="
+    alias ffsm="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=month --pages-start="
+    alias ffsw="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=week --pages-start="
+    
+    # ------ download video
+    alias ffd="ytfzf -t --thumb-viewer=kitty --pages=2 -f -d --pages-start="
+    alias ffds="ytfzf -t --thumb-viewer=kitty --pages=2 -f --ytdl-opts='--write-auto-subs' -d --pages-start="
+    
+    # AUDIO
+    # ------ play audio
+    alias ffa="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --pages-start="
+    # ------- download audio
+    alias ffad="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --ytdl-opts='-x --audio-format mp3' -d --pages-start="
+else
+    # VIDEO
+    # ------ play video
+    alias ff="ytfzf --thumb-viewer=chafa --pages=2 -t -f -l --detach --pages-start="
+    # ------ sort by time
+    alias ffsy="ytfzf --thumb-viewer=chafa --pages=2 -t -f -l --detach --upload-date=year --pages-start="
+    alias ffsm="ytfzf --thumb-viewer=chafa --pages=2 -t -f -l --detach --upload-date=month --pages-start="
+    alias ffsw="ytfzf --thumb-viewer=chafa --pages=2 -t -f -l --detach --upload-date=week --pages-start="
+    
+    # ------ download video
+    alias ffd="ytfzf -t --thumb-viewer=chafa --pages=2 -f -d --pages-start="
+    alias ffds="ytfzf -t --thumb-viewer=chafa --pages=2 -f --ytdl-opts='--write-auto-subs' -d --pages-start="
+    
+    # AUDIO
+    # ------ play audio
+    alias ffa="ytfzf --thumb-viewer=chafa --pages=2 -t -l -m --pages-start="
+    # ------- download audio
+    alias ffad="ytfzf --thumb-viewer=chafa --pages=2 -t -l -m --ytdl-opts='-x --audio-format mp3' -d --pages-start="
+end
+
+
 # YTFZF
 
-# VIDEO
-# ------ play video
-alias ff="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --pages-start="
-# ------ sort by time
-alias ffsy="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=year --pages-start="
-alias ffsm="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=month --pages-start="
-alias ffsw="ytfzf --thumb-viewer=kitty --pages=2 -t -f -l --detach --upload-date=week --pages-start="
-
-# ------ download video
-alias ffd="ytfzf -t --thumb-viewer=kitty --pages=2 -f -d --pages-start="
-alias ffds="ytfzf -t --thumb-viewer=kitty --pages=2 -f --ytdl-opts='--write-auto-subs' -d --pages-start="
-
-# AUDIO
-# ------ play audio
-alias ffa="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --pages-start="
-# ------- download audio
-alias ffad="ytfzf --thumb-viewer=kitty --pages=2 -t -l -m --ytdl-opts='-x --audio-format mp3' -d --pages-start="
 
 
 
