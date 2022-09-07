@@ -307,7 +307,7 @@ fi
 
 
 # load Xmodmap
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 
 
 eval "$(starship init bash)"

@@ -237,7 +237,7 @@ alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 
 
 # load Xmodmap
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 
 xset r rate 240 20
 #cat ~/.config/asciiarts/bismillah.txt | lolcat -F 0.021

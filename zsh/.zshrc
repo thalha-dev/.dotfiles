@@ -118,7 +118,7 @@ export PATH=$PATH:$JAVA_HOME/bin:/usr/local/go/bin
 # fi
 
 # load Xmodmap
-xmodmap ~/.Xmodmap
+# xmodmap ~/.Xmodmap
 
 
 
