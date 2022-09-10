@@ -58,6 +58,7 @@ return packer.startup(function(use)
 	use({ "NTBBloodbath/doom-one.nvim" })
 	use({ "themercorp/themer.lua" })
 	use({ "olimorris/onedarkpro.nvim" })
+	use({ "sam4llis/nvim-tundra" })
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP

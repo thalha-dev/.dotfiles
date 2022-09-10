@@ -33,6 +33,7 @@ alias cll="pwd | xclip -i -sel primary"
 
 # tmux
 alias t='tmux a 2>/dev/null || tmux'
+alias td='tmux detach'
 alias tk='tmux kill-server'
 alias tn='tmux new -d -s '
 

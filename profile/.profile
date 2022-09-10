@@ -15,6 +15,11 @@ export TERM=xterm-256color
 # EDITOR
 export ALTERNATE_EDITOR="vim"
 export EDITOR="nvim"
+# COLORS
+export RED="\033[31m"
+export GREEN="\033[32m"
+export BLUE="\033[34m"
+export COLORRESET="\033[0m"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
