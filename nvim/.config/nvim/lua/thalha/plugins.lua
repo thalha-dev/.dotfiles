@@ -44,9 +44,6 @@ return packer.startup(function(use)
 	use({ "nvim-lua/plenary.nvim" }) -- Useful lua functions used by lots of plugins
 	use({ "nvim-lua/popup.nvim" })
 
-	-- fuzzzy finder
-	-- use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
-
 	-- terminal
 	use({ "akinsho/toggleterm.nvim" })
 
@@ -80,8 +77,6 @@ return packer.startup(function(use)
 	use({ "saadparwaiz1/cmp_luasnip" }) -- snippet completions
 	use({ "rafamadriz/friendly-snippets" }) -- a bunch of snippets to use
 	use({ "hrsh7th/cmp-nvim-lua" })
-
-	-- use({ "glepnir/lspsaga.nvim", branch = "main" })
 
 	-- Debugging
 	use("mfussenegger/nvim-dap")
@@ -141,8 +136,7 @@ return packer.startup(function(use)
 
 	use({ "Pocco81/true-zen.nvim" })
 	use({ "stevearc/dressing.nvim" })
-	-- learning plugin
-	-- use("/home/thalha/learn/lua/plugins/stackmap.nvim")
+	use({ "feline-nvim/feline.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
