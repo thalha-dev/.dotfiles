@@ -107,6 +107,18 @@ keymap("n", "<leader>llx", "<cmd>LspStop<CR>", opts)
 keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
 keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 
+
+-- GIT
+keymap("n", "<leader>gv", "<cmd>DiffviewOpen<CR>", opts)
+keymap("n", "<leader>gt", "<cmd>DiffviewToggleFiles<CR>", opts)
+keymap("n", "<leader>gsb", "<cmd>Gitsigns toggle_current_line_blame<CR>", opts)
+keymap("n", "<leader>gsB", "<cmd>Gitsigns blame_line<CR>", opts)
+keymap("n", "<leader>gss", "<cmd>Gitsigns show<CR>", opts)
+keymap("n", "<leader>gsv", "<cmd>Gitsigns diffthis<CR>", opts)
+keymap("n", "<leader>gsh", "<cmd>Gitsigns toggle_linehl<CR>", opts)
+keymap("n", "<leader>gsw", "<cmd>Gitsigns toggle_word_diff<CR>", opts)
+keymap("n", "<leader>gst", "<cmd>Gitsigns toggle_signs<CR>", opts)
+
 -- Mason
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 

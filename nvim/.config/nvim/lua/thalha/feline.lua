@@ -5,7 +5,7 @@ end
 
 local force_inactive = {
 	filetypes = {
-		"^neo-tree$",
+		"^neo%-tree$",
 		"^dbui$",
 		"^packer$",
 		"^startify$",
