@@ -51,11 +51,9 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "lunarvim/darkplus.nvim" })
 	use({ "xiyaowong/nvim-transparent" })
-	use({ "RRethy/nvim-base16" })
-	use({ "NTBBloodbath/doom-one.nvim" })
+	-- use({ "RRethy/nvim-base16" })
 	use({ "themercorp/themer.lua" })
-	use({ "olimorris/onedarkpro.nvim" })
-	use({ "sam4llis/nvim-tundra" })
+	use({ "cranberry-clockworks/coal.nvim" })
 
 	-- LSP
 	use({ "neovim/nvim-lspconfig" }) -- enable LSP
@@ -133,10 +131,20 @@ return packer.startup(function(use)
 	-- color help
 	use({ "norcalli/nvim-colorizer.lua" })
 	use({ "ziontee113/color-picker.nvim" })
+	-- requires winbar
+	-- use({ "uga-rosa/ccc.nvim" })
 
 	use({ "Pocco81/true-zen.nvim" })
 	use({ "stevearc/dressing.nvim" })
 	use({ "feline-nvim/feline.nvim" })
+
+    -- browser support
+	use({
+		"glacambre/firenvim",
+		run = function()
+			vim.fn["firenvim#install"](0)
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

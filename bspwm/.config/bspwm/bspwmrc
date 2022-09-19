@@ -1,13 +1,14 @@
 #! /bin/sh
 
-sxhkd &
+sxhkd -C ~/.config/sxhkd/sxhkdrc &
+picom -b --experimental-backends
 
-# feh --bg-fill ~/.config/bspwm/3475436.jpg
+nitrogen --restore &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width         1
-bspc config window_gap       	 8
+bspc config window_gap       	 0
 bspc config top_padding          0
 
 bspc config split_ratio          0.50

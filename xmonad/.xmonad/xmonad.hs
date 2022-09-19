@@ -282,7 +282,7 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
-    -- spawnOnce "compton &"
+    spawn "polybarLaunch.sh"
     spawn "picom -b --experimental-backends"
 
 ------------------------------------------------------------------------
@@ -291,7 +291,7 @@ myStartupHook = do
 -- Run xmonad with the settings you specify. No need to modify this.
 --
 main = do
-    xmproc <- spawnPipe "xmobar /home/thalha/.config/xmobar/xmobarrc"
+    -- xmproc <- spawnPipe "xmobar /home/thalha/.config/xmobar/xmobarrc"
     xmonad $ docks defaults
 
 -- A structure containing your configuration settings, overriding
