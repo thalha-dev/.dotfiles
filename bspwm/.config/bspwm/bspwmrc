@@ -1,6 +1,6 @@
 #! /bin/sh
 
-sxhkd -C ~/.config/sxhkd/sxhkdrc &
+sxhkd -C ~/.config/bspwm/sxhkdrc &
 picom -b --experimental-backends
 
 nitrogen --restore &
