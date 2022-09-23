@@ -122,6 +122,9 @@ keymap("n", "<leader>gst", "<cmd>Gitsigns toggle_signs<CR>", opts)
 -- Mason
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 
+-- Markdown Preview Toggle
+keymap("n", "<leader>mmt", "<cmd>MarkdownPreviewToggle<CR>", opts)
+
 -- Prettier
 keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
 

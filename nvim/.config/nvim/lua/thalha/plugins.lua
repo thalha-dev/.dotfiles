@@ -137,8 +137,16 @@ return packer.startup(function(use)
 	use({ "Pocco81/true-zen.nvim" })
 	use({ "stevearc/dressing.nvim" })
 	use({ "feline-nvim/feline.nvim" })
+	use({ "ellisonleao/glow.nvim" })
+	-- install without yarn or npm
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
-    -- browser support
+	-- browser support
 	use({
 		"glacambre/firenvim",
 		run = function()
