@@ -107,6 +107,46 @@ keymap("n", "<leader>llx", "<cmd>LspStop<CR>", opts)
 keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
 keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 
+-- Move to previous/next
+keymap("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts)
+keymap("n", "<A-l>", "<Cmd>BufferNext<CR>", opts)
+-- Re-order to previous/next
+keymap("n", "<A-H>", "<Cmd>BufferMovePrevious<CR>", opts)
+keymap("n", "<A-L>", "<Cmd>BufferMoveNext<CR>", opts)
+-- Goto buffer in position...
+keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
+keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
+keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
+keymap("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
+keymap("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
+keymap("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
+keymap("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
+keymap("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
+keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
+keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
+-- Pin/unpin buffer
+--[[ keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts) ]]
+-- Close buffer
+keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+-- Wipeout buffer
+--                 :BufferWipeout
+-- Close commands
+--                 :BufferCloseAllButCurrent
+--                 :BufferCloseAllButPinned
+--                 :BufferCloseAllButCurrentOrPinned
+--                 :BufferCloseBuffersLeft
+--                 :BufferCloseBuffersRight
+-- Magic buffer-picking mode
+keymap("n", "<leader>jk", "<Cmd>BufferPick<CR>", opts)
+-- Sort automatically by...
+--[[ keymap('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts) ]]
+--[[ keymap('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts) ]]
+--[[ keymap('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts) ]]
+--[[ keymap('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts) ]]
+
+-- Other:
+-- :BarbarEnable - enables barbar (enabled by default)
+-- :BarbarDisable - very bad command, should never be used
 
 -- GIT
 keymap("n", "<leader>gv", "<cmd>DiffviewOpen<CR>", opts)
@@ -200,13 +240,13 @@ keymap("n", "<leader>trn", ":lua _NODE_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trl", ":lua _LUA_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 
--- Switch Tabs
-keymap("n", "<A-h>", ":tabprevious<CR>", opts)
-keymap("n", "<A-l>", ":tabnext<CR>", opts)
+--[[ -- Switch Tabs ]]
+--[[ keymap("n", "<A-h>", ":tabprevious<CR>", opts) ]]
+--[[ keymap("n", "<A-l>", ":tabnext<CR>", opts) ]]
 
---  Move Tabs
-keymap("n", "<A-H>", ":tabmove -<CR>", opts)
-keymap("n", "<A-L>", ":tabmove +<CR>", opts)
+--[[ --  Move Tabs ]]
+--[[ keymap("n", "<A-H>", ":tabmove -<CR>", opts) ]]
+--[[ keymap("n", "<A-L>", ":tabmove +<CR>", opts) ]]
 
 -- Vim Help
 keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)
