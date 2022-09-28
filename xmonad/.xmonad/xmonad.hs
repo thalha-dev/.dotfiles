@@ -282,6 +282,8 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
+    spawnOnce "nm-applet"
+    spawnOnce "blueman-applet"
     spawn "polybarLaunch.sh"
     spawn "picom -b --experimental-backends"
 

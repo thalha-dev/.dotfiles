@@ -125,6 +125,12 @@ return packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 		},
 	})
+	use({ "feline-nvim/feline.nvim" })
+	use({
+		"romgrk/barbar.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
+	use({ "ellisonleao/glow.nvim" })
 	use({ "vifm/vifm.vim" })
 	use({ "is0n/fm-nvim" })
 
@@ -136,12 +142,6 @@ return packer.startup(function(use)
 
 	use({ "Pocco81/true-zen.nvim" })
 	use({ "stevearc/dressing.nvim" })
-	use({ "feline-nvim/feline.nvim" })
-	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
-	use({ "ellisonleao/glow.nvim" })
 	-- install without yarn or npm
 	use({
 		"iamcco/markdown-preview.nvim",

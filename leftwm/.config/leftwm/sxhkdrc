@@ -1,0 +1,18 @@
+# ┌───────────────────────────────────────────────────────────────────────────┐
+# │                        WM INDEPENDENT HOTKEYS                             │
+# └───────────────────────────────────────────────────────────────────────────┘
+
+
+# OPERNER
+super + o;{g,f,C,e,P,b,p,O,B,w,c}
+    {google-chrome,nautilus,code,rofi -show emoji -modi emoji,cheese,polybarLaunch.sh,picom --experimental-backends -b,libreoffice,blueman-manager,nitrogen,gnome-calculator}
+
+super + t;{d,c,t,f,T,n,W,u,U}
+    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e lf,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e sudo apt update,kitty -e sudo nala upgrade}
+# KILL 
+super + a;{p,b}
+    {killall picom,killall -q polybar}
+
+# MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
+super + Escape
+	pkill -USR1 -x sxhkd                    

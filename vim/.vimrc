@@ -397,11 +397,11 @@ noremap <leader>vii <cmd>IndentLinesToggle<cr>
             "c ----- current
             "d ----- dir
 
-noremap <leader>vssc <cmd>mksession!<cr>
-noremap <leader>vssd :mksession! ~/.config/nvim/session/
-noremap <leader>vsmd :!mkdir -p ~/.config/nvim/session/
-noremap <leader>vsrc <cmd>source Session.vim<cr>
-noremap <leader>vsrd :source ~/.config/nvim/session/
+" noremap <leader>ssS <cmd>mksession!<cr>
+" noremap <leader>scR <cmd>source Session.vim<cr>
+noremap <leader>sS :mksession! ~/.local/share/session/
+noremap <leader>sD :!mkdir -p ~/.local/share/session/
+noremap <leader>sR :source ~/.local/share/nvim/session/
 
 
 "-----------------------------Unload Netrw

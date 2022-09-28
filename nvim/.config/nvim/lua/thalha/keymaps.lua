@@ -108,11 +108,11 @@ keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
 keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
 
 -- Move to previous/next
-keymap("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts)
-keymap("n", "<A-l>", "<Cmd>BufferNext<CR>", opts)
+keymap("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
+keymap("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
 -- Re-order to previous/next
-keymap("n", "<A-H>", "<Cmd>BufferMovePrevious<CR>", opts)
-keymap("n", "<A-L>", "<Cmd>BufferMoveNext<CR>", opts)
+keymap("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
+keymap("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
 -- Goto buffer in position...
 keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
 keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
@@ -137,7 +137,7 @@ keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
 --                 :BufferCloseBuffersLeft
 --                 :BufferCloseBuffersRight
 -- Magic buffer-picking mode
-keymap("n", "<leader>jk", "<Cmd>BufferPick<CR>", opts)
+keymap("n", ",f", "<Cmd>BufferPick<CR>", opts)
 -- Sort automatically by...
 --[[ keymap('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts) ]]
 --[[ keymap('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts) ]]
@@ -158,6 +158,11 @@ keymap("n", "<leader>gsv", "<cmd>Gitsigns diffthis<CR>", opts)
 keymap("n", "<leader>gsh", "<cmd>Gitsigns toggle_linehl<CR>", opts)
 keymap("n", "<leader>gsw", "<cmd>Gitsigns toggle_word_diff<CR>", opts)
 keymap("n", "<leader>gst", "<cmd>Gitsigns toggle_signs<CR>", opts)
+
+-- Session
+keymap("n", "<leader>sD", ":!mkdir -p ~/.local/share/nvim/session/", {})
+keymap("n", "<leader>sS", ":mksession! ~/.local/share/nvim/session/", {})
+keymap("n", "<leader>sR", ":source ~/.local/share/nvim/session/", {})
 
 -- Mason
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)

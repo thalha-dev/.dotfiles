@@ -11,11 +11,11 @@ super + {p, shift+p}
     rofi -show {run,drun}
 
 # OPERNER
-super + o;{g,f,C,e,c,b,p}
-    {google-chrome,nautilus,code,rofi -show emoji -modi emoji,cheese,polybarLaunch.sh,picom --experimental-backends -b}
+super + o;{g,f,C,e,P,b,p,O,B,w,c}
+    {google-chrome,nautilus,code,rofi -show emoji -modi emoji,cheese,polybarLaunch.sh,picom --experimental-backends -b,libreoffice,blueman-manager,nitrogen,gnome-calculator}
 
-super + t;{d,c,t,f,T,n}
-    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e lf,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua}
+super + t;{d,c,t,f,T,n,W,u,U}
+    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e lf,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e sudo apt update,kitty -e sudo nala upgrade}
 # KILL 
 super + a;{p,b}
     {killall picom,killall -q polybar}

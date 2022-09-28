@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+
+
+#down the last running theme
+if [ -f "/tmp/leftwm-theme-down" ]; then
+    /tmp/leftwm-theme-down
+    rm /tmp/leftwm-theme-down
+fi
+ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
+
+
+#boot picom or compton if it exists
+if [ -x "$(command -v picom)" ]; then
+  picom -b --experimental-backends
+elif [ -x "$(command -v compton)" ]; then
+  compton &> /dev/null &
+fi
+
+#set the theme.toml config
+leftwm-command "LoadTheme $SCRIPTPATH/theme.toml"
+
+# Background
+if [ -x "$(command -v nitrogen)" ]; then
+    nitrogen --restore
+elif [ -x "$(command -v feh)" ]; then
+    feh --bg-scale $SCRIPTPATH/spaceTravel.jpg
+fi
+
+if [ -x "$(command -v sxhkd)" ]; then
+    sxhkd -C ~/.config/leftwm/sxhkdrc &
+fi
+
+if [ -x "$(command -v nm-applet)" ]; then
+    nm-applet &
+fi
+
+if [ -x "$(command -v blueman-applet)" ]; then
+    blueman-applet &
+fi
+
+if [ -x "$(command -v blueman-tray)" ]; then
+    blueman-tray &
+fi
+
+index=0
+monitors="$(polybar -m | sed s/:.*//)"
+leftwm-state -q -n -t $SCRIPTPATH/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
+do
+  let indextemp=index+1
+  monitor=$(sed "$indextemp!d" <<<"$monitors")
+  monitor=$monitor offset=$x width=$width polybar --config=~/.config/polybar/config.ini main &> /dev/null &
+  let index=indextemp
+done

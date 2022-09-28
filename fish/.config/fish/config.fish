@@ -240,13 +240,7 @@ alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 # load Xmodmap
 # xmodmap ~/.Xmodmap
 
-xset r rate 240 20
-#cat ~/.config/asciiarts/bismillah.txt | lolcat -F 0.021
-
-
 #prompt
 #starship init fish | source 
-
-# zoxide init fish | source
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/thalha/.ghcup/bin # ghcup-env
