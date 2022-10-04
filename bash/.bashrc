@@ -180,6 +180,7 @@ alias nirm="nix-env -e "
 alias nils="nix-env -q"
 alias up="sudo nala update"
 alias upp="sudo nala upgrade"
+alias kittyUpdate="curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin"
 alias ins="sudo nala install"
 alias rem="sudo nala remove"
 alias hist="sudo nala history"
@@ -190,6 +191,7 @@ alias histre="sudo nala history redo"
 
 #alias brightness="xrandr --output eDP --brightness"
 alias bri="sudo brightnessctl set"
+alias bri50="sudo brightnessctl set 50%" 
 
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 

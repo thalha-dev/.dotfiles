@@ -1,12 +1,5 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-	-- Switch Tabs
-	vim.api.nvim_set_keymap("n", "<A-h>", ":tabprevious<CR>", { noremap = true, silent = true })
-	vim.api.nvim_set_keymap("n", "<A-l>", ":tabnext<CR>", { noremap = true, silent = true })
-
-	--  Move Tabs
-	vim.api.nvim_set_keymap("n", "<A-H>", ":tabmove -<CR>", { noremap = true, silent = true })
-	vim.api.nvim_set_keymap("n", "<A-L>", ":tabmove +<CR>", { noremap = true, silent = true })
 	return
 end
 -- Set barbar's options

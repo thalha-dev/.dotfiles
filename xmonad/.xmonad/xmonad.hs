@@ -73,9 +73,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show drun") -- window app
 
-    , ((modm,               xK_s     ), spawn "rofi -show emoji -modi emoji") -- emoji
+    -- , ((modm,               xK_s     ), spawn "rofi -show emoji -modi emoji") -- emoji
 
-    , ((modm,               xK_f     ), spawn "rofi -show file-browser-extended") -- emoji
+    -- , ((modm,               xK_f     ), spawn "rofi -show file-browser-extended") -- emoji
 
     -- launch gmrun
     --, ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
@@ -128,28 +128,18 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Deincrement the number of windows in the master area
     , ((modm              , xK_period), sendMessage (IncMasterN (-1)))
 
-    -- picom - compositor
-    , ((modm              , xK_a ), spawn "picom -b --experimental-backends")
-
-    -- picom - compositor - kill
-    , ((modm .|. shiftMask  , xK_a ), spawn "killall picom")
-
     -- Screenshot - Full Screen
     , ((0                 , xK_Print ), spawn "gnome-screenshot")
-
-    -- Screenshot - Kill gnome-screenshot
-    , ((controlMask       , xK_Print ), spawn "killall gnome-screenshot")
 
     -- Screenshot - Flameshot 
     , ((shiftMask         , xK_Print ), spawn "flameshot gui")
 
-    -- Screenshot - Kill Flameshot
-    , ((controlMask .|. shiftMask, xK_Print ), spawn "killall flameshot")
-    
+    -- gnome-screenshot-gui
+    , ((modm .|. shiftMask, xK_Print ), spawn "gnome-screenshot -i"    )
 
     -- Lock screen
     -- slock: http://tools.suckless.org/slock -- this is what I use
-    , ((modm .|. shiftMask, xK_l     ), spawn "slock")
+    , ((modm .|. mod1Mask, xK_l     ), spawn "slock")
 
 
 
@@ -286,6 +276,8 @@ myStartupHook = do
     spawnOnce "blueman-applet"
     spawn "polybarLaunch.sh"
     spawn "picom -b --experimental-backends"
+    spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
+
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.

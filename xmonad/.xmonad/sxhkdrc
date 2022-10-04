@@ -2,13 +2,6 @@
 # │                        WM INDEPENDENT HOTKEYS                             │
 # └───────────────────────────────────────────────────────────────────────────┘
 
-# TERMINAL EMULATOR
-super + shift + Return
-	kitty 
-
-# PROGRAM LAUNCHER
-super + {p, shift+p}
-    rofi -show {run,drun}
 
 # OPERNER
 # g --> launch google-chrome
@@ -37,11 +30,9 @@ super + o;{g,f,C,e,P,b,p,O,B,w,c}
 super + t;{d,c,t,s,T,n,W,f}
     {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e lf}
 
+# KILL 
 super + a;{p,b}
     {killall picom,killall -q polybar}
-
-super + L
-    slock
 
 # MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
 super + Escape

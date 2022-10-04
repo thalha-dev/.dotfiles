@@ -16,12 +16,11 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-  augroup packer_user_config
-    autocmd!
-    autocmd BufWritePost plugins.lua source <afile> | PackerSync
-  augroup end
-]])
+--[[ vim.cmd() ]]
+--[[ augroup packer_user_config ]]
+--[[   autocmd! ]]
+--[[   autocmd BufWritePost plugins.lua source <afile> | PackerSync ]]
+--[[ augroup end ]]
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -127,8 +126,11 @@ return packer.startup(function(use)
 	})
 	use({ "feline-nvim/feline.nvim" })
 	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
+		"B4mbus/nvim-headband",
+		requires = {
+			{ "SmiteshP/nvim-navic" }, -- required for for the navic section to work
+			{ "kyazdani42/nvim-web-devicons" }, -- required for for devicons and default location_section.separator highlight group
+		},
 	})
 	use({ "ellisonleao/glow.nvim" })
 	use({ "vifm/vifm.vim" })
@@ -147,14 +149,6 @@ return packer.startup(function(use)
 		"iamcco/markdown-preview.nvim",
 		run = function()
 			vim.fn["mkdp#util#install"]()
-		end,
-	})
-
-	-- browser support
-	use({
-		"glacambre/firenvim",
-		run = function()
-			vim.fn["firenvim#install"](0)
 		end,
 	})
 

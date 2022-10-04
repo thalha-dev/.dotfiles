@@ -310,3 +310,21 @@ command = "Execute"
 value = "dmenu_run"
 modifier = ["modkey"]
 key = "r"
+
+[[keybind]]
+command = "Execute"
+value = "brightnessctl set +5"
+modifier = ["modkey"]
+key = "Prior"
+
+[[keybind]]
+command = "Execute"
+value = "brightnessctl set 5-"
+modifier = ["modkey"]
+key = "Next"
+
+[[keybind]]
+command = "Execute"
+value = "brightnessctl set 0"
+modifier = ["modkey", "Shift"]
+key = "Next"

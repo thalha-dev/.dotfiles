@@ -40,8 +40,8 @@ keymap("n", "<leader>fr", "<cmd>Telescope registers<cr>", opts)
 keymap("n", "<leader>fcc", "<cmd>Telescope commands<cr>", opts)
 keymap("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", opts)
 -- keymap("n", "<leader>fq", "<cmd>FzfLua quickfix<cr>", opts)
-keymap("n", "\\f", "<cmd>Telescope git_files<cr>", opts)
--- keymap("n", "\\f", "<cmd>FzfLua git_files<cr>", opts)
+keymap("n", "<leader>a", "<cmd>Telescope git_files<cr>", opts)
+-- keymap("n", "<leader>a", "<cmd>FzfLua git_files<cr>", opts)
 keymap("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", opts)
 keymap("n", "<leader>fgb", "<cmd>Telescope git_branches<cr>", opts)
 keymap("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", opts)
@@ -81,7 +81,7 @@ keymap("n", "<leader>vct", "<cmd>TransparentToggle<CR>", opts)
 keymap("n", "<leader>vpi", "<cmd>PackerInstall<cr>", nor)
 keymap("n", "<leader>vpc", "<cmd>PackerClean<cr>", nor)
 keymap("n", "<leader>vps", "<cmd>PackerStatus<cr>", nor)
-keymap("n", "<leader>vpu", "<cmd>PackerUpdate<cr>", nor)
+keymap("n", "<leader>vpu", "<cmd>PackerSync<cr>", nor)
 
 -- tmux window
 
@@ -95,8 +95,8 @@ keymap("n", "<leader>vii", "<cmd>IndentBlanklineToggle<CR>", opts)
 keymap("n", "<leader>rrr", ":w<CR>:source %<CR>", opts)
 
 -- Quickfix
-keymap("n", "<leader>aj", "<cmd>cnext<CR>", opts)
-keymap("n", "<leader>ak", "<cmd>cprev<CR>", opts)
+keymap("n", "<leader>,j", "<cmd>cnext<CR>", opts)
+keymap("n", "<leader>,k", "<cmd>cprev<CR>", opts)
 
 -- LSP
 keymap("n", "<leader>lli", "<cmd>LspInfo<CR>", opts)
@@ -106,47 +106,6 @@ keymap("n", "<leader>llx", "<cmd>LspStop<CR>", opts)
 -- Nvim Tree
 keymap("n", "<leader>nf", "<cmd>NeoTreeReveal<CR>", opts)
 keymap("n", "<leader>nn", "<cmd>NeoTreeShowToggle<CR>", opts)
-
--- Move to previous/next
-keymap("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
-keymap("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
--- Re-order to previous/next
-keymap("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
-keymap("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
--- Goto buffer in position...
-keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
-keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
-keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
-keymap("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
-keymap("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
-keymap("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
-keymap("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
-keymap("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
-keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
-keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
--- Pin/unpin buffer
---[[ keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts) ]]
--- Close buffer
-keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
--- Wipeout buffer
---                 :BufferWipeout
--- Close commands
---                 :BufferCloseAllButCurrent
---                 :BufferCloseAllButPinned
---                 :BufferCloseAllButCurrentOrPinned
---                 :BufferCloseBuffersLeft
---                 :BufferCloseBuffersRight
--- Magic buffer-picking mode
-keymap("n", ",f", "<Cmd>BufferPick<CR>", opts)
--- Sort automatically by...
---[[ keymap('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts) ]]
---[[ keymap('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts) ]]
---[[ keymap('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts) ]]
---[[ keymap('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts) ]]
-
--- Other:
--- :BarbarEnable - enables barbar (enabled by default)
--- :BarbarDisable - very bad command, should never be used
 
 -- GIT
 keymap("n", "<leader>gv", "<cmd>DiffviewOpen<CR>", opts)
@@ -245,13 +204,11 @@ keymap("n", "<leader>trn", ":lua _NODE_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trl", ":lua _LUA_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 
---[[ -- Switch Tabs ]]
---[[ keymap("n", "<A-h>", ":tabprevious<CR>", opts) ]]
---[[ keymap("n", "<A-l>", ":tabnext<CR>", opts) ]]
-
---[[ --  Move Tabs ]]
---[[ keymap("n", "<A-H>", ":tabmove -<CR>", opts) ]]
---[[ keymap("n", "<A-L>", ":tabmove +<CR>", opts) ]]
+-- Switch Tabs
+keymap("n", "<A-,>", ":tabprevious<CR>", opts)
+keymap("n", "<A-.>", ":tabnext<CR>", opts)
+keymap("n", "<A-<>", ":tabmove -<CR>", opts)
+keymap("n", "<A->>", ":tabmove +<CR>", opts)
 
 -- Vim Help
 keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)
