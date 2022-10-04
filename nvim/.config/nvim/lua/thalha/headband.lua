@@ -27,6 +27,7 @@ local config = {
 			"gitcommit",
 			"NeogitCommitMessage",
 			"NeogitStatus",
+			"toggleterm",
 		})
 	),
 	separator_text = "::", -- the text between the location section and file section, appears only when they both have the same position and both are enabled and accessible
@@ -37,7 +38,7 @@ local config = {
 		text = "filename", -- how the file section should be displayed, can be 'full'|'full_lower'|'filename'|'shortened| 'shortened_lower'
 		wrap = nil, -- see #wrap above
 		enable_devicons = true, -- whether to enable the devicons
-		position = "right", -- the position of the file section, can be `left`|`right`
+		position = "left", -- the position of the file section, can be `left`|`right`
 		reversed = false, -- whether the file section should be reversed
 	},
 	location_section = { -- the configuration for the location section
