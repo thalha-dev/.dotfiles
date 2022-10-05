@@ -21,6 +21,7 @@ function fish_user_key_bindings
   # fish_default_key_bindings
   fish_vi_key_bindings
   bind -M insert -m default jk backward-char force-repaint
+  bind yy fish_clipboard_copy
 end
 ### END OF VI MODE ###
 
@@ -187,6 +188,7 @@ alias k="keynav daemonize"
 alias ja="java -cp ./target/classes/ "
 alias mcc="mavenCoreJava.sh"
 alias I="macchina"
+alias s="fuzzyScript.sh" 
 #alias lser="live-server --no-browser --quiet &"
 
 # applications

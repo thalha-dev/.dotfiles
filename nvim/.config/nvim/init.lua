@@ -11,7 +11,7 @@ require("thalha.lsp")
 require("thalha.telescope")
 require("thalha.treesitter")
 require("thalha.neotree")
---[[ require("thalha.feline") ]]
+require("thalha.lualine")
 require("thalha.headband")
 require("thalha.gitsigns")
 require("thalha.indentline")
@@ -23,3 +23,4 @@ require("thalha.colorpicker")
 require("thalha.debugging")
 require("thalha.fm")
 require("thalha.myAutoCommands")
+
