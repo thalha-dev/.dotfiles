@@ -1,4 +1,4 @@
-mode = {
+local mode = {
 	function()
 		return "▊"
 	end,

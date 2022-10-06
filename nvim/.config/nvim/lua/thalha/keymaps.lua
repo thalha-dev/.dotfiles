@@ -6,13 +6,6 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---- This is how to create funtcions
--- local function vifm_current_dir()
--- 	local st = "marks"
--- 	local command = string.format(":Telescope %s", st)
--- 	vim.cmd(command)
--- end
-
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -205,10 +198,29 @@ keymap("n", "<leader>trl", ":lua _LUA_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 
 -- Switch Tabs
-keymap("n", "<A-,>", ":tabprevious<CR>", opts)
-keymap("n", "<A-.>", ":tabnext<CR>", opts)
-keymap("n", "<A-<>", ":tabmove -<CR>", opts)
-keymap("n", "<A->>", ":tabmove +<CR>", opts)
+--[[ keymap("n", "<A-,>", ":tabprevious<CR>", opts) ]]
+--[[ keymap("n", "<A-.>", ":tabnext<CR>", opts) ]]
+--[[ keymap("n", "<A-<>", ":tabmove -<CR>", opts) ]]
+--[[ keymap("n", "<A->>", ":tabmove +<CR>", opts) ]]
+
+-- Move to previous/next
+keymap("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
+keymap("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
+keymap("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
+keymap("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
+keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
+keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
+keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
+keymap("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
+keymap("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
+keymap("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
+keymap("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
+keymap("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
+keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
+keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
+keymap("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
+keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+keymap("n", ",f", "<Cmd>BufferPick<CR>", opts)
 
 -- Vim Help
 keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)
@@ -220,7 +232,8 @@ keymap("n", "<A-j>", ":m .+1<CR>==", opts)
 keymap("n", "<A-k>", ":m .-2<CR>==", opts)
 
 -- color picker
-keymap("n", "<leader>vcp", "<cmd>PickColor<cr>", opts)
+keymap("n", "<leader>vcp", "<cmd>CccPick<cr>", opts)
+keymap("n", "<leader>vcC", "<cmd>CccConvert<cr>", opts)
 
 -- colorizer
 keymap("n", "<leader>vcx", "<cmd>ColorizerToggle<cr>", opts)
@@ -260,5 +273,5 @@ keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- Command
-keymap("c", "Bd", ":bp | :sp | :bn | :bd", term_opts)
+keymap("c", "Bd", "bp | :sp | :bn | :bd", {})
 keymap("c", "jk", "<C-u><del>", {})

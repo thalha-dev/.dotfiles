@@ -136,15 +136,22 @@ return packer.startup(function(use)
 			{ "kyazdani42/nvim-web-devicons" }, -- required for for devicons and default location_section.separator highlight group
 		},
 	})
+	use({
+		"romgrk/barbar.nvim",
+		requires = { "kyazdani42/nvim-web-devicons" },
+	})
 	use({ "ellisonleao/glow.nvim" })
 	use({ "vifm/vifm.vim" })
 	use({ "is0n/fm-nvim" })
 
 	-- color help
 	use({ "norcalli/nvim-colorizer.lua" })
-	use({ "ziontee113/color-picker.nvim" })
-	-- requires winbar
-	-- use({ "uga-rosa/ccc.nvim" })
+	use({
+		"uga-rosa/ccc.nvim",
+		config = function()
+			require("ccc").setup({})
+		end,
+	})
 
 	use({ "Pocco81/true-zen.nvim" })
 	use({ "stevearc/dressing.nvim" })
