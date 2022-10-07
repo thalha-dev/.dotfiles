@@ -1,14 +1,9 @@
-local mode = {
-	function()
-		return "▊"
-	end,
-	color = function()
-		return { fg = "#8c4ea0", bg = "#8c4ea0" }
-	end,
-	padding = 0,
-}
+local status_ok, lualine = pcall(require, "lualine")
+if not status_ok then
+	return
+end
 
-require("lualine").setup({
+lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = "iceberg",
@@ -28,7 +23,7 @@ require("lualine").setup({
 		},
 	},
 	sections = {
-		lualine_a = { mode },
+		lualine_a = {},
 		lualine_b = {},
 		lualine_c = {
 			{

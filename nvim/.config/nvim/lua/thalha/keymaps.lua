@@ -168,7 +168,7 @@ keymap("n", "<leader>dyy", "ggVGd", opts)
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
 
 -- Test with plenary
-keymap("n", ",t", "<Plug>PlenaryTestFile", opts)
+--[[ keymap("n", ",t", "<Plug>PlenaryTestFile", opts) ]]
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -243,7 +243,7 @@ keymap("n", "<leader>vcx", "<cmd>ColorizerToggle<cr>", opts)
 keymap("i", "jk", "<ESC>", opts)
 
 -- color picker
-keymap("i", "<C-s>", "<cmd>PickColorInsert<cr>", opts)
+keymap("i", "<C-s>", "<cmd>CccConvert<cr>", opts)
 -- Visual --
 
 -- copy to system clipboard

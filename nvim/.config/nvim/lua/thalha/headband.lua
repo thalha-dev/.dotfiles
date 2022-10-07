@@ -38,7 +38,7 @@ local config = {
 		text = "filename", -- how the file section should be displayed, can be 'full'|'full_lower'|'filename'|'shortened| 'shortened_lower'
 		wrap = nil, -- see #wrap above
 		enable_devicons = true, -- whether to enable the devicons
-		position = "left", -- the position of the file section, can be `left`|`right`
+		position = "right", -- the position of the file section, can be `left`|`right`
 		reversed = false, -- whether the file section should be reversed
 	},
 	location_section = { -- the configuration for the location section

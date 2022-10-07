@@ -1,4 +1,9 @@
-require("fm-nvim").setup({
+local status_ok, fm = pcall(require, "fm-nvim")
+if not status_ok then
+	return
+end
+
+fm.setup({
 	-- (Vim) Command used to open files
 	edit_cmd = "edit",
 

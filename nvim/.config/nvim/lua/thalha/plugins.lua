@@ -140,6 +140,11 @@ return packer.startup(function(use)
 		"romgrk/barbar.nvim",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
+	use({ "rcarriga/nvim-notify" })
 	use({ "ellisonleao/glow.nvim" })
 	use({ "vifm/vifm.vim" })
 	use({ "is0n/fm-nvim" })
