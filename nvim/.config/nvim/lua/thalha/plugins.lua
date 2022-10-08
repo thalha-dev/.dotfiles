@@ -167,6 +167,8 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+    -- LIVE COMMAND PREVIEW
+	use({ "smjonas/live-command.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

@@ -20,10 +20,10 @@ local config = {
 		TRACE = icons.ui.Pencil,
 	},
 	level = 2,
-	minimum_width = 10,
+	minimum_width = 20,
 	render = "default",
 	stages = "fade_in_slide_out",
-	timeout = 400,
+	timeout = 500,
 	--[[ top_down = true, ]]
 }
 notify.setup(config)
