@@ -89,7 +89,7 @@ catppuccin.setup({
 		aerial = false,
 		vimwiki = true,
 		beacon = true,
-		navic = false,
+		navic = true,
 		overseer = false,
 	},
 	color_overrides = {},
