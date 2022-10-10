@@ -56,9 +56,9 @@ return packer.startup(function(use)
 	use({ "cranberry-clockworks/coal.nvim" })
 
 	-- LSP
-	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
+    use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
 	use({ "MunifTanjim/prettier.nvim" })

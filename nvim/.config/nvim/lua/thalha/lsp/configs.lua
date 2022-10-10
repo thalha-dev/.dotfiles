@@ -10,7 +10,7 @@ end
 
 local servers = { "jsonls", "html", "sumneko_lua", "gopls", "tsserver", "clangd" }
 
-local servers_check = { "jsonls", "sumneko_lua", "gopls", "jdtls" }
+local servers_check = { "jsonls", "sumneko_lua", "gopls" }
 
 local settings = {
 	ui = {
@@ -28,7 +28,7 @@ local settings = {
 mason.setup(settings)
 mason_lspconfig.setup({
 	ensure_installed = servers_check,
-	automatic_installation = true,
+	automatic_installation = false,
 })
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")

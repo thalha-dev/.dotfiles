@@ -189,6 +189,7 @@ alias ja="java -cp ./target/classes/ "
 alias mcc="mavenCoreJava.sh"
 alias I="macchina"
 alias s="fuzzyScript.sh" 
+alias W="fuzzyWiki.sh " 
 #alias lser="live-server --no-browser --quiet &"
 
 # applications
@@ -199,6 +200,8 @@ alias f="lf"
 alias tmux="tmux -u"
 alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
 alias kmad="fusermount -u /home/thalha/Downloads/android-mp"
+alias ormoluGit="ormolu --mode inplace (git ls-files '*.hs')"
+alias ormoluTree="ormolu --mode inplace (find . -name '*.hs')"
 
 #alias robot="/home/thalha/other-applications/robo3t-1.4.4-linux-x86_64-e6ac9ec/bin/robo3t"
 #alias pman="/home/thalha/other-applications/Postman/Postman"
@@ -225,8 +228,8 @@ alias histre="sudo nala history redo"
 
 #alias brightness="xrandr --output eDP --brightness"
 
-alias bri="sudo brightnessctl set" 
-alias bri50="sudo brightnessctl set 50%" 
+alias bri="brightnessctl set" 
+alias bri50="brightnessctl set 50%" 
 
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 

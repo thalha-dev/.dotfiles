@@ -27,8 +27,10 @@ super + o;{g,f,C,e,P,b,p,O,B,w,c}
 # n --> launch ~/.config/nvim in nvim
 # W --> launch nmtui
 # f --> launch lf
-super + t;{d,c,t,s,T,n,W,f}
-    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e lf}
+# h --> launch notification history
+# C --> clear all notification
+super + s;{d,c,t,s,T,n,W,f,h,C}
+    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e lf,dunstctl history-pop,dunstctl close-all}
 
 # KILL 
 super + a;{p,b}
@@ -37,3 +39,12 @@ super + a;{p,b}
 # MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
 super + Escape
 	pkill -USR1 -x sxhkd                    
+
+XF86AudioLowerVolume
+    {changevolume down}
+
+XF86AudioRaiseVolume
+    {changevolume up}
+
+XF86AudioMute
+    {changevolume mute}
