@@ -158,7 +158,9 @@ keymap("n", "<leader><CR>", ":so ~/.config/nvim/init.lua<CR>", {})
 keymap("n", "\\cc", ":so ~/.config/nvim/lua/thalha/colorscheme.lua<CR>", {})
 
 -- Jump to capital letters
-keymap("n", "<leader>k", "/[A-Z]<CR>", opts)
+keymap("n", "<leader><leader>k", "/[A-Z]<CR>", opts)
+keymap("n", "<leader>k", ":cp<cr>", opts)
+keymap("n", "<leader>j", ":cn<cr>", opts)
 
 -- Registers
 keymap("n", "<leader>yc", 'gg"+yG', opts)

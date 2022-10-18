@@ -139,7 +139,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Lock screen
     -- slock: http://tools.suckless.org/slock -- this is what I use
-    , ((modm .|. mod1Mask, xK_l     ), spawn "slock")
+    , ((modm .|. mod1Mask, xK_l     ), spawn "mylock.sh")
 
 
 

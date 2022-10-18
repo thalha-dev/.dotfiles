@@ -243,6 +243,13 @@ alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 #dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_C6_36_B2_7C_A7_A6/sep1/fd4 org.freedesktop.DBus.Properties.Set string:"org.bluez.MediaTransport1" string:"Volume" variant:uint16:70"
 
 
+alias sleepoff="sudo systemctl mask sleep.target"
+alias sleepon="sudo systemctl unmask sleep.target"
+alias suspendoff="sudo systemctl mask suspend.target"
+alias suspendon="sudo systemctl unmask suspend.target"
+alias hibernateoff="sudo systemctl mask hibernate.target"
+alias hibernateon="sudo systemctl unmask hibernate.target"
+# sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 # load Xmodmap
 # xmodmap ~/.Xmodmap

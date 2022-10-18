@@ -301,7 +301,7 @@ key = "p"
 
 [[keybind]]
 command = "Execute"
-value = "slock"
+value = "mylock.sh"
 modifier = ["modkey", "Alt"]
 key = "l"
 

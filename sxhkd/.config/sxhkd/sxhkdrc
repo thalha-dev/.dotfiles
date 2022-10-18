@@ -43,7 +43,7 @@ super + a;{p,b}
     {killall picom,killall -q polybar}
 
 super + L
-    slock
+    mylock.sh
 
 # MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
 super + Escape
