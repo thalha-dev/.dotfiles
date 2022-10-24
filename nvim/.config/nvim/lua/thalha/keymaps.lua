@@ -22,7 +22,8 @@ vim.g.maplocalleader = " "
 -- Normal --
 
 -- Fuzzy Find
-keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
+-- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>", opts)
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
 -- keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", opts)
@@ -48,6 +49,9 @@ keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "<leader>fmp", "<cmd>Telescope man_pages<cr>", opts)
 keymap("n", "<leader>fht", "<cmd>Telescope help_tags<cr>", opts)
 keymap("n", "<leader>fnn", "<cmd>Telescope notify<cr>", opts)
+-- dir-telescope.nvim
+keymap("n", "<leader>fdg", "<cmd>GrepInDirectory<CR>", opts)
+-- fzf.lua
 keymap("n", "<leader>ftt", "<cmd>FzfLua tabs<cr>", opts)
 keymap("n", "<leader>fss", "<cmd>FzfLua spell_suggest<cr>", opts)
 keymap("n", "<leader>fsh", "<cmd>FzfLua search_history<cr>", opts)
@@ -162,10 +166,12 @@ keymap("n", "<leader><leader>k", "/[A-Z]<CR>", opts)
 keymap("n", "<leader>k", ":cp<cr>", opts)
 keymap("n", "<leader>j", ":cn<cr>", opts)
 
--- Registers
-keymap("n", "<leader>yc", 'gg"+yG', opts)
-keymap("n", "<leader>yy", "ggVGy", opts)
-keymap("n", "<leader>dyy", "ggVGd", opts)
+-- yank
+keymap("n", "<leader>yc", 'gg"+yG<C-o>', opts)
+keymap("n", "<leader>yy", "ggyG<C-o>", opts)
+keymap("n", "<leader>yl", "^v$y", opts)
+keymap("n", "<leader>yL", '^v$"+y', opts)
+keymap("n", "<leader>dyy", "ggdG", opts)
 
 -- Make file executable
 keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)

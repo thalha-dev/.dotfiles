@@ -58,7 +58,7 @@ return packer.startup(function(use)
 	-- LSP
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
-    use({ "neovim/nvim-lspconfig" }) -- enable LSP
+	use({ "neovim/nvim-lspconfig" }) -- enable LSP
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "mfussenegger/nvim-jdtls" })
 	use({ "MunifTanjim/prettier.nvim" })
@@ -98,6 +98,15 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
+	use({
+		"princejoogie/dir-telescope.nvim",
+		config = function()
+			require("dir-telescope").setup({
+				hidden = true,
+				respect_gitignore = true,
+			})
+		end,
+	})
 
 	use({
 		"ibhagwan/fzf-lua",
@@ -167,7 +176,7 @@ return packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-    -- LIVE COMMAND PREVIEW
+	-- LIVE COMMAND PREVIEW
 	use({ "smjonas/live-command.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
