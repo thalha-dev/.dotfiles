@@ -166,7 +166,7 @@ map gh cd ~
 
 # Basic Functions
 map au extract
-map DDD delete
+map DDDD delete
 map p paste
 map x cut
 map y copy
@@ -176,7 +176,7 @@ map Cf mkfile
 map Cd mkdir
 map bb setwallpaper
 map Cx makeExecutable
-map dd trash
+map dddd trash
 map dr restore_trash
 map ; push :
 cmap <a-s> cmd-escape

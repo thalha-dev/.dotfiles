@@ -190,6 +190,7 @@ alias mcc="mavenCoreJava.sh"
 alias I="macchina"
 alias s="fuzzyScript.sh" 
 alias W="fuzzyWiki.sh " 
+alias V="fuzzyVideos.sh " 
 #alias lser="live-server --no-browser --quiet &"
 
 # applications
