@@ -191,6 +191,8 @@ alias I="macchina"
 alias s="fuzzyScript.sh" 
 alias W="fuzzyWiki.sh " 
 alias V="fuzzyVideos.sh " 
+alias B="fuzzyBooks.sh " 
+alias D="fuzzyDots.sh " 
 #alias lser="live-server --no-browser --quiet &"
 
 # applications
