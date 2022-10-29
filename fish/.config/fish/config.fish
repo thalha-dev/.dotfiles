@@ -183,16 +183,33 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 # utils and binaries
 
 alias p="batcat"
+
 alias c="clear"
+
 alias k="keynav daemonize"
+
 alias ja="java -cp ./target/classes/ "
+
 alias mcc="mavenCoreJava.sh"
+
 alias I="macchina"
+
 alias s="fuzzyScript.sh" 
-alias W="fuzzyWiki.sh " 
+
 alias V="fuzzyVideos.sh " 
+
 alias B="fuzzyBooks.sh " 
-alias D="fuzzyDots.sh " 
+
+alias E="fuzzyEdit.sh " 
+alias Ed="fuzzyEdit.sh ~/.dotfiles" 
+alias Ec="fuzzyEdit.sh ~/.config" 
+alias Er="fuzzySudoEdit.sh " 
+
+alias P="fuzzyPrint.sh " 
+alias Pw="fuzzyPrint.sh ~/Wiki/myWiki" 
+alias Pp="fuzzyPrint.sh ~/Documents/personalWiki" 
+alias Pd="fuzzyPrint.sh ~/.dotfiles" 
+
 #alias lser="live-server --no-browser --quiet &"
 
 # applications

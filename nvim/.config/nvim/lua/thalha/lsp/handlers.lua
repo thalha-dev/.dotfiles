@@ -57,7 +57,6 @@ local function attach_navic(client, bufnr)
 	navic.attach(client, bufnr)
 end
 
-
 local function lsp_keymaps(bufnr)
 	local opts = { noremap = true, silent = true }
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -127,9 +126,6 @@ M.on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.document_formatting = false
 	end
-	--[[ if client.name == "jdt.ls" then ]]
-	--[[     client.server_capabilities.document_formatting = false ]]
-	--[[ end ]]
 	if client.name == "html" then
 		client.server_capabilities.document_formatting = false
 	end
