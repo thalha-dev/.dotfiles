@@ -213,10 +213,10 @@ keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 --[[ keymap("n", "<A->>", ":tabmove +<CR>", opts) ]]
 
 -- Move to previous/next
-keymap("n", "<A-,>", "<Cmd>BufferPrevious<CR>", opts)
-keymap("n", "<A-.>", "<Cmd>BufferNext<CR>", opts)
-keymap("n", "<A-<>", "<Cmd>BufferMovePrevious<CR>", opts)
-keymap("n", "<A->>", "<Cmd>BufferMoveNext<CR>", opts)
+keymap("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts)
+keymap("n", "<A-l>", "<Cmd>BufferNext<CR>", opts)
+keymap("n", "<A-H>", "<Cmd>BufferMovePrevious<CR>", opts)
+keymap("n", "<A-L>", "<Cmd>BufferMoveNext<CR>", opts)
 keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
 keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
 keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
