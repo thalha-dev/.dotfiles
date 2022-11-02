@@ -301,7 +301,7 @@ key = "p"
 
 [[keybind]]
 command = "Execute"
-value = "mylock.sh"
+value = "blur-lock.sh"
 modifier = ["modkey", "Alt"]
 key = "l"
 

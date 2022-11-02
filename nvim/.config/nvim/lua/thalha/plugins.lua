@@ -54,6 +54,7 @@ return packer.startup(function(use)
 	-- use({ "RRethy/nvim-base16" })
 	use({ "themercorp/themer.lua" })
 	use({ "cranberry-clockworks/coal.nvim" })
+	use({ "rebelot/kanagawa.nvim" })
 
 	-- LSP
 	use({ "williamboman/mason.nvim" })

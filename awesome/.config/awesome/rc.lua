@@ -246,7 +246,7 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift"    }, "Print", function() awful.util.spawn("gnome-screenshot -i") end,
         {description = "Gnome screenshot gui", group = "screenshots"}),
 
-    awful.key({ modkey,     "Shift"  },  "semicolon", function() awful.util.spawn("mylock.sh") end,
+    awful.key({ modkey,     "Shift"  },  "semicolon", function() awful.util.spawn("blur-lock.sh") end,
         {description = "Screen Lock", group = "launcher"}),
 
     awful.key({ modkey,            },  "F11", function() awful.util.spawn("picom --experimental-backends -b") end,

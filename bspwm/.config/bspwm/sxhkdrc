@@ -44,7 +44,7 @@ super + a;{p,b}
     {killall picom,killall -q polybar}
 
 super + L
-    mylock.sh
+    blur-lock.sh
 
 # MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
 super + Escape
