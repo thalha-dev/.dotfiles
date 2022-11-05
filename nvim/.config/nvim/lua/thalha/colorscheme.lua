@@ -4,7 +4,7 @@ vim.opt.background = 'dark'
 
 vim.cmd([[
 try
-  colorscheme kanagawa
+  colorscheme catppuccin
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark

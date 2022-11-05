@@ -55,6 +55,7 @@ return packer.startup(function(use)
 	use({ "themercorp/themer.lua" })
 	use({ "cranberry-clockworks/coal.nvim" })
 	use({ "rebelot/kanagawa.nvim" })
+	use({ "Yazeed1s/oh-lucy.nvim" })
 
 	-- LSP
 	use({ "williamboman/mason.nvim" })
@@ -146,10 +147,10 @@ return packer.startup(function(use)
 			{ "kyazdani42/nvim-web-devicons" }, -- required for for devicons and default location_section.separator highlight group
 		},
 	})
-	use({
-		"romgrk/barbar.nvim",
-		requires = { "kyazdani42/nvim-web-devicons" },
-	})
+	--[[ use({ ]]
+	--[[ 	"romgrk/barbar.nvim", ]]
+	--[[ 	requires = { "kyazdani42/nvim-web-devicons" }, ]]
+	--[[ }) ]]
 	use({
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",

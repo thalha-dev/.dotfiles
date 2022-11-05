@@ -25,9 +25,9 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
 -- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>", opts)
-keymap("n", "<leader>fb", "<cmd>Telescope buffers<cr>", opts)
--- keymap("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", opts)
-keymap("n", "<leader>ft", "<cmd>Telescope tags<cr>", opts)
+keymap("n", ",f", "<cmd>Telescope buffers<cr>", opts)
+-- keymap("n", ",f", "<cmd>FzfLua buffers<cr>", opts)
+keymap("n", "<leader>fT", "<cmd>Telescope tags<cr>", opts)
 keymap("n", "<leader>fm", "<cmd>Telescope marks<cr>", opts)
 keymap("n", "<leader>fj", "<cmd>Telescope jumplist<cr>", opts)
 keymap("n", "<leader>fr", "<cmd>Telescope registers<cr>", opts)
@@ -52,7 +52,7 @@ keymap("n", "<leader>fnn", "<cmd>Telescope notify<cr>", opts)
 -- dir-telescope.nvim
 keymap("n", "<leader>fdg", "<cmd>GrepInDirectory<CR>", opts)
 -- fzf.lua
-keymap("n", "<leader>ftt", "<cmd>FzfLua tabs<cr>", opts)
+keymap("n", "<leader>ft", "<cmd>FzfLua tabs<cr>", opts)
 keymap("n", "<leader>fss", "<cmd>FzfLua spell_suggest<cr>", opts)
 keymap("n", "<leader>fsh", "<cmd>FzfLua search_history<cr>", opts)
 keymap("n", "<leader>flr", "<cmd>FzfLua lsp_references<cr>", opts)
@@ -127,6 +127,9 @@ keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 -- Markdown Preview Toggle
 keymap("n", "<leader>mmt", "<cmd>MarkdownPreviewToggle<CR>", opts)
 
+-- remove current file from bufferlist
+keymap("n", "<leader>DDD", ":bp | :sp | :bn | :bd<Cr>", {})
+
 -- Prettier
 keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
 
@@ -167,14 +170,14 @@ keymap("n", "<leader>k", ":cp<cr>", opts)
 keymap("n", "<leader>j", ":cn<cr>", opts)
 
 -- yank
-keymap("n", "<leader>yc", 'gg"+yG<C-o>', opts)
-keymap("n", "<leader>yy", "ggyG<C-o>", opts)
+keymap("n", "<leader>yc", 'gg"+yG', opts)
+keymap("n", "<leader>yy", "ggyG", opts)
 keymap("n", "<leader>yl", "^v$y", opts)
 keymap("n", "<leader>yL", '^v$"+y', opts)
 keymap("n", "<leader>dyy", "ggdG", opts)
 
 -- Make file executable
-keymap("n", "<leader>x", ":!chmod +x %<CR>", opts)
+keymap("n", "<leader>X", ":!chmod +x %<CR>", opts)
 
 -- Test with plenary
 --[[ keymap("n", ",t", "<Plug>PlenaryTestFile", opts) ]]
@@ -207,29 +210,29 @@ keymap("n", "<leader>trl", ":lua _LUA_TOGGLE()<CR>", nor)
 keymap("n", "<leader>trj", ":lua _JSHELL_TOGGLE()<CR>", nor)
 
 -- Switch Tabs
---[[ keymap("n", "<A-,>", ":tabprevious<CR>", opts) ]]
---[[ keymap("n", "<A-.>", ":tabnext<CR>", opts) ]]
---[[ keymap("n", "<A-<>", ":tabmove -<CR>", opts) ]]
---[[ keymap("n", "<A->>", ":tabmove +<CR>", opts) ]]
+keymap("n", "<A-h>", ":tabprevious<CR>", opts)
+keymap("n", "<A-l>", ":tabnext<CR>", opts)
+keymap("n", "<A-H", ":tabmove -<CR>", opts)
+keymap("n", "<A-L", ":tabmove +<CR>", opts)
 
--- Move to previous/next
-keymap("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts)
-keymap("n", "<A-l>", "<Cmd>BufferNext<CR>", opts)
-keymap("n", "<A-H>", "<Cmd>BufferMovePrevious<CR>", opts)
-keymap("n", "<A-L>", "<Cmd>BufferMoveNext<CR>", opts)
-keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts)
-keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts)
-keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts)
-keymap("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts)
-keymap("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts)
-keymap("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts)
-keymap("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts)
-keymap("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
-keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
-keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
-keymap("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
-keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
-keymap("n", ",f", "<Cmd>BufferPick<CR>", opts)
+-- bar bar buffer
+--[[ keymap("n", "<A-h>", "<Cmd>BufferPrevious<CR>", opts) ]]
+--[[ keymap("n", "<A-l>", "<Cmd>BufferNext<CR>", opts) ]]
+--[[ keymap("n", "<A-H>", "<Cmd>BufferMovePrevious<CR>", opts) ]]
+--[[ keymap("n", "<A-L>", "<Cmd>BufferMoveNext<CR>", opts) ]]
+--[[ keymap("n", "<A-1>", "<Cmd>BufferGoto 1<CR>", opts) ]]
+--[[ keymap("n", "<A-2>", "<Cmd>BufferGoto 2<CR>", opts) ]]
+--[[ keymap("n", "<A-3>", "<Cmd>BufferGoto 3<CR>", opts) ]]
+--[[ keymap("n", "<A-4>", "<Cmd>BufferGoto 4<CR>", opts) ]]
+--[[ keymap("n", "<A-5>", "<Cmd>BufferGoto 5<CR>", opts) ]]
+--[[ keymap("n", "<A-6>", "<Cmd>BufferGoto 6<CR>", opts) ]]
+--[[ keymap("n", "<A-7>", "<Cmd>BufferGoto 7<CR>", opts) ]]
+--[[ keymap("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts) ]]
+--[[ keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts) ]]
+--[[ keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts) ]]
+--[[ keymap("n", "<A-p>", "<Cmd>BufferPin<CR>", opts) ]]
+--[[ keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts) ]]
+--[[ keymap("n", ",f", "<Cmd>BufferPick<CR>", opts) ]]
 
 -- Vim Help
 keymap("n", "<leader>vwh", ':h <C-R>=expand("<cword>")<CR><CR>', opts)
