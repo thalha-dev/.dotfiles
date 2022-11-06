@@ -56,6 +56,9 @@ return packer.startup(function(use)
 	use({ "cranberry-clockworks/coal.nvim" })
 	use({ "rebelot/kanagawa.nvim" })
 	use({ "Yazeed1s/oh-lucy.nvim" })
+	use({ "lunarvim/Onedarker.nvim" })
+	use({ "lunarvim/horizon.nvim" })
+	use({ "lunarvim/synthwave84.nvim" })
 
 	-- LSP
 	use({ "williamboman/mason.nvim" })
@@ -161,7 +164,7 @@ return packer.startup(function(use)
 
 	use({ "Pocco81/true-zen.nvim" })
 
-    -- MODERN UI
+	-- MODERN UI
 
 	--[[ use({ ]]
 	--[[ 	"folke/noice.nvim", ]]
@@ -174,7 +177,7 @@ return packer.startup(function(use)
 	--[[ 	}, ]]
 	--[[ }) ]]
 
-    use({ "stevearc/dressing.nvim" })
+	use({ "stevearc/dressing.nvim" })
 	-- install without yarn or npm
 	use({
 		"iamcco/markdown-preview.nvim",
