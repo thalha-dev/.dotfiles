@@ -140,17 +140,7 @@ return packer.startup(function(use)
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
-	use({
-		"B4mbus/nvim-headband",
-		requires = {
-			{ "SmiteshP/nvim-navic" }, -- required for for the navic section to work
-			{ "kyazdani42/nvim-web-devicons" }, -- required for for devicons and default location_section.separator highlight group
-		},
-	})
-	--[[ use({ ]]
-	--[[ 	"romgrk/barbar.nvim", ]]
-	--[[ 	requires = { "kyazdani42/nvim-web-devicons" }, ]]
-	--[[ }) ]]
+
 	use({
 		"SmiteshP/nvim-navic",
 		requires = "neovim/nvim-lspconfig",
@@ -170,7 +160,21 @@ return packer.startup(function(use)
 	})
 
 	use({ "Pocco81/true-zen.nvim" })
-	use({ "stevearc/dressing.nvim" })
+
+    -- MODERN UI
+
+	--[[ use({ ]]
+	--[[ 	"folke/noice.nvim", ]]
+	--[[ 	config = function() ]]
+	--[[ 		require("noice").setup() ]]
+	--[[ 	end, ]]
+	--[[ 	requires = { ]]
+	--[[ 		"MunifTanjim/nui.nvim", ]]
+	--[[ 		"rcarriga/nvim-notify", ]]
+	--[[ 	}, ]]
+	--[[ }) ]]
+
+    use({ "stevearc/dressing.nvim" })
 	-- install without yarn or npm
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -180,6 +184,14 @@ return packer.startup(function(use)
 	})
 	-- LIVE COMMAND PREVIEW
 	use({ "smjonas/live-command.nvim" })
+	-- Lua
+	--[[ use({ ]]
+	--[[ 	"narutoxy/silicon.lua", ]]
+	--[[ 	requires = { "nvim-lua/plenary.nvim" }, ]]
+	--[[ 	config = function() ]]
+	--[[ 		require("silicon").setup({}) ]]
+	--[[ 	end, ]]
+	--[[ }) ]]
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

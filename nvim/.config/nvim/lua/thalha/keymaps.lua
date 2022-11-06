@@ -25,7 +25,7 @@ vim.g.maplocalleader = " "
 keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
 -- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>", opts)
-keymap("n", ",f", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", ";f", "<cmd>Telescope buffers<cr>", opts)
 -- keymap("n", ",f", "<cmd>FzfLua buffers<cr>", opts)
 keymap("n", "<leader>fT", "<cmd>Telescope tags<cr>", opts)
 keymap("n", "<leader>fm", "<cmd>Telescope marks<cr>", opts)
@@ -61,6 +61,9 @@ keymap("n", "<leader>fli", "<cmd>FzfLua lsp_implementations<cr>", opts)
 keymap("n", "<leader>fld", "<cmd>FzfLua lsp_definitions<cr>", opts)
 keymap("n", "<leader>fmm", "<cmd>FzfLua menus<cr>", opts)
 keymap("n", "<leader>fca", "<cmd>FzfLua lsp_code_actions<cr>", opts)
+
+
+keymap("n", "<leader>;", "<C-w>j", opts)
 
 -- Vifm
 keymap("n", "<leader>vvc", ":Vifm<cr>", opts)
@@ -134,7 +137,7 @@ keymap("n", "<leader>DDD", ":bp | :sp | :bn | :bd<Cr>", {})
 keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
 
 -- switching pianlessly
-keymap("n", ";", ":", {})
+keymap("n", ";;", ":", {})
 
 -- Ron some script or commands
 keymap("n", "<leader>S", ":!", {})
@@ -287,3 +290,4 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Command
 keymap("c", "Bd", "bp | :sp | :bn | :bd", {})
 keymap("c", "jk", "<C-u><del>", {})
+--[[ keymap("c", "jk", "<C-u><Esc>", {}) ]]

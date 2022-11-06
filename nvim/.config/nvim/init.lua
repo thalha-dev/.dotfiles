@@ -26,4 +26,5 @@ require("thalha.colorpicker")
 require("thalha.debugging")
 require("thalha.liveCommand")
 require("thalha.fm")
+--[[ require("thalha.silicon-conf") ]]
 require("thalha.myAutoCommands")
