@@ -152,7 +152,7 @@ map o
 map d
 
 # Movement 
-map gb cd ~/Documents/Books
+map gb cd ~/my-doc/books/
 map gD cd ~/Documents
 map gd cd ~/Downloads
 map gp cd ~/Pictures
@@ -161,6 +161,7 @@ map gc cd ~/.dotfiles
 map gC cd ~/.config
 map gl cd ~/learn
 map gs cd ~/source-installed
+map gj cd ~/my-doc/
 map gr cd / 
 map gh cd ~ 
 

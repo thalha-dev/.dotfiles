@@ -2,7 +2,7 @@ set selection-clipboard clipboard
 set guioptions none
 
 
-include dark1
+include material
 
 # include dark1
 # include dark2
