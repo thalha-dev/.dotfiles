@@ -62,7 +62,6 @@ keymap("n", "<leader>fld", "<cmd>FzfLua lsp_definitions<cr>", opts)
 keymap("n", "<leader>fmm", "<cmd>FzfLua menus<cr>", opts)
 keymap("n", "<leader>fca", "<cmd>FzfLua lsp_code_actions<cr>", opts)
 
-
 keymap("n", "<leader>;", "<C-w>j", opts)
 
 -- Vifm
@@ -77,6 +76,13 @@ keymap("n", "<leader>fa", ":Lf<CR>", opts)
 -- Transparent
 
 keymap("n", "<leader>vct", "<cmd>TransparentToggle<CR>", opts)
+
+-- SnipRun
+
+keymap("v", "<leader>rb", ":'<,'>SnipRun<CR>", term_opts)
+keymap("n", "<leader>rl", ":SnipRun<CR>", term_opts)
+keymap("n", "<leader>rx", ":SnipReset<CR>", term_opts)
+keymap("n", "<leader>rc", ":SnipClose<CR>", term_opts)
 
 -- Easy Install
 keymap("n", "<leader>vpi", "<cmd>PackerInstall<cr>", nor)
@@ -259,7 +265,6 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- color picker
 keymap("i", "<C-s>", "<cmd>CccConvert<cr>", opts)
--- Visual --
 
 -- copy to system clipboard
 keymap("v", "<leader>y", '"+y', opts)

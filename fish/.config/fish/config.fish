@@ -25,6 +25,11 @@ function fish_user_key_bindings
 end
 ### END OF VI MODE ###
 
+# save history immediately through out all sessions
+function history_record -e fish_prompt
+    history save
+    history merge
+end
 
 ### ALIASES ###
 
