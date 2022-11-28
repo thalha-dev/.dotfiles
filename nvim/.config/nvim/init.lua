@@ -14,12 +14,10 @@ require("thalha.telescope")
 require("thalha.fzflua-conf")
 require("thalha.treesitter")
 require("thalha.neotree")
---[[ require("thalha.barbarbuffer") ]]
 require("thalha.lualine")
 require("thalha.gitsigns")
 require("thalha.indentline")
 require("thalha.autopairs")
---[[ require("thalha.navic-context") ]]
 require("thalha.comment")
 require("thalha.colorizer")
 require("thalha.toggleterm")
@@ -27,5 +25,6 @@ require("thalha.colorpicker")
 require("thalha.debugging")
 require("thalha.liveCommand")
 require("thalha.fm")
---[[ require("thalha.silicon-conf") ]]
 require("thalha.myAutoCommands")
+--[[ require("thalha.silicon-conf") ]]
+--[[ require("thalha.navic-context") ]]

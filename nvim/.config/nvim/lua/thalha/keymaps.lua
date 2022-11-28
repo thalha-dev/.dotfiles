@@ -179,11 +179,9 @@ keymap("n", "<leader>k", ":cp<cr>", opts)
 keymap("n", "<leader>j", ":cn<cr>", opts)
 
 -- yank
-keymap("n", "<leader>yc", 'gg"+yG', opts)
 keymap("n", "<leader>yy", "ggyG", opts)
 keymap("n", "<leader>yl", "^v$y", opts)
-keymap("n", "<leader>yL", '^v$"+y', opts)
-keymap("n", "<leader>dyy", "ggdG", opts)
+keymap("n", "<leader>Dyy", "ggdG", opts)
 
 -- Make file executable
 keymap("n", "<leader>X", ":!chmod +x %<CR>", opts)
@@ -265,9 +263,6 @@ keymap("i", "jk", "<ESC>", opts)
 
 -- color picker
 keymap("i", "<C-s>", "<cmd>CccConvert<cr>", opts)
-
--- copy to system clipboard
-keymap("v", "<leader>y", '"+y', opts)
 
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
