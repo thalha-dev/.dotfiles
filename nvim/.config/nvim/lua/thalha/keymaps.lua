@@ -133,6 +133,10 @@ keymap("n", "<leader>sR", ":source ~/.local/share/nvim/session/", {})
 -- Mason
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 
+-- Mason
+keymap("n", "<leader>lss", ":LiveServer start<CR>", opts)
+keymap("n", "<leader>lsx", ":LiveServer stop<CR>", opts)
+
 -- Markdown Preview Toggle
 keymap("n", "<leader>mmt", "<cmd>MarkdownPreviewToggle<CR>", opts)
 
@@ -140,7 +144,7 @@ keymap("n", "<leader>mmt", "<cmd>MarkdownPreviewToggle<CR>", opts)
 keymap("n", "<leader>DDD", ":bp | :sp | :bn | :bd<Cr>", {})
 
 -- Prettier
-keymap("n", "<leader>lfp", "<Plug>(prettier-format)", {})
+keymap("n", "<leader>lfp", ":Prettier<CR>", {})
 
 -- switching pianlessly
 keymap("n", ";;", ":", {})

@@ -1,6 +1,6 @@
 vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
 vim.opt.background = 'dark'
-vim.g.transparent_enabled = true
+vim.g.transparent_enabled = false
 
 vim.cmd([[
 try

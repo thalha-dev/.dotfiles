@@ -92,6 +92,25 @@ return packer.startup(function(use)
 	-- code help
 	use({ "windwp/nvim-autopairs" }) -- Autopairs, integrates with both cmp and treesitter
 	use({ "numToStr/Comment.nvim" })
+	use({
+		"mattn/emmet-vim",
+		ft = { "html", "css", "javascript" },
+		config = function()
+			vim.g.user_emet_settings = {
+				["javascript.jsx"] = {
+					extends = "jsx",
+				},
+			}
+			vim.g.user_emet_mode = "in"
+		end,
+	})
+	use({
+		"kylechui/nvim-surround",
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup({})
+		end,
+	})
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
@@ -123,6 +142,7 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 	use({ "p00f/nvim-ts-rainbow" })
 
 	-- Git
@@ -196,6 +216,7 @@ return packer.startup(function(use)
 	--[[ 	end, ]]
 	--[[ }) ]]
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	use({ "manzeloth/live-server" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
