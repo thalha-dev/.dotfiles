@@ -163,6 +163,10 @@ keymap("n", "<leader>v;", "/<C-r><C-w>", nor)
 -- colorscheme
 keymap("n", "<leader>vcc", ":colorscheme ", {})
 
+-- chatGPT
+keymap("n", "<leader>chat", ":ChatGPT<cr>", {})
+keymap("n", "<leader>Chat", ":ChatGPTActAs<cr>", {})
+
 -- cursorline
 keymap("n", "<leader>vcl", ":lua MY_CURSOR_TOGGLE()<CR>", {})
 
