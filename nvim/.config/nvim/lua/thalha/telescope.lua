@@ -10,7 +10,7 @@ local actions = require("telescope.actions")
 
 telescope.setup({
 	defaults = {
-		layout_config = { width = 0.99, height = 0.99, preview_width = 0.6 },
+		layout_config = { width = 0.99, height = 0.99, horizontal = { preview_width = 0.6 } },
 		prompt_prefix = " ",
 		selection_caret = " ",
 		path_display = { "smart" },
