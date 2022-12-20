@@ -15,7 +15,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 	vim.cmd([[packadd packer.nvim]])
 end
 
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+--- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd([[
   augroup packer_user_config
     autocmd!
@@ -51,14 +51,11 @@ return packer.startup(function(use)
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	use({ "lunarvim/darkplus.nvim" })
 	use({ "xiyaowong/nvim-transparent" })
-	-- use({ "RRethy/nvim-base16" })
 	use({ "themercorp/themer.lua" })
 	use({ "cranberry-clockworks/coal.nvim" })
 	use({ "rebelot/kanagawa.nvim" })
-	use({ "Yazeed1s/oh-lucy.nvim" })
 	use({ "lunarvim/Onedarker.nvim" })
 	use({ "lunarvim/horizon.nvim" })
-	use({ "lunarvim/synthwave84.nvim" })
 
 	-- LSP
 	use({ "williamboman/mason.nvim" })
@@ -71,9 +68,7 @@ return packer.startup(function(use)
 	-- cmp plugins
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
-	use({ "hrsh7th/cmp-path" }) -- path completions
 	use({ "hrsh7th/cmp-cmdline" }) -- snippet completions
-	use({ "hrsh7th/cmp-calc" })
 	use({ "mtoohey31/cmp-fish", ft = "fish" })
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
@@ -114,7 +109,6 @@ return packer.startup(function(use)
 	use({ "JoosepAlviste/nvim-ts-context-commentstring" })
 	use({ "kyazdani42/nvim-web-devicons" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
-	use({ "preservim/tagbar" })
 
 	-- smooth navigation within buffer
 	use({ "rainbowhxch/accelerated-jk.nvim" })
@@ -164,14 +158,8 @@ return packer.startup(function(use)
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
 	})
 
-	use({
-		"SmiteshP/nvim-navic",
-		requires = "neovim/nvim-lspconfig",
-	})
 	use({ "rcarriga/nvim-notify" })
-	use({ "ellisonleao/glow.nvim" })
-	use({ "vifm/vifm.vim" })
-	use({ "is0n/fm-nvim" })
+	use({ "ellisonleao/glow.nvim" }) -- simple markdown viewer
 
 	-- color help
 	use({ "norcalli/nvim-colorizer.lua" })
@@ -183,22 +171,10 @@ return packer.startup(function(use)
 	})
 
 	use({ "Pocco81/true-zen.nvim" })
-
-	-- MODERN UI
-
-	--[[ use({ ]]
-	--[[ 	"folke/noice.nvim", ]]
-	--[[ 	config = function() ]]
-	--[[ 		require("noice").setup() ]]
-	--[[ 	end, ]]
-	--[[ 	requires = { ]]
-	--[[ 		"MunifTanjim/nui.nvim", ]]
-	--[[ 		"rcarriga/nvim-notify", ]]
-	--[[ 	}, ]]
-	--[[ }) ]]
+	use({ "mbbill/undotree" })
 
 	use({ "stevearc/dressing.nvim" })
-	-- install without yarn or npm
+
 	use({
 		"iamcco/markdown-preview.nvim",
 		run = function()
@@ -207,22 +183,12 @@ return packer.startup(function(use)
 	})
 	-- LIVE COMMAND PREVIEW
 	use({ "smjonas/live-command.nvim" })
-	-- Lua
-	--[[ use({ ]]
-	--[[ 	"narutoxy/silicon.lua", ]]
-	--[[ 	requires = { "nvim-lua/plenary.nvim" }, ]]
-	--[[ 	config = function() ]]
-	--[[ 		require("silicon").setup({}) ]]
-	--[[ 	end, ]]
-	--[[ }) ]]
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use({ "manzeloth/live-server" })
 	use({
 		"jackMort/ChatGPT.nvim",
 		config = function()
-			require("chatgpt").setup({
-				-- optional configuration
-			})
+			require("chatgpt").setup({})
 		end,
 		requires = {
 			"MunifTanjim/nui.nvim",
