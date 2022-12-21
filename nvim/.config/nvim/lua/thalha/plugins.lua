@@ -112,7 +112,12 @@ return packer.startup(function(use)
 
 	-- smooth navigation within buffer
 	use({ "rainbowhxch/accelerated-jk.nvim" })
-	use({ "psliwka/vim-smoothie" })
+	use({
+		"karb94/neoscroll.nvim",
+		config = function()
+			require("neoscroll").setup()
+		end,
+	})
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0" })
