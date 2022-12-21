@@ -5,6 +5,8 @@
 set -e fish_user_paths
 # set -U fish_user_paths $HOME/applications $HOME/.local/bin $fish_user_paths
 
+xset r rate 240 50
+
 # Export #
 set SHELL "/usr/bin/fish"                  # Sets the shell
 

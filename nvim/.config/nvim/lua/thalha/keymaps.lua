@@ -26,43 +26,60 @@ vim.g.maplocalleader = " "
 
 -- Fuzzy Find
 
-keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
-keymap("n", "<leader>fa", "<cmd>Telescope buffers<cr>", opts)
-keymap("n", "<leader>fT", "<cmd>Telescope tags<cr>", opts)
-keymap("n", "<leader>fm", "<cmd>Telescope marks<cr>", opts)
-keymap("n", "<leader>fj", "<cmd>Telescope jumplist<cr>", opts)
-keymap("n", "<leader>fr", "<cmd>Telescope registers<cr>", opts)
-keymap("n", "<leader>fcc", "<cmd>Telescope commands<cr>", opts)
-keymap("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", opts)
 keymap("n", "<leader>a", "<cmd>Telescope git_files<cr>", opts)
+keymap("n", "<leader>fa", "<cmd>Telescope buffers<cr>", opts)
+keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
+keymap("n", "<leader>fj", "<cmd>Telescope jumplist<cr>", opts)
+keymap("n", "<leader>fM", "<cmd>Telescope marks<cr>", opts)
+keymap("n", "<leader>fq", "<cmd>Telescope quickfix<cr>", opts)
+keymap("n", "<leader>fr", "<cmd>FzfLua registers<cr>", opts)
+keymap("n", "<leader>fR", "<cmd>Telescope neoclip<cr>", opts)
+keymap("n", "<leader>ft", "<cmd>FzfLua tabs<cr>", opts)
+keymap("n", "<leader>fT", "<cmd>Telescope tags<cr>", opts)
+keymap("n", "<leader>fca", "<cmd>FzfLua lsp_code_actions<cr>", opts)
+keymap("n", "<leader>fcc", "<cmd>Telescope commands<cr>", opts)
+keymap("n", "<leader>fdg", "<cmd>GrepInDirectory<CR>", opts)
+keymap("n", "<leader>fdd", "<cmd>FzfLua lsp_document_diagnostics<cr>", opts)
 keymap("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", opts)
 keymap("n", "<leader>fgb", "<cmd>Telescope git_branches<cr>", opts)
 keymap("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", opts)
+keymap("n", "<leader>fht", "<cmd>Telescope help_tags<cr>", opts)
+keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>flr", "<cmd>FzfLua lsp_references<cr>", opts)
+keymap("n", "<leader>fli", "<cmd>FzfLua lsp_implementations<cr>", opts)
+keymap("n", "<leader>fld", "<cmd>FzfLua lsp_definitions<cr>", opts)
+keymap("n", "<leader>fmm", "<cmd>FzfLua menus<cr>", opts)
+keymap("n", "<leader>fmp", "<cmd>Telescope man_pages<cr>", opts)
+keymap("n", "<leader>fnn", "<cmd>Telescope notify<cr>", opts)
+keymap("n", "<leader>fss", "<cmd>FzfLua spell_suggest<cr>", opts)
+keymap("n", "<leader>fsh", "<cmd>FzfLua search_history<cr>", opts)
 keymap("n", "<leader>fvo", "<cmd>Telescope vim_options<cr>", opts)
 keymap("n", "<leader>fvb", "<cmd>Telescope builtin<cr>", opts)
 keymap("n", "<leader>fvk", "<cmd>Telescope keymaps<cr>", opts)
 keymap("n", "<leader>fvc", "<cmd>Telescope colorscheme<cr>", opts)
 keymap("n", "<leader>fvC", "<cmd>FzfLua colorschemes<cr>", opts)
-keymap("n", "<leader>flg", "<cmd>Telescope live_grep<cr>", opts)
-keymap("n", "<leader>fmp", "<cmd>Telescope man_pages<cr>", opts)
-keymap("n", "<leader>fht", "<cmd>Telescope help_tags<cr>", opts)
-keymap("n", "<leader>fnn", "<cmd>Telescope notify<cr>", opts)
-keymap("n", "<leader>fdg", "<cmd>GrepInDirectory<CR>", opts)
-keymap("n", "<leader>ft", "<cmd>FzfLua tabs<cr>", opts)
-keymap("n", "<leader>fss", "<cmd>FzfLua spell_suggest<cr>", opts)
-keymap("n", "<leader>fsh", "<cmd>FzfLua search_history<cr>", opts)
-keymap("n", "<leader>flr", "<cmd>FzfLua lsp_references<cr>", opts)
-keymap("n", "<leader>fdd", "<cmd>FzfLua lsp_document_diagnostics<cr>", opts)
-keymap("n", "<leader>fli", "<cmd>FzfLua lsp_implementations<cr>", opts)
-keymap("n", "<leader>fld", "<cmd>FzfLua lsp_definitions<cr>", opts)
-keymap("n", "<leader>fmm", "<cmd>FzfLua menus<cr>", opts)
-keymap("n", "<leader>fca", "<cmd>FzfLua lsp_code_actions<cr>", opts)
 -- keymap("n", ",f", "<cmd>FzfLua buffers<cr>", opts)
 -- keymap("n", "<leader>a", "<cmd>FzfLua git_files<cr>", opts)
 -- keymap("n", "<leader>fq", "<cmd>FzfLua quickfix<cr>", opts)
 -- keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<leader>ff", "<cmd>FzfLua files<cr>", opts)
 -- keymap("n", "<leader>fq", "<cmd>FzfLua live_grep_native<cr>", opts)
+
+------------------------------------------------------------------------------
+
+-- Make adjusing split sizes a bit more friendly
+
+keymap("n", "<A-C-k>", ":resize +2<CR>", opts)
+keymap("n", "<A-C-j>", ":resize -2<CR>", opts)
+keymap("n", "<A-C-h>", ":vertical resize -2<CR>", opts)
+keymap("n", "<A-C-l>", ":vertical resize +2<CR>", opts)
+keymap("n", "<leader>vff", "<cmd>TZFocus<CR>", opts)
+keymap("n", "<leader>vfm", "<cmd>TZMinimalist<CR>", opts)
+keymap("n", "<leader>vfn", "<cmd>TZNarrow<CR>", opts)
+keymap("n", "<leader>vee", "<C-w>=", opts)
+keymap("n", "<leader>vsv", "<C-w>t<C-w>H", opts)
+keymap("n", "<leader>vsh", "<C-w>t<C-w>K", opts)
+-- keymap("n", "<leader>vff", ":vertical resize<CR>:resize<CR>", opts)
 
 ------------------------------------------------------------------------------
 
@@ -80,19 +97,18 @@ keymap("n", "<leader>gst", "<cmd>Gitsigns toggle_signs<CR>", opts)
 
 ------------------------------------------------------------------------------
 
--- Make adjusing split sizes a bit more friendly
+-- REGISTERS
 
-keymap("n", "<A-C-k>", ":resize +2<CR>", opts)
-keymap("n", "<A-C-j>", ":resize -2<CR>", opts)
-keymap("n", "<A-C-h>", ":vertical resize -2<CR>", opts)
-keymap("n", "<A-C-l>", ":vertical resize +2<CR>", opts)
-keymap("n", "<leader>vff", "<cmd>TZFocus<CR>", opts)
-keymap("n", "<leader>vfm", "<cmd>TZMinimalist<CR>", opts)
-keymap("n", "<leader>vfn", "<cmd>TZNarrow<CR>", opts)
-keymap("n", "<leader>vee", "<C-w>=", opts)
-keymap("n", "<leader>vsv", "<C-w>t<C-w>H", opts)
-keymap("n", "<leader>vsh", "<C-w>t<C-w>K", opts)
--- keymap("n", "<leader>vff", ":vertical resize<CR>:resize<CR>", opts)
+keymap("n", "<leader>rup", ":lua MY_REG_COPY_UNNAMED_TO_PLUS()<CR>", {})
+keymap("n", "<leader>rpu", ":lua MY_REG_COPY_PLUS_TO_UNNAMED()<CR>", {})
+keymap("n", "<leader>rzp", ":lua MY_REG_COPY_ZERO_TO_PLUS()<CR>", {})
+keymap("n", "<leader>rop", ":lua MY_REG_COPY_ONE_TO_PLUS()<CR>", {})
+keymap("n", "<leader>rfu", ":lua MY_REG_COPY_PERSENT_TO_UNNAMED()<CR>", {})
+keymap("n", "<leader>rfp", ":lua MY_REG_COPY_PERSENT_TO_PLUS()<CR>", {})
+keymap("n", "<leader>rL", ":registers<CR>", {})
+keymap("n", "<leader>yy", "ggyG", opts)
+keymap("n", "<leader>yc", 'gg"+yG', opts)
+keymap("n", "<leader>yl", "^v$y", opts)
 
 ------------------------------------------------------------------------------
 
@@ -145,10 +161,10 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- SnipRun
 
-keymap("v", "<leader>rb", ":'<,'>SnipRun<CR>", term_opts)
-keymap("n", "<leader>rl", ":SnipRun<CR>", term_opts)
-keymap("n", "<leader>rx", ":SnipReset<CR>", term_opts)
-keymap("n", "<leader>rc", ":SnipClose<CR>", term_opts)
+keymap("v", "<leader>srb", ":'<,'>SnipRun<CR>", term_opts)
+keymap("n", "<leader>srl", ":SnipRun<CR>", term_opts)
+keymap("n", "<leader>srx", ":SnipReset<CR>", term_opts)
+keymap("n", "<leader>src", ":SnipClose<CR>", term_opts)
 
 ------------------------------------------------------------------------------
 
@@ -182,14 +198,6 @@ keymap("n", "<leader>sR", ":source ~/.local/share/nvim/session/", {})
 keymap("v", "<A-j>", ":m '>+1<CR>gv==gv", opts)
 keymap("v", "<A-k>", ":m '<+2<CR>gv==gv", opts)
 keymap("v", "p", '"_dP', opts)
-
-------------------------------------------------------------------------------
-
--- Yank
-
-keymap("n", "<leader>yy", "ggyG", opts)
-keymap("n", "<leader>yl", "^v$y", opts)
-keymap("n", "<leader>Dyy", "ggdG", opts)
 
 ------------------------------------------------------------------------------
 
@@ -295,6 +303,10 @@ keymap("n", ";;", ":", {})
 
 keymap("n", "<leader>S", ":!", {})
 
+-- Ron some script or commands
+
+keymap("n", "<leader>spp", ":r !", {})
+
 -- close telescope easily
 
 keymap("n", "<leader>8", "<C-w>j", opts)
@@ -309,7 +321,7 @@ keymap("n", "<leader>vii", "<cmd>IndentBlanklineToggle<CR>", opts)
 
 -- Execute current file
 
-keymap("n", "<leader>rrr", ":w<CR>:source %<CR>", opts)
+keymap("n", "<leader><leader>s", ":w<CR>:source %<CR>", opts)
 
 -- colorscheme
 
@@ -342,6 +354,10 @@ keymap("n", "<leader><leader>k", "/[A-Z]<CR>", opts)
 -- Make file executable
 
 keymap("n", "<leader>X", ":!chmod +x %<CR>", opts)
+
+-- undotree
+
+keymap("n", "<leader>uu", ":UndotreeToggle<CR>", opts)
 
 -- Vim Help
 

@@ -23,3 +23,35 @@ function MY_WRAP_TOGGLE()
 		vim.o.wrap = true
 	end
 end
+
+-- PLAY WITH REGIGSTERS
+
+function MY_REG_COPY_ZERO_TO_PLUS()
+	local temp = vim.fn.getreg("0")
+	vim.fn.setreg("+", temp)
+end
+
+function MY_REG_COPY_ONE_TO_PLUS()
+	local temp = vim.fn.getreg("1")
+	vim.fn.setreg("+", temp)
+end
+
+function MY_REG_COPY_PLUS_TO_UNNAMED()
+	local temp = vim.fn.getreg("+")
+	vim.fn.setreg("", temp)
+end
+
+function MY_REG_COPY_UNNAMED_TO_PLUS()
+	local temp = vim.fn.getreg("")
+	vim.fn.setreg("+", temp)
+end
+
+function MY_REG_COPY_PERSENT_TO_PLUS()
+	local temp = vim.fn.getreg("%")
+	vim.fn.setreg("+", temp)
+end
+
+function MY_REG_COPY_PERSENT_TO_UNNAMED()
+	local temp = vim.fn.getreg("%")
+	vim.fn.setreg("", temp)
+end

@@ -125,6 +125,7 @@ return packer.startup(function(use)
 			})
 		end,
 	})
+	use({ "AckslD/nvim-neoclip.lua" })
 
 	use({
 		"ibhagwan/fzf-lua",

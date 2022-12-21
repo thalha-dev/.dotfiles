@@ -2,6 +2,7 @@
 
 set -o vi
 
+xset r rate 240 50
 
 # Set MANPAGER
 

@@ -1,5 +1,4 @@
 vim.opt.backup = false -- creates a backup file
-vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
@@ -46,3 +45,4 @@ vim.g.markdown_fenced_languages =
 -- vim.opt.numberwidth = 4,                         -- set number column width to 2 {default 4}
 -- vim.opt.laststatus = 3
 -- vim.opt.showcmd = false,
+-- vim.opt.clipboard = "unnamedplus" -- allows neovim to access the system clipboard
