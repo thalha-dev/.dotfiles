@@ -106,6 +106,7 @@ cmp.setup({
 				nvim_lsp = "💧",
 				nvim_lua = "[NVIM_LUA]",
 				buffer = "📜",
+				path = "🚙",
 				fish = "🐠",
 			})[entry.source.name]
 			return vim_item
@@ -116,6 +117,7 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "buffer" },
+		{ name = "path" },
 		{ name = "fish" },
 	},
 	confirm_opts = {

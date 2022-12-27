@@ -47,7 +47,7 @@ export PATH=$PATH:$HOME/go/bin
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
 # IDEA
-export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
+# export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
 # RUST
 export PATH=$PATH:$HOME/.cargo/bin
 # mason
@@ -59,4 +59,4 @@ xset r rate 240 50
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-if [ -e /home/thalha/.nix-profile/etc/profile.d/nix.sh ]; then . /home/thalha/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+# if [ -e /home/thalha/.nix-profile/etc/profile.d/nix.sh ]; then . /home/thalha/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

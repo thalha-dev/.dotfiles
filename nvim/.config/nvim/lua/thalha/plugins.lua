@@ -68,6 +68,7 @@ return packer.startup(function(use)
 	-- cmp plugins
 	use({ "hrsh7th/cmp-nvim-lsp" })
 	use({ "hrsh7th/cmp-buffer" }) -- buffer completions
+	use({ "hrsh7th/cmp-path" }) -- buffer path completions
 	use({ "hrsh7th/cmp-cmdline" }) -- snippet completions
 	use({ "mtoohey31/cmp-fish", ft = "fish" })
 	use({ "hrsh7th/nvim-cmp" }) -- The completion plugin
