@@ -39,3 +39,8 @@ echo "want to stop right here ? then press CTRL-C"
 sleep 15
 echo "HASKELL"
 ./languages/haskell-setup.sh
+
+mkdir -p ~/Documents/temp
+cp ~/.profile ~/Documents/temp/
+cp ~/.config/fish/config.fish ~/Documents/temp/
+cp ~/.bashrc ~/Documents/temp/

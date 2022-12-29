@@ -16,5 +16,6 @@ mkdir -p ~/learn/docker
 mkdir -p ~/learn/mysql
 mkdir -p ~/learn/bash
 mkdir -p ~/Documents/LinuxSampleConfigs
+mkdir -p ~/Documents/temp
 mkdir -p ~/Downloads/android-mp
 mkdir -p ~/.local/share/nvim/mason/bin
