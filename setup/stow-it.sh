@@ -12,6 +12,11 @@ do
         continue
     fi
 
+    if [[ $item == "sudo-scripts" ]]; then
+        sudo stow --adopt -v -t / $item
+        continue
+    fi
+
     if [[ $item == "setup" ]]; then
         stow --adopt -v -t ~/applications/setup $item
         continue
