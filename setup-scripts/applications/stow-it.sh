@@ -17,11 +17,6 @@ do
         continue
     fi
 
-    if [[ $item == "setup" ]]; then
-        stow --adopt -v -t ~/applications/setup $item
-        continue
-    fi
-
     if [[ $item == "my-services" ]]; then
         continue
     fi

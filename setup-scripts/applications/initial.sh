@@ -11,7 +11,7 @@ sudo apt-get install -y stow
 echo ""
 
 echo "CREATING ESSENTIAL DIRECTORIES..."
-./dir-setup/essential-dirs.sh
+./essential-dirs.sh
 
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts
