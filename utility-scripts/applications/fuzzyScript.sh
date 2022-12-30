@@ -1,3 +1,3 @@
 #!/bin/bash
 
-$(find ~/.dotfiles/scripts/applications/ -type f | fzf)
+$(du ~/applications/* | cut -f2 | fzf)

@@ -28,6 +28,18 @@ curl -fLo "JetBrains Mono Bold Nerd Font Complete.ttf" https://github.com/ryanoa
 curl -fLo "JetBrains Mono Italic Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Italic/complete/JetBrains%20Mono%20Italic%20Nerd%20Font%20Complete.ttf
 curl -fLo "JetBrains Mono Medium Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/JetBrainsMono/Ligatures/Medium/complete/JetBrains%20Mono%20Medium%20Nerd%20Font%20Complete.ttf
 
+# for easy backlight control
+
+sys="$(sudo dmidecode -s system-version)"
+
+if [[ "${sys}" == "Lenovo E41-25" ]]; then
+    sudo chmod 664 /sys/class/backlight/amdgpu_bl0/brightness
+fi
+
+sudo groupadd video
+sudo usermod -aG video $USER
+
+# make sudo last longer
 
 cd $HOME
 git clone git@github.com:thalha-dev/.dotfiles.git

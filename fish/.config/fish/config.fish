@@ -197,7 +197,7 @@ alias k="keynav daemonize"
 
 alias ja="java -cp ./target/classes/ "
 
-alias mcc="mavenCoreJava.sh"
+alias mcc="maven-core-java-project.sh"
 
 alias I="macchina"
 
@@ -214,7 +214,7 @@ alias Er="fuzzySudoEdit.sh "
 
 alias P="fuzzyPrint.sh " 
 alias Pw="fuzzyPrint.sh ~/Wiki/myWiki" 
-alias Pp="fuzzyPrint.sh ~/Documents/personalWiki" 
+alias Pp="fuzzyPrint.sh ~/Wiki/personalWiki" 
 alias Pd="fuzzyPrint.sh ~/.dotfiles" 
 
 #alias lser="live-server --no-browser --quiet &"
@@ -225,6 +225,7 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="lf"
 alias tmux="tmux -u"
+# TODO
 alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
 alias kmad="fusermount -u /home/thalha/Downloads/android-mp"
 # alias ormoluGit="ormolu --mode inplace (git ls-files '*.hs')"
