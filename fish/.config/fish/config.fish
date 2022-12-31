@@ -213,8 +213,8 @@ alias Ec="fuzzyEdit.sh ~/.config"
 alias Er="fuzzySudoEdit.sh " 
 
 alias P="fuzzyPrint.sh " 
-alias Pw="fuzzyPrint.sh ~/Wiki/myWiki" 
-alias Pp="fuzzyPrint.sh ~/Wiki/personalWiki" 
+alias Pw="fuzzyPrint.sh ~/wiki/myWiki" 
+alias Pp="fuzzyPrint.sh ~/wiki/personalWiki" 
 alias Pd="fuzzyPrint.sh ~/.dotfiles" 
 
 #alias lser="live-server --no-browser --quiet &"
