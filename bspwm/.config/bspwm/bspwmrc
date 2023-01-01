@@ -3,6 +3,8 @@
 sxhkd -C ~/.config/bspwm/sxhkdrc &
 picom -b --experimental-backends
 
+/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &
+
 nitrogen --restore &
 
 bspc monitor -d 1 2 3 4 5 6 7 8 9

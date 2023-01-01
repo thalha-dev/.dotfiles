@@ -277,6 +277,7 @@ myStartupHook = do
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
+    spawn "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
 
 
 ------------------------------------------------------------------------

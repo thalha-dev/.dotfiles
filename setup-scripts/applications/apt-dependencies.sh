@@ -22,6 +22,8 @@ sudo apt-get install -y unrar
 sudo apt-get install -y curl
 sudo apt-get install -y wget
 sudo apt-get install -y doxygen
+sudo apt-get install -y policykit-desktop-privileges
+sudo apt-get install -y policykit-1-gnome
 sudo apt-get install -y procps
 sudo apt-get install -y file
 sudo apt-get install -y ninja-build
