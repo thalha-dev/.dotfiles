@@ -92,7 +92,7 @@ echo "NEOVIM !!!"
 echo ""
 mkdir -p ~/source-installed
 cd ~/source-installed
-curl -JOL https://github.com/neovim/neovim/releases/tag/stable/nvim-linux64.deb
+curl -JOL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
 sudo apt install ./nvim-linux64.deb
 cd ~
 
