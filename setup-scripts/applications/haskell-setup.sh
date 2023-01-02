@@ -1,11 +1,17 @@
 #!/bin/bash
 
 
-sudo apt-get install -y libicu-dev
-sudo apt-get install -y libtinfo-dev
-sudo apt-get install -y libgmp-dev
-sudo apt-get install -y libc6-dev
+sudo apt-get install -y build-essential
+sudo apt-get install -y curl
 sudo apt-get install -y libffi-dev
+sudo apt-get install -y libc6-dev
+sudo apt-get install -y libgmp-dev
+sudo apt-get install -y libncurses-dev
+sudo apt-get install -y libicu-dev
+sudo apt-get install -y libffi8ubuntu1
+sudo apt-get install -y libgmp10
+sudo apt-get install -y libncurses5
+sudo apt-get install -y libtinfo5
 sudo apt-get install -y xz-utils
 sudo apt-get install -y zlib1g-dev
 sudo apt-get install -y libtinfo-dev

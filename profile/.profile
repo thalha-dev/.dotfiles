@@ -59,4 +59,7 @@ xset r rate 240 50
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+# HASKELL
+[ -f "/home/thalha/.ghcup/env" ] && source "/home/thalha/.ghcup/env" # ghcup-env
+
 # if [ -e /home/thalha/.nix-profile/etc/profile.d/nix.sh ]; then . /home/thalha/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
