@@ -7,6 +7,7 @@ brew install btop
 brew install tldr
 brew install htop
 brew install pipes-sh
+brew tap wez/wezterm-linuxbrew
 brew install wezterm
 brew install shellcheck
 brew install zsh
