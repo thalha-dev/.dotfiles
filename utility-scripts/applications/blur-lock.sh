@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-PICTURE=~/Pictures/lock/i3lock-temp-img.png
+# PICTURE=~/Pictures/lock/i3lock-temp-img.png
+PICTURE=~/Pictures/lock/tmp.png
 SCREENSHOT="scrot $PICTURE"
 
 BLUR="5x4"

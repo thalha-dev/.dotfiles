@@ -192,17 +192,6 @@ return packer.startup(function(use)
 	use({ "smjonas/live-command.nvim" })
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use({ "manzeloth/live-server" })
-	use({
-		"jackMort/ChatGPT.nvim",
-		config = function()
-			require("chatgpt").setup({})
-		end,
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
