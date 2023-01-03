@@ -2,7 +2,6 @@
 
 mkdir -p ~/source-installed
 mkdir -p ~/applications
-mkdir -p ~/applications/setup
 mkdir -p ~/wiki
 mkdir -p ~/Pictures/code-shot
 mkdir -p ~/Pictures/mpv-screenshot
