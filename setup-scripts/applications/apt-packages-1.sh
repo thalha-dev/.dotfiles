@@ -73,6 +73,7 @@ echo "want to stop right here ? then press CTRL-C"
 sleep 15
 
 curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/
 
 
 echo ""
