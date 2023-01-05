@@ -45,3 +45,13 @@ cd $HOME
 git clone git@github.com:thalha-dev/.dotfiles.git
 cd ~/.dotfiles
 sudo stow -v -t /etc/sudoers.d/ sudo/
+
+xset r rate 240 50
+
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.profile
+echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.profile
+echo 'export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64' >> ~/.profile
+echo 'export PATH=$PATH:$JAVA_HOME/bin' >> ~/.profile
+echo 'export PATH=$PATH:$HOME/.cargo/bin' >> ~/.profile
+echo 'export PATH=$PATH:$HOME/.local/share/nvim/mason/bin ' >> ~/.profile
+echo 'export PATH=$PATH:$HOME/applications' >> ~/.profile

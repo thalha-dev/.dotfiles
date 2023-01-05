@@ -18,14 +18,5 @@ sudo apt-get install -y libtinfo-dev
 
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 
-# install the recommended GHC version
-ghcup install ghc
-
-# install cabal-install
-ghcup install cabal
-
-# install stack
-ghcup install stack
-
-# install haskell-language-server
-ghcup install hls
+#
+# echo '[ -f "/home/thalha/.ghcup/env" ] && source "/home/thalha/.ghcup/env"' >> ~/.bashrc

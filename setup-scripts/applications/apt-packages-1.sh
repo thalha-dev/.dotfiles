@@ -94,7 +94,7 @@ echo ""
 mkdir -p ~/source-installed
 cd ~/source-installed
 curl -JOL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
-sudo apt install ./nvim-linux64.deb
+sudo dpkg -i ./nvim-linux64.deb
 cd ~
 
 echo ""
