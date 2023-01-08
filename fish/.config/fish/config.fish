@@ -35,13 +35,11 @@ end
 
 ### ALIASES ###
 
-# current temp working dir to primary clipboard
-alias cll="pwd | xclip -i -sel primary"
+# current temp working dir to clipboard
+alias cll="pwd | xclip -i -sel clip"
 
 
 # tmux
-alias t='tmux a 2>/dev/null || tmux'
-alias td='tmux detach'
 alias tk='tmux kill-server'
 alias tn='tmux new -d -s '
 
@@ -217,7 +215,6 @@ alias Pw="fuzzyPrint.sh ~/wiki/myWiki"
 alias Pp="fuzzyPrint.sh ~/wiki/personalWiki" 
 alias Pd="fuzzyPrint.sh ~/.dotfiles" 
 
-#alias lser="live-server --no-browser --quiet &"
 
 # applications
 
@@ -263,6 +260,7 @@ alias bri50="brightnessctl set 50%"
 
 # Bluetooth
 
+# TODO
 alias bcon="bluetoothctl connect C6:36:B2:7C:A7:A6"
 alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 

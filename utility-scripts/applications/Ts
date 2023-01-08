@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+mkdir -p ~/.tmux/oldresurrect
+
+echo ""
+read -p "NEW / UPDATE ? [n/u] :  " option
+
+if [[ $option == "n" || $option == "N" ]]; then
+
+    defaultname=$(readlink -f ~/.tmux/resurrect/last)
+
+    dir_path=$(dirname ${defaultname})
+
+    read -p "Enter new name to save : " newname
+
+    newlocation="${dir_path}/${newname}.txt"
+
+    mv ${defaultname} ${newlocation}
+
+    ln -sf ${newlocation} ~/.tmux/resurrect/last
+
+elif [[  $option == "u" || $option == "U" ]]; then
+
+    toupdate=$(find ~/.tmux/resurrect -type f | fzf)
+
+    oldname=$(readlink -f ~/.tmux/resurrect/last)
+
+    if [[ ${toupdate} != ${oldname} ]]; then
+        mv ${toupdate} ~/.tmux/oldresurrect
+        mv ${oldname} ${toupdate}
+        ln -sf ${toupdate} ~/.tmux/resurrect/last
+    fi
+fi

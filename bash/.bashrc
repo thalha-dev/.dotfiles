@@ -97,9 +97,9 @@ fi
 # Aliaser
 
 
-# current temp working dir to primary clipboard 
+# current temp working dir to clipboard 
 
-alias cll="pwd | xclip -i -sel primary"
+alias cll="pwd | xclip -i -sel clip"
 
 # navigation
 alias ..='cd ..'
@@ -133,13 +133,8 @@ alias c="clear"
 alias k="keynav daemonize"
 
 # tmux
-alias t='tmux a 2>/dev/null || tmux'
-alias td='tmux detach'
 alias tk='tmux kill-server'
 alias tn='tmux new -d -s '
-
-#alias livee="live-server --no-browser --quiet &"
-#alias klivee="ps aux | grep live-server | grep -v grep | awk '{print $2}' | xargs kill"
 
 
 # confirm before overwriting something

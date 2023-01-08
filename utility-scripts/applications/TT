@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+filename=$(find ~/.tmux/resurrect/ -type f | fzf)
+
+ln -sf ${filename} ~/.tmux/resurrect/last
