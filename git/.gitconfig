@@ -1,12 +1,55 @@
 [init]
 	defaultBranch = main
+
 [user]
 	name = thalha-dev
 	email = dev.thalha@gmail.com
+
 [color]
 	ui = auto
+
 [core]
 	editor = nvim
+    pager = delta
+
 [alias]
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches
     s = status
+
+[delta]
+    features = decorations
+    navigate = true 
+    syntax-theme = DarkNeon
+    line-numbers = true
+    line-numbers-minus-style = "#e93544"
+    line-numbers-zero-style = "#444444"
+    line-numbers-plus-style = "#44eb2f"
+    line-numbers-left-format = "{nm:>4}┊"
+    line-numbers-right-format = "{np:>4}│"
+    line-numbers-left-style = "#84858c"
+    line-numbers-right-style = "#84858c"
+    light = false
+    side-by-side = true
+    ; wrap-max-lines = 0
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    commit-style = raw
+    file-style = bold "#fbff02" box
+    hunk-header-style = line-number syntax
+    hunk-header-decoration-style = "#84858c" ul
+    hunk-header-file-style = "#2cf233"
+    hunk-header-line-number-style = "#fbff02"
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+

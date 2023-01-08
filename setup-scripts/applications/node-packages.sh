@@ -1,13 +1,13 @@
 #!/bin/bash
 
 
-sudo npm install -g n
-sudo npm install -g vtop
-sudo npm install -g eslint
-sudo npm install -g neovim
-sudo npm install -g prettier
-sudo npm install -g live-server
-sudo npm install -g browser-sync
-sudo npm install -g alacritty-themes
-sudo npm install -g vscode-langservers-extracted
-sudo npm install -g typescript typescript-language-server
+npm install -g n
+npm install -g vtop
+npm install -g eslint
+npm install -g neovim
+npm install -g prettier
+npm install -g live-server
+npm install -g browser-sync
+npm install -g alacritty-themes
+npm install -g vscode-langservers-extracted
+npm install -g typescript typescript-language-server

@@ -303,17 +303,11 @@ fi
 
 
 # switch between shells
-# I do not recommend switching default SHELL from bash.
 alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
@@ -332,15 +326,11 @@ fi
 . "$HOME/.cargo/env"
 
 
-
-# load Xmodmap
-# xmodmap ~/.Xmodmap
+# # NVM_
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 
 eval "$(starship init bash)"
 
 # eval "$(zoxide init bash)"
-
-# BEGIN_KITTY_SHELL_INTEGRATION
-#if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
-# END_KITTY_SHELL_INTEGRATION

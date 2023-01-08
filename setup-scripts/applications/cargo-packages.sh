@@ -4,6 +4,7 @@ cargo install macchina
 cargo install typeracer
 cargo install stylua
 cargo install xremap --features x11   # X11
+cargo install git-delta
 
 
 echo ""

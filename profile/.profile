@@ -43,21 +43,30 @@ fi
 # GOLANG
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
+
 # JAVA 
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
+
 # IDEA
 # export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
+
 # RUST
 export PATH=$PATH:$HOME/.cargo/bin
+
+# # NODE
+export NPM_CONFIG_PREFIX=~/.npm-global
+export PATH=$PATH:$HOME/.npm-global/bin
+
 # mason
 export PATH=$PATH:$HOME/.local/share/nvim/mason/bin 
+
 # application
 export PATH=$PATH:$HOME/applications
 
-xset r rate 240 50
+# HASKELL
+[ -f "/home/thalha/.ghcup/env" ] && source "/home/thalha/.ghcup/env" # ghcup-env
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# HASKELL
-[ -f "/home/thalha/.ghcup/env" ] && source "/home/thalha/.ghcup/env" # ghcup-env
+xset r rate 240 50
