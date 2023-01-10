@@ -4,7 +4,7 @@ vim.g.transparent_enabled = false
 
 vim.cmd([[
 try
-  colorscheme catppuccin
+  colorscheme themer_radium
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
