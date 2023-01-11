@@ -131,12 +131,14 @@ return packer.startup(function(use)
 			})
 		end,
 	})
-	use({ "AckslD/nvim-neoclip.lua" })
 
 	use({
 		"ibhagwan/fzf-lua",
 		requires = { "kyazdani42/nvim-web-devicons" },
 	})
+
+	use({ "kkharji/sqlite.lua" })
+	use({ "AckslD/nvim-neoclip.lua" })
 
 	-- Treesitter
 	use({
@@ -190,8 +192,22 @@ return packer.startup(function(use)
 	})
 	-- LIVE COMMAND PREVIEW
 	use({ "smjonas/live-command.nvim" })
+
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
+
 	use({ "manzeloth/live-server" })
+
+	-- Lua
+	use({
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

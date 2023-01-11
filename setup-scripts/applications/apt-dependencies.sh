@@ -18,6 +18,8 @@ sudo apt-get install -y gettext
 sudo apt-get install -y autoconf
 sudo apt-get install -y automake
 sudo apt-get install -y unzip
+sudo apt-get install -y sqlite3 
+sudo apt-get install -y libsqlite3-dev
 sudo apt-get install -y unrar
 sudo apt-get install -y curl
 sudo apt-get install -y wget
