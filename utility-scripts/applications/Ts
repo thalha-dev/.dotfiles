@@ -4,7 +4,7 @@
 mkdir -p ~/.tmux/oldresurrect
 
 echo ""
-read -p "NEW / UPDATE ? [n/u] :  " option
+read -p "NEW / UPDATE / RENAME ? [n/u/r] :  " option
 
 if [[ $option == "n" || $option == "N" ]]; then
 
@@ -16,9 +16,12 @@ if [[ $option == "n" || $option == "N" ]]; then
 
     newlocation="${dir_path}/${newname}.txt"
 
-    mv ${defaultname} ${newlocation}
+    if [[ $newname != "" ]]; then
 
-    ln -sf ${newlocation} ~/.tmux/resurrect/last
+        mv ${defaultname} ${newlocation}
+
+        ln -sf ${newlocation} ~/.tmux/resurrect/last
+    fi
 
 elif [[  $option == "u" || $option == "U" ]]; then
 
@@ -27,8 +30,32 @@ elif [[  $option == "u" || $option == "U" ]]; then
     oldname=$(readlink -f ~/.tmux/resurrect/last)
 
     if [[ ${toupdate} != ${oldname} ]]; then
-        mv ${toupdate} ~/.tmux/oldresurrect
-        mv ${oldname} ${toupdate}
-        ln -sf ${toupdate} ~/.tmux/resurrect/last
+
+        if [[ $toupdate != "" ]]; then
+
+            mv ${toupdate} ~/.tmux/oldresurrect
+
+            mv ${oldname} ${toupdate}
+
+            ln -sf ${toupdate} ~/.tmux/resurrect/last
+        fi
     fi
+
+elif [[  $option == "r" || $option == "R" ]]; then
+
+    torename=$(find ~/.tmux/resurrect -type f | fzf)
+
+    dir_path=$(dirname ${torename})
+
+    read -p "Rename : " newname
+
+    newlocation="${dir_path}/${newname}.txt"
+
+    if [[ $torename != "" ]]; then
+
+        mv ${torename} ${newlocation}
+
+        ln -sf ${newlocation} ~/.tmux/resurrect/last
+    fi
+
 fi

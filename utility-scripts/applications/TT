@@ -3,4 +3,6 @@
 
 filename=$(find ~/.tmux/resurrect/ -type f | fzf)
 
-ln -sf ${filename} ~/.tmux/resurrect/last
+if [[ $filename != "" ]]; then
+    ln -sf ${filename} ~/.tmux/resurrect/last
+fi
