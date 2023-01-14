@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo ""
-echo "SELECT : "
-echo ""
-
 filename=$(find ~/.tmux/resurrect/ -type f | fzf)
 
 if [[ $filename != "" ]]; then
@@ -15,3 +11,13 @@ touch ~/.tmux/servers/serverlist.txt
 random_word=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13 ; echo '')
 echo "$random_word" >> ~/.tmux/servers/serverlist.txt
 tmux -L ${random_word}
+
+# TODO
+#
+# read -p "Restore? [y/Y] : " option
+#
+# if [[ $option == "y" || $option == "Y" ]]; then
+#
+#     xdotool key Alt+a ; xdotool key Ctrl+r
+#
+# fi
