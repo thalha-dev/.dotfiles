@@ -1,5 +1,14 @@
 #!/bin/bash
 
+echo ""
+echo "SELECT : "
+echo ""
+
+filename=$(find ~/.tmux/resurrect/ -type f | fzf)
+
+if [[ $filename != "" ]]; then
+    ln -sf ${filename} ~/.tmux/resurrect/last
+fi
 
 mkdir -p ~/.tmux/servers
 touch ~/.tmux/servers/serverlist.txt
