@@ -8,16 +8,11 @@ fi
 
 mkdir -p ~/.tmux/servers
 touch ~/.tmux/servers/serverlist.txt
+touch ~/.tmux/servers/last_created_server.txt
 random_word=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 13 ; echo '')
 echo "$random_word" >> ~/.tmux/servers/serverlist.txt
+echo "$random_word" > ~/.tmux/servers/last_created_server.txt
 tmux -L ${random_word}
 
 # TODO
-#
-# read -p "Restore? [y/Y] : " option
-#
-# if [[ $option == "y" || $option == "Y" ]]; then
-#
-#     xdotool key Alt+a ; xdotool key Ctrl+r
-#
-# fi
+# tmux -L ${random_word} send-keys "xdotool key Alt+a && xdotool key Ctrl+r" Enter

@@ -1,4 +1,4 @@
 #!/bin/bash
 
-last_server=$(cat ~/.tmux/servers/last.txt | tr -d "[:blank:]")
+last_server=$(cat ~/.tmux/servers/last_detached_server.txt | tr -d "[:blank:]")
 tmux -L ${last_server} attach

@@ -2,6 +2,6 @@
 
 severname=$(echo $TMUX | cut -f1 -d',' | cut -f4 -d'/')
 mkdir -p ~/.tmux/servers
-touch ~/.tmux/servers/last.txt
-echo "$severname" > ~/.tmux/servers/last.txt
+touch ~/.tmux/servers/last_detached_sever.txt
+echo "$severname" > ~/.tmux/servers/last_detached_sever.txt
 tmux detach
