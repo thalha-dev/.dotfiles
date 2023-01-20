@@ -278,7 +278,7 @@ alias hibernateon="sudo systemctl unmask hibernate.target"
 # sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target
 
 # load Xmodmap
-# xmodmap ~/.Xmodmap
+xmodmap ~/.Xmodmap
 
 #prompt
 #starship init fish | source 

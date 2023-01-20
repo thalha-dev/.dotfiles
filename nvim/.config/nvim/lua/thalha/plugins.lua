@@ -209,6 +209,17 @@ return packer.startup(function(use)
 		end,
 	})
 
+	-- Remove the `use` here if you're using folke/lazy.nvim.
+	use({
+		"Exafunction/codeium.vim",
+		config = function()
+			-- Change '<C-g>' here to any keycode you like.
+			vim.keymap.set("i", "<C-g>", function()
+				return vim.fn["codeium#Accept"]()
+			end, { expr = true })
+		end,
+	})
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
