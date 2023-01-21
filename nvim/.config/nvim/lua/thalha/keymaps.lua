@@ -259,13 +259,6 @@ keymap("n", "<leader>v;", "/<C-r><C-w>", nor)
 
 ------------------------------------------------------------------------------
 
--- chatGPT
-
-keymap("n", "<leader>chat", ":ChatGPT<cr>", {})
-keymap("n", "<leader>Chat", ":ChatGPTActAs<cr>", {})
-
-------------------------------------------------------------------------------
-
 -- Move text up and down
 
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
@@ -279,6 +272,12 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 ------------------------------------------------------------------------------
+
+-- codeium
+
+vim.keymap.set("i", "<A-l>", function()
+	return vim.fn["codeium#Accept"]()
+end, { expr = true })
 
 -- Markdown Preview Toggle
 
