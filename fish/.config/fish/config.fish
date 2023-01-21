@@ -51,7 +51,6 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 
 # vim 
-alias vim='/usr/bin/vim'
 alias v='/usr/bin/nvim'
 
 # ls 

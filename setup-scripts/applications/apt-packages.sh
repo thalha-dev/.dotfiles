@@ -8,7 +8,6 @@ sudo apt-get install -y bat
 sudo apt-get install -y ssh
 sudo apt-get install -y fish
 sudo apt-get install -y fzf
-sudo apt-get install -y vim
 sudo apt-get install -y tmux
 sudo apt-get install -y jq
 sudo apt-get install -y rofi
@@ -44,6 +43,7 @@ sudo apt-get install -y polybar
 sudo apt-get install -y fd-find
 sudo apt-get install -y cmatrix
 sudo apt-get install -y blueman
+sudo apt-get install -y lxappearance
 sudo apt-get install -y neofetch
 sudo apt-get install -y nitrogen
 sudo apt-get install -y nm-applet

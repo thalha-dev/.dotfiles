@@ -1,5 +1,5 @@
-syntax on                  " enable syntax highlighting.
 syntax enable
+syntax on 
 filetype plugin indent on  " enable file type based indentation.
 set autoindent
 set number
@@ -7,9 +7,10 @@ set hidden
 set noswapfile
 set nowrap
 set nohlsearch
-set termguicolors     " enable true colors support
+set termguicolors  
 set incsearch " dynamically move the cursor to the next match.
 set relativenumber
+set background=dark
 set expandtab
 set encoding=UTF-8
 set showmatch				" Show matching brackets
@@ -26,10 +27,6 @@ set t_Co=256
 set foldmethod=indent
 autocmd BufRead * normal zR
 
-" set wildmode=longest,list,full
-" set cursorline
-" :set listchars=tab:\|\ 
-" :set list
 
 call plug#begin('~/.vim/plugged')
 
@@ -40,23 +37,12 @@ Plug 'junegunn/fzf.vim'
 
 "-------------------------------theme
 
+Plug 'ayu-theme/ayu-vim' " or other package manager
 
 
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"-----------------------------codeium plugin
 
-Plug 'jacoborus/tender.vim'
-
-Plug 'gosukiwi/vim-atom-dark'
-
-Plug 'mhartington/oceanic-next'
-
-Plug 'NLKNguyen/papercolor-theme'
-
-Plug 'rafamadriz/neon'
-
-Plug 'shaeinst/roshnivim-cs'
-
-Plug 'bluz71/vim-nightfly-guicolors'
+Plug 'Exafunction/codeium.vim'
 
 "-----------------------------rainbow paranthasis
 
@@ -74,9 +60,6 @@ Plug 'vifm/vifm.vim'
 "
 Plug 'mbbill/undotree'
 
-"--------------------------Git
-"
-Plug 'tpope/vim-fugitive'
 
 "-------------------Scroll Smooth
 "
@@ -85,11 +68,6 @@ Plug 'psliwka/vim-smoothie'
 "-------------------Fastest jk
 "
 Plug 'rhysd/accelerated-jk'
-
-"--------------------------Color Preview
-"
-Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
 
 
 "----------auto close html tag
@@ -118,60 +96,17 @@ Plug 'jiangmiao/auto-pairs'
 "
 Plug 'mattn/emmet-vim'
 
-"--------------------JS syntax highlighting
-
-Plug 'yuezk/vim-js'
-Plug 'maxmellon/vim-jsx-pretty'
-
 
 " ---------------------------------Comments
 "  Select in visual mode and press leader+gc
 
 Plug 'tpope/vim-commentary'
 
-" ----------------------------------Tmux
-"
-Plug 'preservim/vimux'
-
 
 "---------------------------DevIcons
 
 Plug 'ryanoasis/vim-devicons'
 
-
-"---------------------------Tag
-Plug 'preservim/tagbar'
-
-
-
-
-" TODO
-"-------------------multi-cursor
-
-" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
-
-"--------------------------board
-
-" Plug 'azabiong/vim-board'
-
-
-
-
-" NICE TO HAVE
-"-------------------jump flasher
-"
-" Plug 'danilamihailov/beacon.nvim'
-"
-"----------------------------Status Line
-"
-"Plug 'itchyny/lightline.vim'
-"
-"----------------------------multiple color schemes
-"
-" Plug 'flazz/vim-colorschemes'
-
-
-"--------------------------END OF PLUGINS
 
 call plug#end()
 
@@ -180,99 +115,16 @@ call plug#end()
 "set to 0 if you want to enable it later via :RainbowToggle
 let g:rainbow_active = 1 
 
+let ayucolor="dark"   " for dark version of theme
 
-set background=dark
+colorscheme ayu
 
-"-------tokyonight
-let g:tokyonight_style="night"
-" let g:tokyonight_style="dark"
-
-let g:neon_style="dark"
-
-" .vimrc
-" let g:tokyodark_transparent_background = 1
-
-colorscheme onehalfdark
-" nightfly
-" tokyodark
-" moonlight
-" codeschool
-" vn-night
-" neon
-" onehalfdark
-" rvcs
-" meliora
-" OceanicNext
-" PaperColor
-" tender
-" atom-dark-256
-" catppuccin
-" kanagawa
-" tokyonight
 
 "-------------------------indentLine Config
 let g:indentLine_fileTypeExclude= ["help", "undotree", "diff","floaterm","fzf"]
 let g:indentLine_bufTypeExclude = ["help","terminal","term:.*"]
 let g:indentLine_bufNameExclude = ["vifm"]
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
-
-"----------------------------------minimap
-"
-" let g:minimap_auto_start = 1
-
-"-------------------------vim-hexokinase Config
-" 
-let g:Hexokinase_highlighters = [ 'backgroundfull' ]
-
-"  All possible highlighters
-"    'virtual'
-"    'sign_colmn'
-"    'backgroud'
-"    'backgroudfull'
-"    'foregroud'
-"    'foregroudfull'
-
-
-let g:Hexokinase_optInPatterns = [
-\     'full_hex',
-\     'triple_hex',
-\     'rgb',
-\     'rgba',
-\     'hsl',
-\     'hsla',
-\ ]
-
-" \     'colour_names'
-
-" let g:Hexokinase_ftOptInPatterns = {
-" \     'css': 'full_hex,rgb,rgba,hsl,hsla,colour_names',
-" \     'html': 'full_hex,rgb,rgba,hsl,hsla,colour_names'
-" \ }
-
-""coc.preferences.formatOnSaveFiletypes": [
-"  "javascript",
-"  "typescript",
-"  "typescriptreact",
-"  "json",
-"  "javascriptreact",
-"  "typescript.tsx",
-"  "graphql",
-"  "html",
-"  "css"
-"],
-
-"--------------------------------Coc-Extension-List
-"
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
-let g:coc_global_extensions = [
-    \ 'coc-prettier',
-    \ 'coc-json',
-    \ 'coc-html',
-    \ 'coc-tsserver',
-    \ 'coc-snippets',
-    \ 'coc-lua',
-    \]
 
 "------------------------emmet
 "
@@ -294,7 +146,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>yc gg"+yG
 nnoremap <leader>yy ggVGy
 nnoremap <leader>dyy ggVGd
-nnoremap <leader>x :!chmod +x %<CR>
+nnoremap <leader>X :!chmod +x %<CR>
 " nnoremap <leader>k /[A-Z]<CR>
 
 "------------------------Find and Replace
@@ -341,8 +193,8 @@ nnoremap <silent> <A-L> :tabmove +<CR>
 
 "------------------------------ Change 2 split windows from vert to horiz or horiz to vert
 "
-map <leader>th <C-w>t<C-w>H
-map <leader>tk <C-w>t<C-w>K
+nnoremap <leader>th <C-w>t<C-w>H
+nnoremap <leader>tk <C-w>t<C-w>K
 
 
 "-----------------------Vim Help
@@ -365,10 +217,6 @@ noremap <leader>vvl <cmd>TabVifm<cr>
 noremap <leader>vvs <cmd>VsplitVifm<cr>
 noremap <leader>vvh <cmd>SplitVifm<cr>
 noremap <leader>vvc <cmd>Vifm<cr>
-
-"-------------------------------Tagbar
-"
-noremap <leader>vtt <cmd>TagbarToggle<cr>
 
 "---------------------------Colorsceme
 "v------- vim
@@ -404,22 +252,6 @@ noremap <leader>sD :!mkdir -p ~/.local/share/session/
 noremap <leader>sR :source ~/.local/share/nvim/session/
 
 
-"-----------------------------Unload Netrw
-" let g:loaded_netrw       = 1
-" let g:loaded_netrwPlugin = 1
-
-
-"----------------------------------cocPrettierformat
-"
-nnoremap <leader>lfp <cmd>CocCommand prettier.formatFile<cr>
-nnoremap <leader>lff <cmd>CocCommand editor.action.formatDocument<cr>
-
-
-"----------------------------------minimap
-"
-nnoremap <leader>vmm <cmd>MinimapToggle<cr>
-
-
 "-------------------------------Undo tree
 "
 noremap <leader>vuu :UndotreeToggle<CR>
@@ -452,16 +284,6 @@ nnoremap <leader>fsh <cmd>History/<CR>
 nnoremap <leader>nn :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>ng :NERDTreeVCS<CR>
-
-
-"-----------------------------------------Vimux
-"
-nnoremap <leader>ttr <cmd>VimuxPromptCommand<CR>
-nnoremap <leader>ttl <cmd>VimuxRunLastCommand<CR>
-nnoremap <leader>tto <cmd>VimuxOpenRunner<CR>
-nnoremap <leader>ttx <cmd>VimuxCloseRunner<CR>
-nnoremap <leader>ttt <cmd>VimuxTogglePane<CR>
-nnoremap <leader>ttc <cmd>VimuxClearTerminalScreen<CR>
 
 
 "Split tmux window with leader

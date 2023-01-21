@@ -250,6 +250,26 @@ keymap("n", "<leader>lsx", ":LiveServer stop<CR>", opts)
 keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
 keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 
+-- COPILOT
+
+vim.g.copilot_assume_mapped = true
+keymap("i", "<A-l>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+keymap("i", "<A-p>", "copilot#Previous()", { silent = true, expr = true })
+keymap("i", "<A-n>", "copilot#Next()", { silent = true, expr = true })
+
+--[[ vim.g.copilot_filetypes = { ]]
+--[[   ["*"] = false, ]]
+--[[   ["javascript"] = true, ]]
+--[[   ["typescript"] = true, ]]
+--[[   ["lua"] = false, ]]
+--[[   ["rust"] = true, ]]
+--[[   ["c"] = true, ]]
+--[[   ["c#"] = true, ]]
+--[[   ["c++"] = true, ]]
+--[[   ["go"] = true, ]]
+--[[   ["python"] = true, ]]
+--[[ } ]]
+
 ------------------------------------------------------------------------------
 
 -- -- Find and Replace
@@ -275,9 +295,10 @@ keymap("v", ">", ">gv", opts)
 
 -- codeium
 
-vim.keymap.set("i", "<A-l>", function()
-	return vim.fn["codeium#Accept"]()
-end, { expr = true })
+vim.g.codeium_enabled = false
+--[[ vim.keymap.set("i", "<A-l>", function() ]]
+--[[ 	return vim.fn["codeium#Accept"]() ]]
+--[[ end, { expr = true }) ]]
 
 -- Markdown Preview Toggle
 

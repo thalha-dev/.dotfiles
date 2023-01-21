@@ -4,6 +4,7 @@
 brew install lf
 brew install starship
 brew install btop
+brew install vim
 brew install tldr
 brew install htop
 brew install pipes-sh
