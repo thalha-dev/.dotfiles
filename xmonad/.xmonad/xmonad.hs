@@ -69,9 +69,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- launch rofi 
-    , ((modm,               xK_p     ), spawn "rofi -show run") -- commands 
+    , ((modm,               xK_p     ), spawn "rofi-launcher.sh") -- commands 
 
-    , ((modm .|. shiftMask, xK_p     ), spawn "rofi -show drun") -- window app
+    , ((modm .|. shiftMask, xK_p     ), spawn "rofi-launcher.sh") -- window app
 
     -- , ((modm,               xK_s     ), spawn "rofi -show emoji -modi emoji") -- emoji
 
