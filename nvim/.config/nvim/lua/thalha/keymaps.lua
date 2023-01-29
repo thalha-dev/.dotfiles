@@ -26,7 +26,7 @@ vim.g.maplocalleader = " "
 
 -- Fuzzy Find
 
-keymap("n", "<leader>a", "<cmd>Telescope git_files<cr>", opts)
+keymap("n", "<leader>a", ":lua require('telescope.builtin').git_files({show_untracked = true})<cr>", opts)
 keymap("n", "<leader>fa", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "<leader>ff", "<cmd>FileInDirectory<CR>", opts)
 keymap("n", "<leader>fj", "<cmd>Telescope jumplist<cr>", opts)
@@ -210,6 +210,14 @@ keymap("i", "<C-s>", "<cmd>CccConvert<cr>", opts)
 
 ------------------------------------------------------------------------------
 
+-- rest.nvim
+
+keymap("n", "<leader>ree", "<Plug>RestNvim", opts) -- run the request under the cursor
+keymap("n", "<leader>rep", "<Plug>RestNvimPreview", opts) -- preview the request cURL command
+keymap("n", "<leader>rel", "<Plug>RestNvimLast", opts) -- re-run the last request
+
+------------------------------------------------------------------------------
+
 -- Command
 
 keymap("c", "Bd", "bp | :sp | :bn | :bd", {})
@@ -312,13 +320,17 @@ keymap("n", "<leader>DDD", ":bp | :sp | :bn | :bd<Cr>", {})
 
 keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 
+-- Lf
+
+keymap("n", "<leader><leader>f", "<cmd>Lf<CR>", opts)
+
 -- Prettier
 
 keymap("n", "<leader>lfp", ":Prettier<CR>", {})
 
 -- switching pianlessly
 
-keymap("n", ";;", ":", {})
+keymap("n", ";", ":", {})
 
 -- Ron some script or commands
 

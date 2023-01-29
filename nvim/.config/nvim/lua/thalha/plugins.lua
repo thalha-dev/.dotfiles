@@ -162,6 +162,7 @@ return packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 		},
 	})
+	use({ "is0n/fm-nvim" })
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "kyazdani42/nvim-web-devicons", opt = true },
@@ -211,6 +212,9 @@ return packer.startup(function(use)
 
 	-- Remove the `use` here if you're using folke/lazy.nvim.
 	use({ "Exafunction/codeium.vim" })
+
+	-- REST API client
+	use({ "rest-nvim/rest.nvim" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
