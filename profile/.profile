@@ -45,8 +45,17 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
 # JAVA 
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
+
+# Andorid Studio
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # IDEA
 # export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
