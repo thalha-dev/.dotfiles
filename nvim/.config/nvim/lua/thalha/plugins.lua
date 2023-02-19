@@ -216,6 +216,39 @@ return packer.startup(function(use)
 	-- REST API client
 	use({ "rest-nvim/rest.nvim" })
 
+	use({
+		"edluffy/hologram.nvim",
+		config = function()
+			require("hologram").setup({
+				auto_display = true, -- WIP automatic markdown image display, may be prone to breaking
+			})
+		end,
+	})
+
+	-- use({
+	-- 	"giusgad/pets.nvim",
+	-- 	requires = {
+	-- 		"edluffy/hologram.nvim",
+	-- 		"MunifTanjim/nui.nvim",
+	-- 	},
+	-- 	config = function()
+	-- 		require("pets").setup({})
+	-- 	end,
+	-- })
+
+	-- use({
+	-- 	"tamton-aquib/duck.nvim",
+	-- 	config = function()
+	-- 		-- pets 🐈 🦆 🐤 🐦
+	-- 		vim.keymap.set("n", "<leader><leader>ps", function()
+	-- 			require("duck").hatch("⚽", 10)
+	-- 		end, {})
+	-- 		vim.keymap.set("n", "<leader><leader>pk", function()
+	-- 			require("duck").cook()
+	-- 		end, {})
+	-- 	end,
+	-- })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

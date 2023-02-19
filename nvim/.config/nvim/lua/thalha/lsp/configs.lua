@@ -8,9 +8,9 @@ if not status_ok_1 then
 	return
 end
 
-local servers = { "jsonls", "html", "sumneko_lua", "tsserver", "clangd" }
+local servers = { "jsonls", "html", "lua_ls", "tsserver", "clangd" }
 
-local servers_check = { "jsonls", "sumneko_lua" }
+local servers_check = { "jsonls", "lua_ls" }
 
 local settings = {
 	ui = {
