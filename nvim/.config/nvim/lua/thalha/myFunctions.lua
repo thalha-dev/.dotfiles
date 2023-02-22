@@ -55,3 +55,17 @@ function MY_REG_COPY_PERSENT_TO_UNNAMED()
 	local temp = vim.fn.getreg("%")
 	vim.fn.setreg("", temp)
 end
+
+function MY_INDENT_TWO()
+	vim.cmd([[
+    set shiftwidth=2
+    set softtabstop=2
+  ]])
+end
+
+function MY_INDENT_FOUR()
+	vim.cmd([[
+    set shiftwidth=4
+    set softtabstop=4
+  ]])
+end

@@ -144,10 +144,12 @@ keymap("n", "<A-L", ":tabmove +<CR>", opts)
 
 -- Move text up and down
 
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+keymap("n", "<A-j>", ":move .+1<CR>==", opts)
+keymap("n", "<A-k>", ":move .-2<CR>==", opts)
+keymap("x", "J", ":move '<-2<CR>gv-gv", opts)
+keymap("x", "K", ":move '>+1<CR>gv-gv", opts)
+keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
+keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 ------------------------------------------------------------------------------
 
@@ -277,7 +279,6 @@ keymap("i", "<A-n>", "copilot#Next()", { silent = true, expr = true })
 --[[   ["go"] = true, ]]
 --[[   ["python"] = true, ]]
 --[[ } ]]
-
 ------------------------------------------------------------------------------
 
 -- -- Find and Replace
@@ -307,7 +308,6 @@ vim.g.codeium_enabled = false
 --[[ vim.keymap.set("i", "<A-l>", function() ]]
 --[[ 	return vim.fn["codeium#Accept"]() ]]
 --[[ end, { expr = true }) ]]
-
 -- Markdown Preview Toggle
 
 keymap("n", "<leader>mmt", "<cmd>MarkdownPreviewToggle<CR>", opts)
@@ -371,6 +371,14 @@ keymap("n", "<leader>vsc", ":lua MY_SPELL_TOGGLE()<CR>", {})
 -- wraptext
 
 keymap("n", "<leader>vww", ":lua MY_WRAP_TOGGLE()<CR>", {})
+
+-- set indent size to 2
+
+keymap("n", "<leader>vi2", ":lua MY_INDENT_TWO()<CR>", {})
+
+-- set indent size to 4
+--
+keymap("n", "<leader>vi4", ":lua MY_INDENT_FOUR()<CR>", {})
 
 -- Source init.lua
 

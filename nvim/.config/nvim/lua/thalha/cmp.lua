@@ -10,6 +10,9 @@ end
 
 require("luasnip/loaders/from_vscode").lazy_load()
 
+luasnip.filetype_extend("javascript", { "javascriptreact" })
+luasnip.filetype_extend("javascript", { "html" })
+
 -- inoremap <c-u> <cmd>lua require("luasnip.extras.select_choice")()<cr>
 
 local check_backspace = function()
