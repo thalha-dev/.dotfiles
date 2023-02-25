@@ -216,14 +216,14 @@ return packer.startup(function(use)
 	-- REST API client
 	use({ "rest-nvim/rest.nvim" })
 
-	use({
-		"edluffy/hologram.nvim",
-		config = function()
-			require("hologram").setup({
-				auto_display = true, -- WIP automatic markdown image display, may be prone to breaking
-			})
-		end,
-	})
+	-- use({
+	-- 	"edluffy/hologram.nvim",
+	-- 	config = function()
+	-- 		require("hologram").setup({
+	-- 			auto_display = true, -- WIP automatic markdown image display, may be prone to breaking
+	-- 		})
+	-- 	end,
+	-- })
 
 	-- use({
 	-- 	"giusgad/pets.nvim",

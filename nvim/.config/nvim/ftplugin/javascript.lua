@@ -1,3 +1,6 @@
+vim.opt_local.shiftwidth = 2
+vim.opt_local.tabstop = 2
+
 local status_ok, comment = pcall(require, "Comment")
 if not status_ok then
 	return

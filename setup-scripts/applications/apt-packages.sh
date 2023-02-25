@@ -27,7 +27,6 @@ sudo apt-get install -y sxhkd
 sudo apt-get install -y dmenu
 sudo apt-get install -y bluez*
 sudo apt-get install -y dunst
-sudo apt-get install -y yt-dlp
 sudo apt-get install -y cheese
 sudo apt-get install -y lolcat
 sudo apt-get install -y zoxide
