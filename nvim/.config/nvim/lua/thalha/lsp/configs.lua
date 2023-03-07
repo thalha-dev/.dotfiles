@@ -8,7 +8,7 @@ if not status_ok_1 then
 	return
 end
 
-local servers = { "jsonls", "html", "lua_ls", "tsserver", "clangd" }
+local servers = { "jsonls", "html", "lua_ls", "tsserver", "clangd", "tailwindcss", "cssls" }
 
 local servers_check = { "jsonls", "lua_ls" }
 
