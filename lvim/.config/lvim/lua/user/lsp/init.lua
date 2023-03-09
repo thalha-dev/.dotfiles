@@ -1,3 +1,5 @@
+require("user.lsp.languages.go")
+
 lvim.lsp.diagnostics.virtual_text = false
 
 local formatters = require("lvim.lsp.null-ls.formatters")

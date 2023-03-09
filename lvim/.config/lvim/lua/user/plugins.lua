@@ -59,8 +59,7 @@ lvim.plugins = {
 			})
 		end,
 	},
-	-- {
-	-- 	"krivahtoo/silicon.nvim",
-	-- 	run = "./install.sh",
-	-- },
+	-- GOLANG
+	"olexsmir/gopher.nvim",
+	"leoluz/nvim-dap-go",
 }
