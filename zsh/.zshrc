@@ -19,7 +19,7 @@ export PATH=$HOME/bin:$PATH
 
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 export ALTERNATE_EDITOR="vim"
-export EDITOR="nvim"
+export EDITOR="lvim"
 
 
 
@@ -38,6 +38,7 @@ alias rm='rm -i'
 # vim 
 alias vim='/usr/bin/vim'
 alias vi='/usr/local/bin/nvim'
+alias v="$HOME/.local/bin/lvim"
 
 
 alias dir='dir --color=auto'

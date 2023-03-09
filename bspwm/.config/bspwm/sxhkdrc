@@ -37,7 +37,7 @@ super + o;{g,f,C,e,P,b,p,O,B,w,c}
 # h --> launch notification history
 # C --> clear all notification
 super + s;{d,c,t,s,T,n,W,f,h,C}
-    {kitty -e nvim ~/.dotfiles,kitty -e nvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua,kitty -e nmtui,kitty -e lf,dunstctl history-pop,dunstctl close-all}
+    {kitty -e lvim ~/.dotfiles,kitty -e lvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e lvim ~/.dotfiles/lvim/.config/lvim/config.lua,kitty -e nmtui,kitty -e lf,dunstctl history-pop,dunstctl close-all}
 
 # KILL 
 super + a;{p,b}

@@ -14,7 +14,7 @@ export LANG=en_IN.UTF-8
 export TERM=xterm-256color
 # EDITOR
 export ALTERNATE_EDITOR="vim"
-export EDITOR="nvim"
+export EDITOR="lvim"
 # COLORS
 export RED="\033[31m"
 export GREEN="\033[32m"

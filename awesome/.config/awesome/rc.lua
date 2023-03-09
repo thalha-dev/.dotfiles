@@ -58,7 +58,7 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "kitty"
-editor = os.getenv("EDITOR") or "nvim" or "nano"
+editor = os.getenv("EDITOR") or "lvim" or "nvim" or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
 -- Default modkey.

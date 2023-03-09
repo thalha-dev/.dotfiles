@@ -110,7 +110,8 @@ alias .5='cd ../../../../..'
 
 
 # vim 
-alias v='/usr/bin/nvim'
+alias vi='/usr/bin/nvim'
+alias v="$HOME/.local/bin/lvim"
 
 
 # ls 
