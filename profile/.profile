@@ -60,6 +60,9 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # IDEA
 # export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
 
+export ANDROID_HOME=$HOME/Android/Sdk
+export LUNARVIM_RUNTIME_DIR=$HOME/.local/share/lunarvim
+
 # RUST
 export PATH=$PATH:$HOME/.cargo/bin
 

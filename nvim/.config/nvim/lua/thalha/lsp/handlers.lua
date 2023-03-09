@@ -104,6 +104,8 @@ end
 M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	attach_navic(client, bufnr)
+	-- TO INSPECT
+	-- lua =vim.lsp.get_active_clients()[1].server_capabilities
 
 	-- The blow command will highlight the current variable and its usages in the buffer.
 	-- if client.server_capabilities.documentHighlightProvider then
@@ -122,12 +124,19 @@ M.on_attach = function(client, bufnr)
 	vim.notify_once(client.name .. " starting...")
 	if client.name == "tsserver" then
 		client.server_capabilities.document_formatting = false
+		-- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
 	end
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.document_formatting = false
+		-- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
 	end
 	if client.name == "html" then
 		client.server_capabilities.document_formatting = false
+		-- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
+	end
+	if client.name == "cssls" then
+		client.server_capabilities.document_formatting = false
+		-- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
 	end
 end
 
