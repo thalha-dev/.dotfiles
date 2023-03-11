@@ -129,6 +129,7 @@ alias lj='exa -a --icons --group *.java'
 # utils and binaries
 
 alias p="batcat"
+alias i="neofetch"
 alias c="clear"
 alias k="keynav daemonize"
 

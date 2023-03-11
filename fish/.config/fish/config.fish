@@ -189,6 +189,8 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 alias p="batcat"
 
+alias i="neofetch"
+
 alias c="clear"
 
 alias k="keynav daemonize"
