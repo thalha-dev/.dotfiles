@@ -10,7 +10,7 @@ lvim.plugins = {
 	"mbbill/undotree",
 	"manzeloth/live-server",
 	"rest-nvim/rest.nvim",
-	"Exafunction/codeium.vim",
+	-- "Exafunction/codeium.vim",
 	"MunifTanjim/prettier.nvim",
 	{
 		"uga-rosa/ccc.nvim",
