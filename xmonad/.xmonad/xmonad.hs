@@ -273,6 +273,7 @@ myLogHook = return ()
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
     spawnOnce "nm-applet"
+    spawnOnce "keynav daemonize"
     spawnOnce "blueman-applet"
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"

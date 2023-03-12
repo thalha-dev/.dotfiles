@@ -1,9 +1,10 @@
-lvim.colorscheme = "catppuccin"
+lvim.colorscheme = "lunar"
 
 lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.terminal.active = true
+lvim.builtin.breadcrumbs.winbar_filetype_exclude = { "html" }
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
