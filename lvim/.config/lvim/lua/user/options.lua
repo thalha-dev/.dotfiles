@@ -46,5 +46,5 @@ vim.fn.mkdir(vim_undo_dir, "p")
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true -- enable persistent undo
 
-vim.g.transparent_enabled = true
+-- vim.g.transparent_enabled = true
 -- vim.g.codeium_enabled = false
