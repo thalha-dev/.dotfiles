@@ -4,7 +4,8 @@ lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.terminal.active = true
-lvim.builtin.breadcrumbs.winbar_filetype_exclude = { "html" }
+-- lvim.builtin.breadcrumbs.winbar_filetype_exclude = { "html" }
+lvim.builtin.breadcrumbs.active = false
 
 -- Automatically install missing parsers when entering buffer
 lvim.builtin.treesitter.auto_install = true
