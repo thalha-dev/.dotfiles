@@ -282,7 +282,8 @@ alias hibernateon="sudo systemctl unmask hibernate.target"
 # load Xmodmap
 xmodmap ~/.Xmodmap
 
-#prompt
-#starship init fish | source 
 
-# set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/thalha/.ghcup/bin # ghcup-env
+# if status is-interactive 
+# and not set -q TMUX
+#      ~/applications/ta 2>/dev/null || ~/applications/T
+# end
