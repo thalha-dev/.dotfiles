@@ -224,7 +224,26 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="lf"
 alias tmux="tmux -u"
-# TODO
+
+# kdeconnect
+
+alias kdl="kdeconnect-cli --list-devices"
+alias kdp1="kdeconnect-cli --pair --device a21f2f81bfef9275"
+alias kdp2="kdeconnect-cli --pair --device f2f2110b2f39cdbe"
+alias kdp3="kdeconnect-cli --pair --device 697b7727b18c1e5c"
+alias kdup1="kdeconnect-cli --unpair --device a21f2f81bfef9275"
+alias kdup2="kdeconnect-cli --unpair --device f2f2110b2f39cdbe"
+alias kdup3="kdeconnect-cli --unpair --device 697b7727b18c1e5c"
+alias kdr1="kdeconnect-cli --ring --device a21f2f81bfef9275"
+alias kdr2="kdeconnect-cli --ring --device f2f2110b2f39cdbe"
+alias kdr3="kdeconnect-cli --ring --device 697b7727b18c1e5c"
+alias kds1="kdeconnect-cli --device a21f2f81bfef9275 --share "
+alias kds2="kdeconnect-cli --device f2f2110b2f39cdbe --share "
+alias kds3="kdeconnect-cli --device 697b7727b18c1e5c --share "
+alias kdsc1="kdeconnect-cli --device a21f2f81bfef9275 --share-text "
+alias kdsc2="kdeconnect-cli --device f2f2110b2f39cdbe --share-text "
+alias kdsc3="kdeconnect-cli --device 697b7727b18c1e5c --share-text "
+
 alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
 alias kmad="fusermount -u /home/thalha/Downloads/android-mp"
 # alias ormoluGit="ormolu --mode inplace (git ls-files '*.hs')"

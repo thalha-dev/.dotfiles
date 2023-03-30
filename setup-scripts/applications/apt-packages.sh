@@ -48,6 +48,7 @@ sudo apt-get install -y nitrogen
 sudo apt-get install -y nm-applet
 sudo apt-get install -y flameshot
 sudo apt-get install -y screenkey
+sudo apt-get install -y kdeconnect
 sudo apt-get install -y keynav
 sudo apt-get install -y network-manager
 sudo apt-get install -y trash-cli
