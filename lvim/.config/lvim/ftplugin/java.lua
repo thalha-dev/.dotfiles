@@ -1,7 +1,12 @@
 ---@diagnostic disable: missing-parameter
 vim.opt_local.shiftwidth = 2
 vim.opt_local.tabstop = 2
--- vim.opt_local.cmdheight = 2 -- more space in the neovim command line for displaying messages
+
+local lsp_utils = require("lvim.lsp.utils")
+---@diagnostic disable-next-line: duplicate-set-field
+lsp_utils.setup_codelens_refresh = function()
+	return
+end
 
 local capabilities = require("lvim.lsp").common_capabilities()
 
@@ -104,49 +109,31 @@ local config = {
 	-- for a list of options
 	settings = {
 		java = {
-			-- jdt = {
-			--   ls = {
-			--     vmargs = "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m"
-			--   }
-			-- },
 			eclipse = {
 				downloadSources = true,
 			},
 			configuration = {
 				updateBuildConfiguration = "interactive",
-				-- runtimes = {
-				-- 	{
-				-- 		name = "OpenJDK-11",
-				-- 		path = "/usr/lib/jvm/java-11-openjdk-amd64",
-				-- 	},
-				-- 	{
-				-- 		name = "OpenJDK-17",
-				-- 		path = "/usr/lib/jvm/java-17-openjdk-amd64",
-				-- 	},
-				-- },
 			},
 			maven = {
 				downloadSources = true,
 			},
 			implementationsCodeLens = {
-				enabled = true,
+				enabled = false,
 			},
 			referencesCodeLens = {
-				enabled = true,
+				enabled = false,
 			},
 			references = {
-				includeDecompiledSources = true,
+				includeDecompiledSources = false,
 			},
 			inlayHints = {
 				parameterNames = {
-					enabled = "all", -- literals, all, none
+					enabled = "literals", -- literals, all, none
 				},
 			},
 			format = {
 				enabled = false,
-				-- settings = {
-				--   profile = "asdf"
-				-- }
 			},
 		},
 		signatureHelp = { enabled = true },
@@ -181,13 +168,6 @@ local config = {
 		allow_incremental_sync = true,
 	},
 
-	-- Language server `initializationOptions`
-	-- You need to extend the `bundles` with paths to jar files
-	-- if you want to use additional eclipse.jdt.ls plugins.
-	--
-	-- See https://github.com/mfussenegger/nvim-jdtls#java-debug-installation
-	--
-	-- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
 	init_options = {
 		-- bundles = {},
 		bundles = bundles,
@@ -195,21 +175,20 @@ local config = {
 }
 
 config["on_attach"] = function(client, bufnr)
-	local _, _ = pcall(vim.lsp.codelens.refresh)
-	require("jdtls.dap").setup_dap_main_class_configs()
-	require("jdtls").setup_dap({ hotcodereplace = "auto" })
+	-- local _, _ = pcall(vim.lsp.codelens.refresh)
+	-- require("jdtls.dap").setup_dap_main_class_configs()
+	-- require("jdtls").setup_dap({ hotcodereplace = "auto" })
+	require("jdtls").setup_dap()
 	require("lvim.lsp").on_attach(client, bufnr)
 end
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	pattern = { "*.java" },
-	callback = function()
-		local _, _ = pcall(vim.lsp.codelens.refresh)
-	end,
-})
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+-- 	pattern = { "*.java" },
+-- 	callback = function()
+-- 		local _, _ = pcall(vim.lsp.codelens.refresh)
+-- 	end,
+-- })
 
--- This starts a new client & server,
--- or attaches to an existing client & server depending on the `root_dir`.
 jdtls.start_or_attach(config)
 
 vim.cmd(
