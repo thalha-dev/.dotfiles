@@ -62,4 +62,5 @@ lvim.plugins = {
 	-- GOLANG
 	"olexsmir/gopher.nvim",
 	"leoluz/nvim-dap-go",
+	"mfussenegger/nvim-jdtls",
 }

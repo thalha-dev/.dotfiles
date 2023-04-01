@@ -45,8 +45,8 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
 
 # JAVA 
-# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export PATH=$PATH:$JAVA_HOME/bin
 
 # Andorid Studio
@@ -61,6 +61,8 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # export PATH=$PATH:$HOME/source-installed/idea/idea-IC-222.3345.118/bin
 
 export ANDROID_HOME=$HOME/Android/Sdk
+
+
 export LUNARVIM_RUNTIME_DIR=$HOME/.local/share/lunarvim
 
 # RUST
