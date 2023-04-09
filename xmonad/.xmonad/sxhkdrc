@@ -28,6 +28,14 @@ super + o;{w}
     {nitrogen}
 super + o;{c}
     {gnome-calculator}
+super + o;{8}
+    {picom-trans --toggle 85}
+super + o;{7}
+    {picom-trans -s -10}
+super + o;{9}
+    {picom-trans -s +10}
+super + o;{0}
+    {picom-trans -r}
 
 
 # TERMINAL BASED HOTKEYS
