@@ -275,7 +275,6 @@ myStartupHook = do
     spawnOnce "nm-applet"
     spawnOnce "keynav daemonize"
     spawnOnce "blueman-applet"
-    spawnOnce "$HOME/.dotfiles/utility-scripts/applications/battery-notification.sh &"
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"

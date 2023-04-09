@@ -4,37 +4,60 @@
 
 
 # OPERNER
-# g --> launch google-chrome
-# f --> launch nautilus
-# C --> launch vscode
-# e --> launch rofi emoji
-# P --> launch cheese
-# b --> launch polybar
-# p --> launch picom
-# O --> launch libreoffice
-# B --> launch blueman-manager
-# w --> launch nitrogen
-# c --> launch gnome-calculator
-super + o;{g,f,C,e,P,b,p,O,B,w,c}
-    {google-chrome,nautilus,code,rofi -show emoji -modi emoji -theme $HOME/.config/rofi/launchers/black.rasi,cheese,polybar-up,picom --experimental-backends -b,libreoffice,blueman-manager,nitrogen,gnome-calculator}
+super + o;{i}
+    {battery-notification.sh}
+super + o;{f}
+    {nautilus}
+super + o;{g}
+    {google-chrome}
+super + o;{C}
+    {code}
+super + o;{e}
+    {rofi -show emoji -modi emoji -theme $HOME/.config/rofi/launchers/black.rasi}
+super + o;{P}
+    {cheese}
+super + o;{b}
+    {polybar-up}
+super + o;{p}
+    {picom --experimental-backends -b}
+super + o;{O}
+    {libreoffice}
+super + o;{B}
+    {blueman-manager}
+super + o;{w}
+    {nitrogen}
+super + o;{c}
+    {gnome-calculator}
+
 
 # TERMINAL BASED HOTKEYS
-# d --> launch ~/.dotfiles in nvim
-# c --> launch ~/.config in nvim
-# t --> attatch tmux 
-# s --> fuzzy execute scripts
-# T --> launch btop
-# n --> launch ~/.config/nvim in nvim
-# W --> launch nmtui
-# f --> launch lf
-# h --> launch notification history
-# C --> clear all notification
-super + s;{d,c,t,s,T,n,W,f,h,C}
-    {kitty -e lvim ~/.dotfiles,kitty -e lvim ~/.config,kitty -e tmux a,kitty -e fuzzyScript.sh,kitty -e btop,kitty -e lvim ~/.dotfiles/lvim/.config/lvim/config.lua,kitty -e nmtui,kitty -e lf,dunstctl history-pop,dunstctl close-all}
+super + s;{d}
+    {kitty -e lvim ~/.dotfiles}
+super + s;{c}
+    {kitty -e lvim ~/.config}
+super + s;{t}
+    {kitty -e tmux a}
+super + s;{s}
+    {kitty -e fuzzyScript.sh}
+super + s;{T}
+    {kitty -e btop}
+super + s;{n}
+    {kitty -e lvim ~/.dotfiles/lvim/.config/lvim/config.lua}
+super + s;{W}
+    {kitty -e nmtui}
+super + s;{f}
+    {kitty -e lf}
+super + s;{h}
+    {dunstctl history-pop}
+super + s;{C}
+    {dunstctl close-all}
+
 
 # KILL 
-super + a;{p,b}
-    {killall picom,killall -q polybar}
+super + a;{p}
+    {killall picom}
+super + a;{b}
+    {killall -q polybar}
 
 # MAKE SXHKD RELOAD ITS CONFIGURATION FILES:
 super + Escape
