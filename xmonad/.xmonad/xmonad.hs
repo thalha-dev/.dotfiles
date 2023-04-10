@@ -272,9 +272,9 @@ myLogHook = return ()
 -- By default, do nothing.
 myStartupHook = do 
     spawnOnce "nitrogen --restore &"
-    spawnOnce "nm-applet"
     spawnOnce "keynav daemonize"
-    spawnOnce "blueman-applet"
+    -- spawnOnce "nm-applet"
+    -- spawnOnce "blueman-applet"
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
