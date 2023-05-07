@@ -68,7 +68,7 @@ set nowrap
 
 " color scheme
 
-colorscheme mytheme
+colorscheme darkGlass
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M
@@ -436,7 +436,8 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 
-nnoremap <A-c> :colorscheme <TAB>
+nnoremap <A-8> :colorscheme dark<CR>
+nnoremap <A-9> :colorscheme darkGlass<CR>
 
 "------------------------------------------------- Make adjusing split sizes a bit more friendly
 "noremap <silent> <C-Left> :vertical resize +5<CR>
@@ -494,7 +495,8 @@ nnoremap <f3> :!less %f<cr>
 " nnoremap o :edit<cr>
 nnoremap o :edit<cr>
 
-nnoremap Q :qa<cr>
+nnoremap q :qa<cr>
+nnoremap H :history<cr>
 
 " ------------------------------------------------------------------------------
 

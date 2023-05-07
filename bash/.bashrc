@@ -158,7 +158,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="vifm"
+alias f="vifm ."
 alias F="lf"
 alias tmux="tmux -u"
 alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
@@ -212,8 +212,6 @@ alias bri50="brightnessctl set 50%"
 
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 
-alias bcon="bluetoothctl connect C6:36:B2:7C:A7:A6"
-alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 
 alias sleepoff="sudo systemctl mask sleep.target"
 alias sleepon="sudo systemctl unmask sleep.target"

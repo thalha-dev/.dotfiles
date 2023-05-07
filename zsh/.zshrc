@@ -75,7 +75,7 @@ alias k="keynav daemonize"
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="vifm"
+alias f="vifm ."
 alias goo="google-chrome"
 
 # update and upgrade
@@ -89,9 +89,6 @@ alias upgrade="sudo apt upgrade"
 alias bri="sudo brightnessctl set" 
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 
-
-alias bluecon="bluetoothctl connect 41:42:59:C9:5E:12"
-alias bluediscon="bluetoothctl disconnect 41:42:59:C9:5E:12"
 
 
 # switch between shells

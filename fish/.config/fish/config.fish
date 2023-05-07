@@ -222,7 +222,7 @@ alias Pd="fuzzyPrint.sh ~/.dotfiles"
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="vifm"
+alias f="vifm ."
 alias F="lf"
 alias tmux="tmux -u"
 
@@ -280,11 +280,7 @@ alias bri50="brightnessctl set 50%"
 
 #alias keys="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf "%-3s %s\n", $5, $8 }'"
 
-# Bluetooth
 
-# TODO
-alias bcon="bluetoothctl connect C6:36:B2:7C:A7:A6"
-alias bdiscon="bluetoothctl disconnect C6:36:B2:7C:A7:A6"
 
 #dbus-send --system --print-reply --dest=org.bluez / org.freedesktop.DBus.ObjectManager.GetManagedObjects | less
 #dbus-send --system --print-reply --dest=org.bluez /org/bluez/hci0/dev_C6_36_B2_7C_A7_A6/sep1/fd4 org.freedesktop.DBus.Properties.Get string:"org.bluez.MediaTransport1" string:"Volume" | grep uint16"

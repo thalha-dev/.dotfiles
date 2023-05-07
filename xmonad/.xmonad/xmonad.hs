@@ -274,7 +274,6 @@ myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "keynav daemonize"
     spawnOnce "nm-applet"
-    spawnOnce "blueman-applet"
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
