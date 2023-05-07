@@ -55,10 +55,21 @@ set period 1                    # interval to check for directory updates
 # │                                 COMMANDS                                  │
 # └───────────────────────────────────────────────────────────────────────────┘
 
-cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
-map r push :rename<space>
+# cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
-cmd open ${{
+cmd alternativeStart ${{
+    test -L $f && f=$(readlink -f $f)
+    pattern=$(file --mime-type $f -b)
+    case $pattern in
+        image/*) sxiv -b $fx &;;
+        application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1;;
+        video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+        text/*) N $fx;;
+        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+cmd defaultStart ${{
     test -L $f && f=$(readlink -f $f)
     pattern=$(file --mime-type $f -b)
     case $pattern in
@@ -86,9 +97,17 @@ cmd extract ${{
 }}
 
 # compress current file or selected files with tar and gunzip
+# cmd tar ${{
+#     set -f
+#     mkdir $1
+#     cp -r $fx $1
+#     tar czf $1.tar.gz $1
+#     rm -rf $1
+# }}
+
 cmd tar ${{
     set -f
-    mkdir $1
+    mkdir -p $f
     cp -r $fx $1
     tar czf $1.tar.gz $1
     rm -rf $1
@@ -143,6 +162,15 @@ cmd makeExecutable ${{
     chmod +x $f
 }}
 
+cmd rename ${{
+    old_name=$(basename -- "$f")
+    printf "Old Name: $old_name\n"
+    printf "New Name:  "
+    read new_name
+    mv $old_name $new_name
+}}
+
+
 # ┌───────────────────────────────────────────────────────────────────────────┐
 # │                                 BINDINGS                                  │
 # └───────────────────────────────────────────────────────────────────────────┘
@@ -166,12 +194,16 @@ map gr cd /
 map gh cd ~ 
 
 # Basic Functions
+map r rename
 map au extract
+map ac tar
+map az zip
 map DDDD delete
 map p paste
 map x cut
 map y copy
-map <enter> open
+map <enter> defaultStart
+map o alternativeStart
 map R reload
 map Cf mkfile
 map Cd mkdir

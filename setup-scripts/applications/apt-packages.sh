@@ -14,7 +14,6 @@ sudo apt-get install -y rofi
 sudo apt-get install -y rofi-dev
 sudo apt-get install -y nala
 sudo apt-get install -y sxiv
-sudo apt-get install -y vifm
 sudo apt-get install -y ncdu
 sudo apt-get install -y acpi
 sudo apt-get install -y scrot

@@ -222,7 +222,8 @@ alias Pd="fuzzyPrint.sh ~/.dotfiles"
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="lf"
+alias f="vifm"
+alias F="lf"
 alias tmux="tmux -u"
 
 # kdeconnect

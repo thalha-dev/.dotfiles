@@ -158,7 +158,8 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 alias fdm="fdm &"
 alias eclipse="eclipse &"
-alias f="lf"
+alias f="vifm"
+alias F="lf"
 alias tmux="tmux -u"
 alias mad="go-mtpfs /home/thalha/Downloads/android-mp"
 alias kmad="fusermount -u /home/thalha/Downloads/android-mp"
