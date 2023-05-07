@@ -2,7 +2,8 @@
 
 nvims() {
 	items=("lvim" "default" "lazyNvim" "nvChad" "astroNvim" "kickStart")
-	config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --layout=reverse --border --exit-0)
+
+	config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --layout=reverse --pointer="⚡" --border=rounded --margin 2% --height 60% --exit-0)
 	if [[ -z $config ]]; then
 		echo "Nothing selected"
 		return 0
