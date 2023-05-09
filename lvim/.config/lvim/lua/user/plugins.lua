@@ -21,7 +21,7 @@ lvim.plugins = {
 	{ "norcalli/nvim-colorizer.lua" },
 	{
 		"iamcco/markdown-preview.nvim",
-		run = function()
+		build = function()
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
@@ -44,7 +44,7 @@ lvim.plugins = {
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v2.x",
-		requires = {
+		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
