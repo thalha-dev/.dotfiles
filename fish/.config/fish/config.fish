@@ -24,6 +24,7 @@ function fish_user_key_bindings
   fish_vi_key_bindings
   bind -M insert -m default jk backward-char force-repaint
   bind yy fish_clipboard_copy
+  bind P fish_clipboard_paste
 end
 ### END OF VI MODE ###
 
@@ -189,7 +190,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 alias p="batcat"
 
-alias i="neofetch"
+alias i="echo "" && neofetch"
 
 alias c="clear"
 
