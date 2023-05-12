@@ -115,7 +115,7 @@ endif
 
 " Set custom status line look
 
-set statusline=" %A %T %10u:%-7g %15s %20d"
+set statusline=" %A %T %10u:%-7g %15s:%5E %20d"
 
 " ------------------------------------------------------------------------------
 
@@ -254,6 +254,9 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ shotwell,
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ echo no preview available. %i 
+" fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
+"         \ chafa %f
+
 
 " OpenRaster
 filextype *.ora

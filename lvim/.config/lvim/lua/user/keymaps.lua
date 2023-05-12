@@ -85,7 +85,8 @@ keymap("n", "<leader>lmm", "<cmd>Mason<CR>", opts)
 
 -- Lf
 
-keymap("n", "<leader><leader>f", "<cmd>Lf<CR>", opts)
+keymap("n", "<leader><leader>f", "<cmd>Vifm<CR>", opts)
+keymap("n", "<leader><leader>F", "<cmd>Lf<CR>", opts)
 
 -- Prettier
 
