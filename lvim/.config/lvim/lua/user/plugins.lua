@@ -1,7 +1,6 @@
 lvim.plugins = {
 	"catppuccin/nvim",
 	"xiyaowong/nvim-transparent",
-	"themercorp/themer.lua",
 	"rebelot/kanagawa.nvim",
 	"rainbowhxch/accelerated-jk.nvim",
 	"ibhagwan/fzf-lua",
