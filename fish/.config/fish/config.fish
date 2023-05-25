@@ -190,7 +190,7 @@ alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
 alias p="batcat"
 
-alias i="echo "" && neofetch"
+alias i="echo "" && neofetch --config ~/.dotfiles/neofetch/.config/neofetch/minimal/config.conf"
 
 alias c="clear"
 

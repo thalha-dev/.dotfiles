@@ -54,11 +54,7 @@ myWorkspaces    = ["0","1","2","3","4","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#02040F"
--- myFocusedBorderColor = "#B752AE"
--- myFocusedBorderColor = "#E8F9FD"
--- myFocusedBorderColor = "#DEA057"
 myFocusedBorderColor = "#525E75"
--- myFocusedBorderColor = "#BBBFCA"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -278,6 +274,7 @@ myStartupHook = do
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
     spawn "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
+    spawnOnce "$HOME/.dotfiles/utility-scripts/applications/battery-loop.sh &"
 
 
 ------------------------------------------------------------------------
