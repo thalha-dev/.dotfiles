@@ -1,4 +1,4 @@
-lvim.colorscheme = "lunar"
+lvim.colorscheme = "catppuccin"
 
 lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.active = false

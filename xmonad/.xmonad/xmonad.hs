@@ -270,11 +270,11 @@ myStartupHook = do
     spawnOnce "nitrogen --restore &"
     spawnOnce "keynav daemonize"
     spawnOnce "nm-applet"
+    spawnOnce "battery-loop.sh &"
     spawn "polybar-up"
     spawn "picom -b --experimental-backends"
     spawn "sxhkd -c ~/.xmonad/sxhkdrc &"
     spawn "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &"
-    spawnOnce "$HOME/.dotfiles/utility-scripts/applications/battery-loop.sh &"
 
 
 ------------------------------------------------------------------------
