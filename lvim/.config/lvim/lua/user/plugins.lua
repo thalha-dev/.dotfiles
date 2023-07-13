@@ -1,7 +1,9 @@
 lvim.plugins = {
 	"catppuccin/nvim",
+	"Mofiqul/vscode.nvim",
+	"marko-cerovac/material.nvim",
 	"xiyaowong/nvim-transparent",
-	"rebelot/kanagawa.nvim",
+	"projekt0n/github-nvim-theme",
 	"rainbowhxch/accelerated-jk.nvim",
 	"ibhagwan/fzf-lua",
 	"is0n/fm-nvim",

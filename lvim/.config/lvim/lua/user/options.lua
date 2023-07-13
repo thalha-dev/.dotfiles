@@ -1,4 +1,4 @@
-lvim.colorscheme = "catppuccin"
+lvim.colorscheme = "lunar"
 
 lvim.builtin.alpha.active = false
 lvim.builtin.nvimtree.active = false
@@ -21,7 +21,7 @@ vim.opt.clipboard = "" -- allows neovim to access the system clipboard
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 vim.opt.hlsearch = false -- highlight all matches on previous search pattern
 vim.opt.ignorecase = true -- ignore case in search patterns
-vim.opt.mouse = "a" -- allow the mouse to be used in neovim
+vim.opt.mouse = "" -- allow the mouse to be used in neovim
 vim.opt.pumheight = 20 -- pop up menu height
 vim.opt.showtabline = 0 -- always show tabs
 vim.opt.smartcase = true -- smart case
@@ -49,3 +49,4 @@ vim.opt.undofile = true -- enable persistent undo
 
 -- vim.g.transparent_enabled = true
 -- vim.g.codeium_enabled = false
+vim.g.material_style = "deep ocean"

@@ -17,17 +17,17 @@
 set shell bash                    # interpreter for shell commands
 set ifs "\n"
 set filesep "\n"                # default already
-set incsearch o                 # jump to first match after each keystroke in searc
-set incfilter o                 # apply filter after each keystroke
+set incsearch true                 # jump to first match after each keystroke in searc
+set incfilter true                 # apply filter after each keystroke
 set smartcase                   # if capital letter then case sensitive
 set scrolloff 10                # leave some space at the top and the bottom of the screen
 set hidden true
 set icons
-set dircounts on                # show number of items in directory instead of sie
-set drawbox on                  # draw a border around all panes
+set dircounts true                # show number of items in directory instead of sie
+set drawbox true                  # draw a border around all panes
 set ratios '1:2:2'              # ratio of pane widths
 set info "size"                 # list directory information on the right
-# set history on                  # save history across sessions 
+set history true                  # save history across sessions 
 set period 1                    # interval to check for directory updates
 
 
