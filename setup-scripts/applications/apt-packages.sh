@@ -130,10 +130,10 @@ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
 ln -s ~/.local/kitty.app/bin/kitty ~/.local/bin/
 
 
-echo ""
-echo "NEXT NEOVIM SETUP"
-echo "want to stop right here ? then press CTRL-C"
-sleep 15
+# echo ""
+# echo "NEXT NEOVIM SETUP"
+# echo "want to stop right here ? then press CTRL-C"
+# sleep 15
 
 
 #  _   _ _____ _____     _____ __  __
@@ -142,14 +142,14 @@ sleep 15
 # | |\  | |__| |_| |\ V /  | || |  | |
 # |_| \_|_____\___/  \_/  |___|_|  |_|
 #
-echo ""
-echo "NEOVIM !!!"
-echo ""
-mkdir -p ~/source-installed
-cd ~/source-installed
-curl -JOL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
-sudo dpkg -i ./nvim-linux64.deb
-cd ~
+# echo ""
+# echo "NEOVIM !!!"
+# echo ""
+# mkdir -p ~/source-installed
+# cd ~/source-installed
+# curl -JOL https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
+# sudo dpkg -i ./nvim-linux64.deb
+# cd ~
 
 echo ""
 echo "NEXT YTFZF SETUP"
@@ -163,8 +163,8 @@ sleep 15
 #   |_|   |_| |_|   /____|_|
 #
 mkdir -p ~/source-installed
-cd ~/source-installed
+cd ~/source-installed || exit
 git clone https://github.com/pystardust/ytfzf
-cd ytfzf
+cd ytfzf || exit
 sudo make install doc
-cd ~
+cd ~ || exit

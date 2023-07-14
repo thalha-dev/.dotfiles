@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 sudo apt-get -y install libc6:i386
 sudo apt-get -y install libncurses5:i386
 sudo apt-get -y install libstdc++6:i386
