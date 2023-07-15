@@ -1,6 +1,9 @@
 require("user.lsp.languages.go")
 
-lvim.lsp.diagnostics.virtual_text = false
+-- lvim.lsp.diagnostics.virtual_text = false
+vim.diagnostic.config({ virtual_text = false })
+
+-- vim.
 ---@diagnostic disable-next-line: missing-parameter
 -- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jdtls" })
 

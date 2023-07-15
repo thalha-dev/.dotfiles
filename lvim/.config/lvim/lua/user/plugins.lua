@@ -9,7 +9,6 @@ lvim.plugins = {
 	"is0n/fm-nvim",
 	"Pocco81/true-zen.nvim",
 	"mbbill/undotree",
-	"manzeloth/live-server",
 	"rest-nvim/rest.nvim",
 	-- "Exafunction/codeium.vim",
 	"MunifTanjim/prettier.nvim",

@@ -1,0 +1,35 @@
+
+xmonad.hs:10:1: error:
+    Could not find module ‘XMonad’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+10 | import XMonad
+   | ^^^^^^^^^^^^^
+
+xmonad.hs:13:1: error:
+    Could not find module ‘XMonad.Util.SpawnOnce’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+13 | import XMonad.Util.SpawnOnce
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:14:1: error:
+    Could not find module ‘XMonad.Util.Run’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+14 | import XMonad.Util.Run
+   | ^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:15:1: error:
+    Could not find module ‘XMonad.Hooks.ManageDocks’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+15 | import XMonad.Hooks.ManageDocks
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+xmonad.hs:16:1: error:
+    Could not find module ‘XMonad.StackSet’
+    Use -v (or `:set -v` in ghci) to see a list of the files searched for.
+   |
+16 | import qualified XMonad.StackSet as W
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
