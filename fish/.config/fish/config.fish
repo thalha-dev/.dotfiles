@@ -225,7 +225,7 @@ alias fdm="fdm &"
 alias eclipse="eclipse &"
 alias f="vifm ."
 alias F="lf"
-alias tmux="tmux -u"
+alias t="tmux -u"
 
 # kdeconnect
 

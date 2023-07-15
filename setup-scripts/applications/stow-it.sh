@@ -23,6 +23,10 @@ for item in "${arr[@]}"; do
 		continue
 	fi
 
+	if [[ $item == "dconf" ]]; then
+		continue
+	fi
+
 	stow --adopt -v $item
 done
 
