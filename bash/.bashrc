@@ -130,6 +130,7 @@ alias lj='exa -a --icons --group *.java'
 
 alias p="batcat"
 alias i="echo "" && neofetch --config ~/.dotfiles/neofetch/.config/neofetch/minimal/config.conf"
+alias nf="echo "" && neofetch"
 alias c="clear"
 alias k="keynav daemonize"
 
