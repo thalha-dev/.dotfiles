@@ -66,12 +66,17 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
+# if [ "$color_prompt" = yes ]; then
+#     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+# else
+#     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+# fi
+
+
 unset color_prompt force_color_prompt
+
+
+PS1='\n\[\e[38;5;228;1m\]\w\[\e[0m\] \[\e[38;5;183;1m\]$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2)\n\[\e[38;5;228m\]\u\[\e[38;5;249;2m\]@\[\e[0;1;38;5;228m\]\h\[\e[0m\]:\[\e[38;5;141;1m\]\$\[\e[0m\] '
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -115,16 +120,18 @@ alias v="$HOME/.local/bin/lvim"
 
 
 # ls 
-alias ls='exa --icons --color=auto'
-alias la='exa --icons -a'
-alias l='exa -al --icons --group'
-alias ld='exa -ad .[^.]* --icons --color=auto'
-alias e='exa -al --icons --group'
-alias lt='exa -al --icons --group --tree'
-alias lt2='exa -al --icons --group --tree --level=2'
-alias lt3='exa -al --icons --group --tree --level=3'
-alias lt4='exa -al --icons --group --tree --level=4'
-alias lj='exa -a --icons --group *.java'
+# alias ls='exa --icons --color=auto'
+# alias la='exa --icons -a'
+# alias l='exa -al --icons --group'
+alias l='ls -lash'
+alias lsi='ls -lashi'
+# # alias ld='exa -ad .[^.]* --icons --color=auto'
+# alias e='exa -al --icons --group'
+# alias lt='exa -al --icons --group --tree'
+# alias lt2='exa -al --icons --group --tree --level=2'
+# alias lt3='exa -al --icons --group --tree --level=3'
+# alias lt4='exa -al --icons --group --tree --level=4'
+# alias lj='exa -a --icons --group *.java'
 
 # utils and binaries
 
@@ -308,6 +315,25 @@ alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
 alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
 alias tofish="sudo chsh $USER -s /bin/fish && echo 'Now log out.'"
 
+# kdeconnect
+
+alias kdl="kdeconnect-cli --list-devices"
+alias kdp1="kdeconnect-cli --pair --device a21f2f81bfef9275"
+alias kdp2="kdeconnect-cli --pair --device f2f2110b2f39cdbe"
+alias kdp3="kdeconnect-cli --pair --device 697b7727b18c1e5c"
+alias kdup1="kdeconnect-cli --unpair --device a21f2f81bfef9275"
+alias kdup2="kdeconnect-cli --unpair --device f2f2110b2f39cdbe"
+alias kdup3="kdeconnect-cli --unpair --device 697b7727b18c1e5c"
+alias kdr1="kdeconnect-cli --ring --device a21f2f81bfef9275"
+alias kdr2="kdeconnect-cli --ring --device f2f2110b2f39cdbe"
+alias kdr3="kdeconnect-cli --ring --device 697b7727b18c1e5c"
+alias kds1="kdeconnect-cli --device a21f2f81bfef9275 --share "
+alias kds2="kdeconnect-cli --device f2f2110b2f39cdbe --share "
+alias kds3="kdeconnect-cli --device 697b7727b18c1e5c --share "
+alias kdsc1="kdeconnect-cli --device a21f2f81bfef9275 --share-text "
+alias kdsc2="kdeconnect-cli --device f2f2110b2f39cdbe --share-text "
+alias kdsc3="kdeconnect-cli --device 697b7727b18c1e5c --share-text "
+
 
 
 if [ -f ~/.bash_aliases ]; then
@@ -326,12 +352,14 @@ if ! shopt -oq posix; then
 fi
 . "$HOME/.cargo/env"
 
+# load Xmodmap
+xmodmap ~/.Xmodmap
 
 # # NVM_
 # export NVM_DIR="$HOME/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
 # eval "$(zoxide init bash)"
