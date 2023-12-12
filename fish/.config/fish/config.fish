@@ -57,7 +57,7 @@ alias v="$HOME/.local/bin/lvim"
 
 # ls 
 alias ls='exa --icons --color=auto'
-alias ld='exa -ad .* --icons --color=auto'
+# alias ld='exa -ad .* --icons --color=auto'
 alias l='exa -al --icons --group'
 alias lt='exa -alm --icons --group --tree'
 alias lt2='exa -alm --icons --group --tree --level=2'
