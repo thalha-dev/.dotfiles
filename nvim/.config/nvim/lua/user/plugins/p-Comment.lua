@@ -28,6 +28,9 @@ return {
 				-- for commenting tsx and jsx files
 				pre_hook = ts_context_commentstring.create_pre_hook(),
 			})
+
+			local api = require("Comment.api")
+			vim.keymap.set("n", "<leader>/", api.toggle.linewise.current, { desc = { "comment current line" } })
 		end,
 	},
 }
