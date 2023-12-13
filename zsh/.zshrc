@@ -19,7 +19,7 @@ export PATH=$HOME/bin:$PATH
 
 export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
 export ALTERNATE_EDITOR="vim"
-export EDITOR="lvim"
+export EDITOR="nvim"
 
 
 
