@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local modules = { { import = "user.plugins" } }
+local modules = { { import = "user.plugins" }, { import = "user.plugins.lsp" } }
 local opts = {
 	install = {
 		-- try to load one of these colorschemes when starting an installation during startup
