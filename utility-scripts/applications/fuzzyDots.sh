@@ -14,8 +14,8 @@ code)
     fi
 	;;
 *)
-    if [ -x "$(command -v lvim)" ]; then
-      lvim "${editFile}"
+    if [ -x "$(command -v nvim)" ]; then
+      nvim "${editFile}"
     else 
       vi "${editFile}"
     fi

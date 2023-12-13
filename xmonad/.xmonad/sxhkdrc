@@ -40,9 +40,9 @@ super + o;{0}
 
 # TERMINAL BASED HOTKEYS
 super + s;{d}
-    {kitty -e lvim ~/.dotfiles}
+    {kitty -e nvim ~/.dotfiles}
 super + s;{c}
-    {kitty -e lvim ~/.config}
+    {kitty -e nvim ~/.config}
 super + s;{t}
     {kitty -e tmux a}
 super + s;{s}
@@ -50,7 +50,7 @@ super + s;{s}
 super + s;{T}
     {kitty -e btop}
 super + s;{n}
-    {kitty -e lvim ~/.dotfiles/lvim/.config/lvim/config.lua}
+    {kitty -e nvim ~/.dotfiles/nvim/.config/nvim/init.lua}
 super + s;{W}
     {kitty -e nmtui}
 super + s;{f}
