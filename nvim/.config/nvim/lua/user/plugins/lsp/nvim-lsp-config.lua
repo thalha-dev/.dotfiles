@@ -96,7 +96,6 @@ return {
 			lspconfig.bashls.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
-				filetypes = { "sh", "aliasrc" },
 			})
 
 			-- C/C++
