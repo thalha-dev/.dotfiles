@@ -40,8 +40,8 @@ return {
 			}),
 			-- sources for autocompletion
 			sources = cmp.config.sources({
-				{ name = "nvim_lsp" },
 				{ name = "luasnip" }, -- snippets
+				{ name = "nvim_lsp" },
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
 			}),
@@ -63,5 +63,12 @@ return {
 				native_menu = false,
 			},
 		})
+
+		local keymap = vim.api.nvim_set_keymap
+		local opts = { noremap = true, silent = true }
+		keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+		keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+		keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+		keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 	end,
 }
