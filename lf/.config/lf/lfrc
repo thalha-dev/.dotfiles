@@ -25,7 +25,8 @@ set hidden true
 set icons
 set dircounts true                # show number of items in directory instead of sie
 set drawbox true                  # draw a border around all panes
-set ratios '1:2:2'              # ratio of pane widths
+set ratios '1:4'              # ratio of pane widths
+set preview false
 set info "size"                 # list directory information on the right
 set history true                  # save history across sessions 
 set period 1                    # interval to check for directory updates
@@ -57,17 +58,17 @@ set period 1                    # interval to check for directory updates
 
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 
-cmd alternativeStart ${{
-    test -L $f && f=$(readlink -f $f)
-    pattern=$(file --mime-type $f -b)
-    case $pattern in
-        image/*) sxiv -b $fx &;;
-        application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1;;
-        video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
-        text/*) N $fx;;
-        *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
-    esac
-}}
+# cmd alternativeStart ${{
+#     test -L $f && f=$(readlink -f $f)
+#     pattern=$(file --mime-type $f -b)
+#     case $pattern in
+#         image/*) sxiv -b $fx &;;
+#         application/pdf|application/epub*) setsid -f zathura $fx >/dev/null 2>&1;;
+#         video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+#         text/*) N $fx;;
+#         *) for f in $fx; do setsid $OPENER $f > /dev/null 2> /dev/null & done;;
+#     esac
+# }}
 
 cmd defaultStart ${{
     test -L $f && f=$(readlink -f $f)
@@ -203,7 +204,7 @@ map p paste
 map x cut
 map y copy
 map <enter> defaultStart
-map o alternativeStart
+map o defaultStart
 map R reload
 map Cf mkfile
 map Cd mkdir
