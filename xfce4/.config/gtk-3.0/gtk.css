@@ -1,10 +1,20 @@
 .xfce4-panel {
+  font-family:
+    "Hack Nerd Font",
+    system-ui,
+    -apple-system,
+    Roboto,
+    Ubuntu,
+    "Times New Roman",
+    Times,
+    serif;
   border-radius: 3px;
   font-size: 12px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .xfce4-panel * {
+  font-weight: bold;
   -gtk-icon-transform: scale(0.85);
   -gtk-icon-theme: "Papirus-Dark";
 }
@@ -30,6 +40,6 @@
 }
 
 #clock-button {
-  color: black;
-  background-color: #5edb7a;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #181d26;
 }
