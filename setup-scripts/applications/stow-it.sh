@@ -32,7 +32,6 @@ done
 
 cd ~/.dotfiles
 read -p "do you want to run 'git restore .' ? [y/Y]" option
-sleep 5
 if [[ $option == "y" || $option == "Y" ]]; then
 	git restore .
 fi
