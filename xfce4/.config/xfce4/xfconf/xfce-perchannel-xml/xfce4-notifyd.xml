@@ -5,6 +5,8 @@
     <property name="known_applications" type="array">
       <value type="string" value="nm-applet"/>
       <value type="string" value="org.kde.kdeconnect.daemon"/>
+      <value type="string" value="org.xfce.Thunar"/>
+      <value type="string" value="thunar-volman"/>
       <value type="string" value="xfce4-power-manager"/>
       <value type="string" value="xfce4-settings-helper"/>
     </property>
