@@ -1,0 +1,35 @@
+.xfce4-panel {
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.xfce4-panel * {
+  -gtk-icon-transform: scale(0.85);
+  -gtk-icon-theme: "Papirus-Dark";
+}
+
+.flat,
+.toggle {
+  transition: 0.2s;
+  border-radius: 3px;
+  margin-left: 3px;
+  margin-right: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background: rgba(255, 255, 255, 0);
+}
+
+.flat:hover,
+.toggle:hover,
+.flat:checked,
+.toggle:checked {
+  background: rgba(255, 255, 255, 0.5);
+  color: #000;
+  border-radius: 5px;
+}
+
+#clock-button {
+  color: black;
+  background-color: #5edb7a;
+}

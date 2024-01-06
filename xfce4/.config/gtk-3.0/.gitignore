@@ -1,0 +1,6 @@
+# Ignore everything
+/*
+
+# But do not ignore these ...
+!.gitignore
+!gtk.css
