@@ -1,5 +1,5 @@
 favorites=xfce4-web-browser.desktop,xfce4-mail-reader.desktop,xfce4-file-manager.desktop,xfce4-terminal-emulator.desktop
-recent=xfce-backdrop-settings.desktop,xfce4-file-manager.desktop,org.gnome.Calendar.desktop,org.gnome.Calculator.desktop,xfce-settings-manager.desktop,google-chrome.desktop,xfce-ui-settings.desktop,brave-browser.desktop,xfce4-taskmanager.desktop,microsoft-edge.desktop
+recent=xfce-backdrop-settings.desktop
 button-icon=org.xfce.panel.whiskermenu
 button-single-row=false
 show-button-title=false

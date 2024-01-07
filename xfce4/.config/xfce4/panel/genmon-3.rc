@@ -1,0 +1,6 @@
+Command=xfce4-genmon-mem-2.sh
+UseLabel=0
+Text=
+UpdatePeriod=30000
+Font=Hack Nerd Font Bold 10
+

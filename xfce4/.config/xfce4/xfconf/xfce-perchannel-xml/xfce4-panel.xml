@@ -4,50 +4,56 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="3"/>
+    <value type="int" value="1"/>
+    <value type="int" value="2"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-3" type="empty">
-      <property name="position" type="string" value="p=6;x=683;y=13"/>
+      <property name="position" type="string" value="p=11;x=415;y=14"/>
       <property name="size" type="uint" value="25"/>
       <property name="mode" type="uint" value="0"/>
-      <property name="length-adjust" type="bool" value="false"/>
-      <property name="length" type="uint" value="100"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="length" type="uint" value="15"/>
       <property name="background-style" type="uint" value="0"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="1"/>
-        <value type="int" value="4"/>
-        <value type="int" value="5"/>
         <value type="int" value="12"/>
-        <value type="int" value="8"/>
-        <value type="int" value="17"/>
-        <value type="int" value="6"/>
-        <value type="int" value="23"/>
-        <value type="int" value="14"/>
-        <value type="int" value="2"/>
-        <value type="int" value="9"/>
-        <value type="int" value="28"/>
+        <value type="int" value="3"/>
+        <value type="int" value="27"/>
+        <value type="int" value="5"/>
       </property>
       <property name="position-locked" type="bool" value="true"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="autohide-behavior" type="uint" value="0"/>
       <property name="disable-struts" type="bool" value="false"/>
     </property>
+    <property name="panel-1" type="empty">
+      <property name="position" type="string" value="p=2;x=1241;y=15"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="disable-struts" type="bool" value="false"/>
+      <property name="length" type="uint" value="16"/>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="24"/>
+        <value type="int" value="23"/>
+        <value type="int" value="16"/>
+        <value type="int" value="19"/>
+        <value type="int" value="18"/>
+        <value type="int" value="22"/>
+        <value type="int" value="11"/>
+      </property>
+    </property>
+    <property name="panel-2" type="empty">
+      <property name="position" type="string" value="p=6;x=163;y=21"/>
+      <property name="size" type="uint" value="25"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="plugin-ids" type="array">
+        <value type="int" value="25"/>
+      </property>
+      <property name="position-locked" type="bool" value="true"/>
+      <property name="disable-struts" type="bool" value="false"/>
+      <property name="length" type="uint" value="11"/>
+    </property>
   </property>
   <property name="plugins" type="empty">
-    <property name="plugin-4" type="string" value="pager">
-      <property name="rows" type="uint" value="1"/>
-      <property name="miniature-view" type="bool" value="false"/>
-    </property>
-    <property name="plugin-6" type="string" value="clock">
-      <property name="mode" type="uint" value="2"/>
-      <property name="digital-format" type="string" value="%a %d/%m/%Y, %I:%M %p"/>
-      <property name="timezone" type="string" value="Asia/Kolkata"/>
-    </property>
-    <property name="plugin-9" type="string" value="power-manager-plugin"/>
-    <property name="plugin-14" type="string" value="pulseaudio">
-      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="chromium.instance11786;chromium.instance7319;kdeconnect.mpris_15cec10bf8614b2493a24b7040cada1a;kdeconnect.mpris_2120cf35aa804882bd2887d90ba7e454;kdeconnect.mpris_43e888b7a9e34c5f89e7d34364732cc3;kdeconnect.mpris_47f4e07aafff4713a9cb4cba51417ebd;kdeconnect.mpris_6dd45122685f4bd88c5b981990af5618;kdeconnect.mpris_95dba67080e74135a7e7fc7fadd8406c;kdeconnect.mpris_b032e123891443a78f7df0e27772eff3;kdeconnect.mpris_b70f5708d32f449d820bdb9f61e8cc15;kdeconnect.mpris_dde6463838274966abaf8575bbd0e4f5;kdeconnect.mpris_fa7fe94a05a24b7cb4ec31236c52e2e7;kdeconnect.mpris_ff6e23ec50874154861c582964f15ad7"/>
-    </property>
-    <property name="plugin-17" type="string" value="xfce4-clipman-plugin"/>
     <property name="clipman" type="empty">
       <property name="tweaks" type="empty">
         <property name="never-confirm-history-clear" type="bool" value="true"/>
@@ -56,43 +62,35 @@
         <property name="show-qr-code" type="bool" value="true"/>
       </property>
     </property>
-    <property name="plugin-23" type="string" value="notification-plugin"/>
-    <property name="plugin-28" type="string" value="actions">
-      <property name="button-title" type="uint" value="1"/>
-      <property name="custom-title" type="string" value="Thalha "/>
-      <property name="appearance" type="uint" value="1"/>
-      <property name="items" type="array">
-        <value type="string" value="+lock-screen"/>
-        <value type="string" value="+switch-user"/>
-        <value type="string" value="+separator"/>
-        <value type="string" value="+suspend"/>
-        <value type="string" value="-hibernate"/>
-        <value type="string" value="-hybrid-sleep"/>
-        <value type="string" value="-separator"/>
-        <value type="string" value="+shutdown"/>
-        <value type="string" value="+restart"/>
-        <value type="string" value="+separator"/>
-        <value type="string" value="-logout"/>
-        <value type="string" value="+logout-dialog"/>
-      </property>
+    <property name="plugin-5" type="string" value="cpugraph"/>
+    <property name="plugin-12" type="string" value="separator">
+      <property name="style" type="uint" value="0"/>
+      <property name="expand" type="bool" value="true"/>
     </property>
-    <property name="plugin-2" type="string" value="systray">
+    <property name="plugin-3" type="string" value="genmon"/>
+    <property name="plugin-11" type="string" value="actions"/>
+    <property name="plugin-16" type="string" value="systray">
       <property name="known-items" type="array">
-        <value type="string" value="Free Download Manager"/>
         <value type="string" value="blueman"/>
         <value type="string" value="nm-applet"/>
       </property>
-      <property name="known-legacy-items" type="array">
-        <value type="string" value="thunar"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="bluetooth enabled"/>
-        <value type="string" value="network"/>
-      </property>
     </property>
-    <property name="plugin-1" type="string" value="whiskermenu"/>
-    <property name="plugin-5" type="string" value="cpugraph"/>
-    <property name="plugin-8" type="string" value="xfce4-dict-plugin"/>
-    <property name="plugin-12" type="string" value="separator">
+    <property name="plugin-18" type="string" value="pulseaudio">
+      <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+    </property>
+    <property name="plugin-19" type="string" value="notification-plugin"/>
+    <property name="plugin-22" type="string" value="power-manager-plugin"/>
+    <property name="plugin-23" type="string" value="whiskermenu"/>
+    <property name="plugin-24" type="string" value="clock">
+      <property name="digital-format" type="string" value="%a %d/%m/%Y, %I:%M %p"/>
+      <property name="timezone" type="string" value="Asia/Kolkata"/>
+    </property>
+    <property name="plugin-25" type="string" value="pager">
+      <property name="rows" type="uint" value="1"/>
+      <property name="miniature-view" type="bool" value="false"/>
+      <property name="numbering" type="bool" value="false"/>
+    </property>
+    <property name="plugin-27" type="string" value="separator">
       <property name="style" type="uint" value="0"/>
       <property name="expand" type="bool" value="true"/>
     </property>
