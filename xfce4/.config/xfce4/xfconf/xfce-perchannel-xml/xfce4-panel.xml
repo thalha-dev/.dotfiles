@@ -71,12 +71,17 @@
     <property name="plugin-11" type="string" value="actions"/>
     <property name="plugin-16" type="string" value="systray">
       <property name="known-items" type="array">
+        <value type="string" value="Free Download Manager"/>
         <value type="string" value="blueman"/>
         <value type="string" value="nm-applet"/>
+      </property>
+      <property name="known-legacy-items" type="array">
+        <value type="string" value="networkmanager applet"/>
       </property>
     </property>
     <property name="plugin-18" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
+      <property name="mpris-players" type="string" value="kdeconnect.mpris_0d81f97e30014e06a5793f682be59a11;kdeconnect.mpris_1841b291bf0142cfa70bcc9c8a09f62f;kdeconnect.mpris_20e8fa32149e4978a0af968d542ec849;kdeconnect.mpris_3f339f7187a842afa418f8a433967f2a;kdeconnect.mpris_3f341d8e205b4853a81e8074666e3c38;kdeconnect.mpris_74edfc44d42e4a27a17f7e1371cd8689;kdeconnect.mpris_9f9a7e2399c84baba487cfe55cac46ee;kdeconnect.mpris_a2cfc155020a41e7a82435b7658cd53b;kdeconnect.mpris_c58e3f67ae8b4fe1a19d0545814dadf2;kdeconnect.mpris_d70607a594344ddc9aa90a4a996dea26;kdeconnect.mpris_ed239faee5034057992004132317e652"/>
     </property>
     <property name="plugin-19" type="string" value="notification-plugin"/>
     <property name="plugin-22" type="string" value="power-manager-plugin"/>
