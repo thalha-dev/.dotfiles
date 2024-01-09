@@ -4,7 +4,6 @@
 # Calculate RAM values
 readonly TOTAL=$(free -b | awk '/^[Mm]em/{$2 = $2 / 1073741824; printf "%.2f", $2}')
 readonly USED=$(free -b | awk '/^[Mm]em/{$3 = $3 / 1073741824; printf "%.2f", $3}')
-readonly USED_PERCENTAGE=$(free | grep Mem | awk '{printf("%02d",  $3/$2 * 100.0)}')
 readonly FREE=$(free -b | awk '/^[Mm]em/{$4 = $4 / 1073741824; printf "%.2f", $4}')
 readonly SHARED=$(free -b | awk '/^[Mm]em/{$5 = $5 / 1073741824; printf "%.2f", $5}')
 readonly CACHED=$(free -b | awk '/^[Mm]em/{$6 = $6 / 1073741824; printf "%.2f", $6}')
@@ -17,7 +16,10 @@ readonly SWP_FREE=$(free -b | awk '/^[Ss]wap/{$4 = $4 / 1073741824; printf "%.2f
 
 # Panel
 INFO+="<txt>"
-INFO+=" ${USED_PERCENTAGE}"
+INFO+="  "
+INFO+="${USED}"
+# INFO+="／"
+INFO+="${TOTAL} GB"
 INFO+="%"
 INFO+="</txt>"
 
@@ -41,3 +43,18 @@ echo -e "${INFO}"
 
 # Tooltip Print
 echo -e "${MORE_INFO}"
+
+
+# CSS Styling
+CSS="<css>"
+CSS+=".genmon_value {
+      background-color: #835077; 
+      color:#ffffff; 
+      padding-left:10px; 
+      padding-right:10px; 
+    } 
+    .genmon_label {color:green}"
+CSS+="</css>"
+
+# Add Styling
+echo -e "${CSS}"

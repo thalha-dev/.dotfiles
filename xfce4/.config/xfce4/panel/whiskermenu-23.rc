@@ -1,5 +1,5 @@
 favorites=xfce4-web-browser.desktop,xfce4-mail-reader.desktop,xfce4-file-manager.desktop,xfce4-terminal-emulator.desktop
-recent=xfce-wm-settings.desktop,xfce-backdrop-settings.desktop,google-chrome.desktop,nm-connection-editor.desktop
+recent=microsoft-edge.desktop,google-chrome.desktop,xfce4-about.desktop,xfce-backdrop-settings.desktop,gucharmap.desktop,xfce-wm-settings.desktop,nm-connection-editor.desktop
 button-icon=org.xfce.panel.whiskermenu
 button-single-row=false
 show-button-title=false
