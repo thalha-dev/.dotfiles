@@ -1,0 +1,18 @@
+[General]
+FreeFloating=true
+
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+CharacterRunnerEnabled=false
+PIM Contacts Search RunnerEnabled=false
+appstreamEnabled=false
+baloosearchEnabled=false
+bookmarksEnabled=false
+browserhistoryEnabled=false
+browsertabsEnabled=false
+konsoleprofilesEnabled=false
+org.kde.activities2Enabled=false
+recentdocumentsEnabled=false
+webshortcutsEnabled=false
