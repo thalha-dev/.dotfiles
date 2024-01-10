@@ -23,14 +23,14 @@ DialogWidth=720
 [Containments][1][General]
 ToolBoxButtonState=topcenter
 ToolBoxButtonX=228
-ToolBoxButtonY=22
+ToolBoxButtonY=20
 positions={"1366x768":[]}
 
 [Containments][1][Wallpaper][org.kde.color][General]
 Color=137,133,243
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/home/thalha/Pictures/Wallpapers/Spooky-324-1532.jpg
+Image=file:///home/thalha/Pictures/Wallpapers/Spooky-324-1532.jpg
 SlidePaths=/home/thalha/.local/share/wallpapers,/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][1][Wallpaper][org.kde.potd][General]
