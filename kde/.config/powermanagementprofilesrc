@@ -1,9 +1,6 @@
 [AC]
 icon=battery-charging
 
-[AC][DimDisplay]
-idleTime=300000
-
 [AC][HandleButtonEvents]
 lidAction=1
 powerButtonAction=0
@@ -13,9 +10,6 @@ triggerLidActionWhenExternalMonitorPresent=false
 [Battery]
 icon=battery-060
 
-[Battery][DimDisplay]
-idleTime=120000
-
 [Battery][HandleButtonEvents]
 lidAction=1
 powerButtonAction=16
@@ -24,9 +18,6 @@ triggerLidActionWhenExternalMonitorPresent=false
 
 [LowBattery]
 icon=battery-low
-
-[LowBattery][DimDisplay]
-idleTime=120000
 
 [LowBattery][HandleButtonEvents]
 lidAction=1
