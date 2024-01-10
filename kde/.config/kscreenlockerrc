@@ -1,6 +1,9 @@
 [$Version]
 update_info=kscreenlocker.upd:0.1-autolock
 
+[Daemon]
+Autolock=false
+
 [Greeter][Wallpaper][org.kde.image][General]
 Image=/home/thalha/Pictures/Wallpapers/bird-blackBlue.png
 SlidePaths=/home/thalha/.local/share/wallpapers,/usr/share/plasma/wallpapers,/usr/share/wallpapers
