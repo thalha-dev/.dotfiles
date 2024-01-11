@@ -1,0 +1,8 @@
+[FileDialogSize]
+eDP Height 1366x768=512
+eDP Width 1366x768=836
+
+[KFileDialog Settings]
+Recent Files[$e]=file:$HOME/Downloads/dbgate-latest.deb,file:$HOME/Downloads/dbgate-latest.deb
+Recent URLs[$e]=file:$HOME/Downloads/,file:$HOME/
+iconViewIconSize=64

@@ -1,0 +1,35 @@
+[Event/criticalbattery]
+Action=Sound|Popup|Execute
+Execute=/home/thalha/kitty -e cmatrix && notify-send 'Battery about to die dummy, are you there?'
+Logfile=
+TTS=
+
+[Event/fullbattery]
+Action=Execute
+Execute=/home/thalha/notify-send "REMOVE THE CHARGER" "Wish charging to 200% or what?"
+Logfile=
+TTS=
+
+[Event/lowbattery]
+Action=Sound|Popup|Execute
+Execute=/home/thalha/kitty -e cmatrix && notify-send 'Plugin the charger!'
+Logfile=
+TTS=Hey are you there? battery about to die!
+
+[Event/lowperipheralbattery]
+Action=Sound|Popup|Execute
+Execute=/home/thalha/kitty -e cmatrix
+Logfile=
+TTS=
+
+[Event/pluggedin]
+Action=Sound
+Execute=/home/thalha/kitty -e cmatrix
+Logfile=
+TTS=Tasty
+
+[Event/unplugged]
+Action=Sound
+Execute=
+Logfile=
+TTS=tasty
