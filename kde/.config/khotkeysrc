@@ -2000,6 +2000,7 @@ WindowsCount=0
 Theme[$d]
 
 [KDE]
+AnimationDurationFactor[$d]
 LookAndFeelPackage[$d]
 widgetStyle[$d]
 

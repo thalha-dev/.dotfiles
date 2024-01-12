@@ -1,7 +1,20 @@
+[ActionsWidget]
+ColumnState=AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAi4AAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAA+gAAAAEAAAAAAAABNAAAAAEAAAAAAAAD6AAAAABk
+
+[ConfigDialog]
+eDP Height 1366x768=481
+eDP Width 1366x768=700
+
+[General]
+Number of Actions=0
+
 [KFileDialog Settings]
-Recent Files[$e]=t2xx78n4oac81.png,file:$HOME/Pictures/Wallpapers/t2xx78n4oac81.png
-Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/
+Recent Files[$e]=t2xx78n4oac81.png,file:$HOME/Pictures/Wallpapers/_5731e619-b62c-448f-aafb-095c0e6356e2.jpeg,file:$HOME/Pictures/Wallpapers/_929cddf0-7e16-4a92-886b-659596941616.jpeg,file:$HOME/Pictures/Wallpapers/_719ff904-ee48-46d3-9bed-db8447f63ee6.jpeg,file:$HOME/Pictures/Wallpapers/_553fadba-8eee-483d-81fa-d90123efe394.jpeg,file:$HOME/Pictures/Wallpapers/_97d594b5-7d27-47e0-aff3-4cbf5c41055d.jpeg,file:$HOME/Pictures/Wallpapers/_93a56abf-15d9-4e20-8eff-436cb9fc010a.jpeg,file:$HOME/Pictures/Wallpapers/_83e80165-d32d-4dcb-8173-54cdc524ce51.jpeg,file:$HOME/Pictures/Wallpapers/_68ce9829-e98b-40bc-bbbd-85e975601cf5.jpeg,file:$HOME/Pictures/Wallpapers/_65f33fb3-6f4f-46c8-84d9-71055ac757b9.jpeg,file:$HOME/Pictures/Wallpapers/_63d113d8-071a-49d0-b8ed-4ebb474d8766.jpeg,file:$HOME/Pictures/Wallpapers/_9a01bee9-a7df-4853-bd17-a781f23eaf7a.jpeg,file:$HOME/Pictures/Wallpapers/_7ea4bee0-6cb7-4cb6-9d6b-36e0b39c36e7.jpeg,file:$HOME/Pictures/Wallpapers/_04c6733b-eb74-45e3-923b-318c9d8d3a92.jpeg,file:$HOME/Pictures/Wallpapers/_3cc97c53-ef25-4573-baf5-a9738440d85b.jpeg,file:$HOME/Pictures/Wallpapers/_0d25bb43-68be-42c9-a5a3-4d410200329f.jpeg,file:$HOME/Pictures/Wallpapers/t2xx78n4oac81.png
+Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/,file:$HOME/Pictures/
 iconViewIconSize=64
+
+[PlasmaTransientsConfig]
+PreloadWeight=18
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=20

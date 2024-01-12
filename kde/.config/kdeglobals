@@ -147,6 +147,7 @@ XftSubPixel=none
 font=Hack Nerd Font,10,-1,5,50,0,0,0,0,0
 
 [KDE]
+AnimationDurationFactor=1
 LookAndFeelPackage=org.kde.breezedark.desktop
 
 [KFileDialog Settings]
