@@ -13,8 +13,8 @@ Recent Files[$e]=t2xx78n4oac81.png,file:$HOME/Pictures/Wallpapers/_5731e619-b62c
 Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/,file:$HOME/Pictures/
 iconViewIconSize=64
 
-[PlasmaTransientsConfig]
-PreloadWeight=18
+[PIMEventsPlugin]
+calendars=10
 
 [PlasmaViews][Panel 2][Defaults]
 thickness=20
