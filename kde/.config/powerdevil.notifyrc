@@ -1,24 +1,24 @@
 [Event/criticalbattery]
 Action=Sound|Popup|Execute
-Execute=/home/thalha/kitty -e cmatrix && notify-send 'Battery about to die dummy, are you there?'
+Execute=/home/thalha/.local/bin/kitty -e /usr/bin/cmatrix
 Logfile=
 TTS=
 
 [Event/fullbattery]
 Action=Execute
-Execute=/home/thalha/notify-send "REMOVE THE CHARGER" "Wish charging to 200% or what?"
+Execute=/home/thalha/.local/bin/kitty -e /usr/bin/cmatrix
 Logfile=
 TTS=
 
 [Event/lowbattery]
 Action=Sound|Popup|Execute
-Execute=/home/thalha/kitty -e cmatrix && notify-send 'Plugin the charger!'
+Execute=/home/thalha/.local/bin/kitty -e /usr/bin/cmatrix
 Logfile=
 TTS=Hey are you there? battery about to die!
 
 [Event/lowperipheralbattery]
 Action=Sound|Popup|Execute
-Execute=/home/thalha/kitty -e cmatrix
+Execute=/home/thalha/.local/bin/kitty -e /usr/bin/cmatrix
 Logfile=
 TTS=
 

@@ -33,7 +33,7 @@ positions={"1366x768":[]}
 Color=137,133,243
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///home/thalha/Pictures/Wallpapers/ColorWall-zy856j.png
+Image=file:///home/thalha/.local/share/wallpapers/39514-sky-arctic-star-mountain-range-daytime-1920x1080.jpg
 SlidePaths=/home/thalha/.local/share/wallpapers,/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][1][Wallpaper][org.kde.potd][General]
@@ -171,14 +171,14 @@ immutability=1
 plugin=org.kde.plasma.colorpicker
 
 [Containments][2][Applets][39][Configuration]
-PreloadWeight=25
+PreloadWeight=26
 
 [Containments][2][Applets][39][Configuration][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][2][Applets][39][Configuration][General]
-history=#122129,#3ca9e2,#323e51,#3daee9,#2a2e32,#73a2f2,#6ebd76,#6f7275,#337484
+history=#2c2c2c,#4befb4,#3caae4,#74b8db,#fdf9da,#28456c,#122129,#3ca9e2,#323e51
 
 [Containments][2][Applets][39][Shortcuts]
 global=Meta+Alt+P
@@ -202,7 +202,7 @@ immutability=1
 plugin=org.kde.plasma.notes
 
 [Containments][2][Applets][46][Configuration]
-PreloadWeight=77
+PreloadWeight=53
 
 [Containments][2][Applets][46][Configuration][ConfigDialog]
 DialogHeight=540
@@ -228,7 +228,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=92
+PreloadWeight=89
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -262,7 +262,7 @@ immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=35
+PreloadWeight=31
 
 [Containments][8][Applets][11][Configuration][ConfigDialog]
 DialogHeight=540
@@ -283,7 +283,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][8][Applets][13][Configuration]
-PreloadWeight=64
+PreloadWeight=40
 
 [Containments][8][Applets][13][Shortcuts]
 global=Meta+V
@@ -328,7 +328,7 @@ immutability=1
 plugin=org.kde.plasma.battery
 
 [Containments][8][Applets][20][Configuration]
-PreloadWeight=88
+PreloadWeight=84
 
 [Containments][8][Applets][20][Shortcuts]
 global=Meta+Alt+B
@@ -338,7 +338,7 @@ immutability=1
 plugin=org.kde.plasma.bluetooth
 
 [Containments][8][Applets][21][Configuration]
-PreloadWeight=44
+PreloadWeight=35
 
 [Containments][8][Applets][21][Shortcuts]
 global=Meta+Alt+Shift+B
