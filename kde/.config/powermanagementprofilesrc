@@ -13,6 +13,11 @@ powerButtonAction=0
 powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=false
 
+[AC][SuspendSession]
+idleTime=600000
+suspendThenHibernate=false
+suspendType=1
+
 [Battery]
 icon=battery-060
 
@@ -42,3 +47,8 @@ lidAction=1
 powerButtonAction=0
 powerDownAction=16
 triggerLidActionWhenExternalMonitorPresent=false
+
+[LowBattery][SuspendSession]
+idleTime=600000
+suspendThenHibernate=false
+suspendType=1
