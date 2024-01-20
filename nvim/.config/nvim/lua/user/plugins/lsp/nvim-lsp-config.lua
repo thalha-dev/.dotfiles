@@ -122,9 +122,9 @@ return {
 				-- for projects that are relevant to code that is being edited. With this
 				-- setting enabled OmniSharp may load fewer projects and may thus display
 				-- incomplete reference lists for symbols.
-				enable_ms_build_load_projects_on_demand = false,
+				-- enable_ms_build_load_projects_on_demand = false,
 				-- Enables support for roslyn analyzers, code fixes and rulesets.
-				enable_roslyn_analyzers = false,
+				-- enable_roslyn_analyzers = false,
 				-- Specifies whether 'using' directives should be grouped and sorted during
 				-- document formatting.
 				organize_imports_on_format = true,
@@ -140,7 +140,7 @@ return {
 				sdk_include_prereleases = true,
 				-- Only run analyzers against open files when 'enableRoslynAnalyzers' is
 				-- true
-				analyze_open_documents_only = false,
+				-- analyze_open_documents_only = false,
 			})
 
 			-- configure lua server (with special settings)
