@@ -13,6 +13,10 @@ Recent Files[$e]=t2xx78n4oac81.png,file:$HOME/Pictures/Wallpapers/_5731e619-b62c
 Recent URLs[$e]=file:$HOME/Pictures/Wallpapers/,file:$HOME/Pictures/
 iconViewIconSize=64
 
+[Open-with settings]
+CompletionMode=1
+History=
+
 [PIMEventsPlugin]
 calendars=10
 

@@ -5,17 +5,17 @@ update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_valu
 count=0
 
 [Session: saved at previous logout]
-clientId1=10dfe2702d000170542710500000034840005
+clientId1=10dfe2702d000170572844200000032420004
 clientId2=10dfe2702d000170484957800000034780007
 clientId3=10dfe2702d000170484957800000034780008
 count=3
-discardCommand2[$e]=rm,$HOME/.config/session/kmix_10dfe2702d000170484957800000034780007_1705486988_746753
+discardCommand2[$e]=rm,$HOME/.config/session/kmix_10dfe2702d000170484957800000034780007_1705732636_249460
 program1=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier
 program2=/usr/bin/kmix
 program3=/usr/bin/korgac
-restartCommand1=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier,-session,10dfe2702d000170542710500000034840005_1705486988_749433
-restartCommand2=/usr/bin/kmix,-session,10dfe2702d000170484957800000034780007_1705486988_746753
-restartCommand3=/usr/bin/korgac,-session,10dfe2702d000170484957800000034780008_1705486988_747606
+restartCommand1=/usr/lib/x86_64-linux-gnu/libexec/DiscoverNotifier,-session,10dfe2702d000170572844200000032420004_1705732636_250578
+restartCommand2=/usr/bin/kmix,-session,10dfe2702d000170484957800000034780007_1705732636_249460
+restartCommand3=/usr/bin/korgac,-session,10dfe2702d000170484957800000034780008_1705732636_250247
 restartStyleHint1=0
 restartStyleHint2=0
 restartStyleHint3=0
