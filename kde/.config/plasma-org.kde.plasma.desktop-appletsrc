@@ -54,7 +54,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][2][Applets][27][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][2][Applets][27][Configuration][Appearance]
 chartFace=org.kde.ksysguard.horizontalbars
@@ -203,7 +203,7 @@ immutability=1
 plugin=org.kde.plasma.notes
 
 [Containments][2][Applets][46][Configuration]
-PreloadWeight=2
+PreloadWeight=8
 
 [Containments][2][Applets][46][Configuration][ConfigDialog]
 DialogHeight=540
@@ -229,7 +229,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=100
+PreloadWeight=91
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -256,7 +256,7 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][10][Configuration]
-PreloadWeight=30
+PreloadWeight=16
 
 [Containments][8][Applets][11]
 immutability=1
@@ -380,7 +380,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=15
+PreloadWeight=5
 
 [Containments][8][Applets][9][Shortcuts]
 global=Meta+Alt+K
