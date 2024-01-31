@@ -33,7 +33,7 @@ positions={"1366x768":[]}
 Color=137,133,243
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=file:///home/thalha/.local/share/wallpapers/paramount_2_hd.jpg
+Image=file:///home/thalha/.local/share/wallpapers/fonwall.ru-beach-sea-coast-water-aldh.jpeg
 SlidePaths=/home/thalha/.local/share/wallpapers,/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][1][Wallpaper][org.kde.potd][General]
@@ -203,7 +203,7 @@ immutability=1
 plugin=org.kde.plasma.notes
 
 [Containments][2][Applets][46][Configuration]
-PreloadWeight=8
+PreloadWeight=0
 
 [Containments][2][Applets][46][Configuration][ConfigDialog]
 DialogHeight=540
@@ -229,7 +229,7 @@ immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][2][Applets][7][Configuration]
-PreloadWeight=91
+PreloadWeight=86
 SystrayContainmentId=8
 
 [Containments][2][ConfigDialog]
@@ -256,14 +256,14 @@ immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][8][Applets][10][Configuration]
-PreloadWeight=16
+PreloadWeight=0
 
 [Containments][8][Applets][11]
 immutability=1
 plugin=org.kde.plasma.volume
 
 [Containments][8][Applets][11][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][8][Applets][11][Configuration][ConfigDialog]
 DialogHeight=540
@@ -380,7 +380,7 @@ immutability=1
 plugin=org.kde.kdeconnect
 
 [Containments][8][Applets][9][Configuration]
-PreloadWeight=5
+PreloadWeight=2
 
 [Containments][8][Applets][9][Shortcuts]
 global=Meta+Alt+K
